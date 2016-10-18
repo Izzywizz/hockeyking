@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Promotion.h"
 #import "Data.h"
+#import "PListParser.h"
 
 @interface ViewController ()
 
@@ -28,6 +29,10 @@
     starbucks = [self createPromotionTestObject];
     NSLog(@"StarBuck: %@", starbucks);
     NSLog(@"Data Shared: %@", data);
+    
+    PListParser *parser = [[PListParser alloc] init];
+    [parser readPlistValuesFromPlist:@"promotions"];
+//    [parser createPromotionDict:[[parser plistArray] objectAtIndex:0]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,5 +59,7 @@
     
     return promotion;
 }
+
+
 
 @end

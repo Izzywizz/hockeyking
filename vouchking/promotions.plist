@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>promotionId</key>
+		<integer>123456</integer>
+		<key>totalPoints</key>
+		<integer>900</integer>
+		<key>currentRank</key>
+		<integer>2</integer>
+		<key>totalUsers</key>
+		<integer>10</integer>
+		<key>expiryEpoch</key>
+		<integer>1476786058</integer>
+		<key>promotionDescription</key>
+		<string>Two for One offer on coffees and get a free cookie</string>
+		<key>pointsEarned</key>
+		<integer>50</integer>
+		<key>promotionNotes</key>
+		<string>This is one time offer, you use it once thats it</string>
+		<key>totalPromotionsAvailable</key>
+		<integer>1</integer>
+		<key>businessName</key>
+		<string>StarBucks</string>
+		<key>twitter</key>
+		<string>https://twitter.com/Starbucks?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor</string>
+		<key>facebook</key>
+		<string>https://en-gb.facebook.com/Starbucks/</string>
+		<key>website</key>
+		<string>http://www.starbucks.co.uk</string>
+	</dict>
+	<dict>
+		<key>promotionId</key>
+		<integer>654321</integer>
+		<key>totalPoints</key>
+		<integer>84</integer>
+		<key>currentRank</key>
+		<integer>1</integer>
+		<key>totalUsers</key>
+		<integer>42</integer>
+		<key>expiryEpoch</key>
+		<integer>1476780997</integer>
+		<key>promotionDescription</key>
+		<string>Buy one KFC burger and get one free</string>
+		<key>pointsEarned</key>
+		<string>4562</string>
+		<key>promotionNotes</key>
+		<string>This offer can be used multiplen times baby</string>
+		<key>totalPromotionsAvailable</key>
+		<string>2</string>
+		<key>businessName</key>
+		<string>KFC</string>
+		<key>twitter</key>
+		<string>https://twitter.com/kfc_uki?lang=en</string>
+		<key>facebook</key>
+		<string>https://www.facebook.com/KFC.uk/</string>
+		<key>website</key>
+		<string>https://www.kfc.co.uk</string>
+	</dict>
+</array>
+</plist>

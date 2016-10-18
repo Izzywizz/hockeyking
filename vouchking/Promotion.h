@@ -24,4 +24,7 @@
 @property (nonatomic, strong) NSURL *facebook;
 @property (nonatomic, strong) NSURL *website;
 
+-(Promotion*)initWithDict:(NSDictionary*)dict;
+
+
 @end

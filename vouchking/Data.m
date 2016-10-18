@@ -7,6 +7,7 @@
 //
 
 #import "Data.h"
+#import "Promotion.h"
 
 @implementation Data
 
@@ -20,5 +21,7 @@
     });
     return sharedInstance;
 }
+
+
 
 @end
