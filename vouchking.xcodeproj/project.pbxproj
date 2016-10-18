@@ -16,6 +16,7 @@
 		43C7BA1D1DB611A700FDD9F1 /* vouchkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA1C1DB611A700FDD9F1 /* vouchkingTests.m */; };
 		43C7BA2A1DB61CF800FDD9F1 /* Promotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA291DB61CF800FDD9F1 /* Promotion.m */; };
 		43C7BA2D1DB626D500FDD9F1 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA2C1DB626D500FDD9F1 /* Data.m */; };
+		43C7BA301DB62C4100FDD9F1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA2F1DB62C4100FDD9F1 /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		43C7BA291DB61CF800FDD9F1 /* Promotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Promotion.m; sourceTree = "<group>"; };
 		43C7BA2B1DB626D500FDD9F1 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		43C7BA2C1DB626D500FDD9F1 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
+		43C7BA2E1DB62C4100FDD9F1 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		43C7BA2F1DB62C4100FDD9F1 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				43C7BA101DB611A700FDD9F1 /* LaunchScreen.storyboard */,
 				43C7BA131DB611A700FDD9F1 /* Info.plist */,
 				43C7BA021DB611A700FDD9F1 /* Supporting Files */,
+				43C7BA2E1DB62C4100FDD9F1 /* TestViewController.h */,
+				43C7BA2F1DB62C4100FDD9F1 /* TestViewController.m */,
 			);
 			path = vouchking;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C7BA301DB62C4100FDD9F1 /* TestViewController.m in Sources */,
 				43C7BA2D1DB626D500FDD9F1 /* Data.m in Sources */,
 				43C7BA0A1DB611A700FDD9F1 /* ViewController.m in Sources */,
 				43C7BA2A1DB61CF800FDD9F1 /* Promotion.m in Sources */,
