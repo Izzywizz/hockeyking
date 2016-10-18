@@ -22,17 +22,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    Data *data = [Data sharedInstance];
-    data.promotionsDict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"test", @1, nil];
+    [[Data sharedInstance] createPromotionDict];
     
-    Promotion *starbucks = [[Promotion alloc] init];
-    starbucks = [self createPromotionTestObject];
-    NSLog(@"StarBuck: %@", starbucks);
-    NSLog(@"Data Shared: %@", data);
-    
-    PListParser *parser = [[PListParser alloc] init];
-    [parser readPlistValuesFromPlist:@"promotions"];
-//    [parser createPromotionDict:[[parser plistArray] objectAtIndex:0]];
+//    Promotion *starbucks = [[Promotion alloc] init];
+//    starbucks = [self createPromotionTestObject];
+//    NSLog(@"StarBuck: %@", starbucks);
+//    
+//    PListParser *parser = [[PListParser alloc] init];
+//    [parser readPlistValuesFromPlist:@"promotions"];
 }
 
 - (void)didReceiveMemoryWarning {

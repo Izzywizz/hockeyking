@@ -13,5 +13,5 @@
 @property (nonatomic, strong) NSMutableDictionary *promotionsDict;
 
 +(instancetype) sharedInstance;
-
+-(void) createPromotionDict;
 @end

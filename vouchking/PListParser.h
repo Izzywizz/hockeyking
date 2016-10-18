@@ -10,9 +10,6 @@
 
 @interface PListParser : NSObject
 
-@property (strong, nonatomic) NSArray *plistArray;
-
 -(NSArray *) readPlistValuesFromPlist: (NSString *) plistName;
--(void) createPromotionDict: (NSDictionary*) dict;
 
 @end

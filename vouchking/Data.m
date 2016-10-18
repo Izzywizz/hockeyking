@@ -8,6 +8,7 @@
 
 #import "Data.h"
 #import "Promotion.h"
+#import "PListParser.h"
 
 @implementation Data
 
@@ -20,6 +21,19 @@
         sharedInstance = [[Data alloc] init];
     });
     return sharedInstance;
+}
+
+#pragma mark - Promotion Methods
+
+
+-(void) createPromotionDict  {
+    _promotionsDict = [NSMutableDictionary new];
+    
+    for (NSDictionary *d in [[PListParser new] readPlistValuesFromPlist:@"promotions"]) {
+        Promotion *promotionsObj = [[Promotion alloc]initWithDict:d];
+        [_promotionsDict setObject:promotionsObj forKey:[NSString stringWithFormat:@"%@", promotionsObj.promotionId]];
+    }
+    NSLog(@"Promotions Dictionary: %@", _promotionsDict);
 }
 
 
