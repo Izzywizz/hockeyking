@@ -15,6 +15,7 @@
 		43C7BA121DB611A700FDD9F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C7BA101DB611A700FDD9F1 /* LaunchScreen.storyboard */; };
 		43C7BA1D1DB611A700FDD9F1 /* vouchkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA1C1DB611A700FDD9F1 /* vouchkingTests.m */; };
 		43C7BA2A1DB61CF800FDD9F1 /* Promotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA291DB61CF800FDD9F1 /* Promotion.m */; };
+		43C7BA2D1DB626D500FDD9F1 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA2C1DB626D500FDD9F1 /* Data.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		43C7BA1E1DB611A700FDD9F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43C7BA281DB61CF800FDD9F1 /* Promotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Promotion.h; sourceTree = "<group>"; };
 		43C7BA291DB61CF800FDD9F1 /* Promotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Promotion.m; sourceTree = "<group>"; };
+		43C7BA2B1DB626D500FDD9F1 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		43C7BA2C1DB626D500FDD9F1 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 		43C7BA271DB61C8A00FDD9F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				43C7BA2B1DB626D500FDD9F1 /* Data.h */,
+				43C7BA2C1DB626D500FDD9F1 /* Data.m */,
 				43C7BA281DB61CF800FDD9F1 /* Promotion.h */,
 				43C7BA291DB61CF800FDD9F1 /* Promotion.m */,
 			);
@@ -224,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C7BA2D1DB626D500FDD9F1 /* Data.m in Sources */,
 				43C7BA0A1DB611A700FDD9F1 /* ViewController.m in Sources */,
 				43C7BA2A1DB61CF800FDD9F1 /* Promotion.m in Sources */,
 				43C7BA071DB611A700FDD9F1 /* AppDelegate.m in Sources */,

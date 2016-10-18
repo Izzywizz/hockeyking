@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Promotion.h"
+#import "Data.h"
 
 @interface ViewController ()
 
@@ -20,9 +21,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    Data *data = [Data sharedInstance];
+    data.promotionsDict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"test", @1, nil];
+    
     Promotion *starbucks = [[Promotion alloc] init];
     starbucks = [self createPromotionTestObject];
     NSLog(@"StarBuck: %@", starbucks);
+    NSLog(@"Data Shared: %@", data);
 }
 
 - (void)didReceiveMemoryWarning {
