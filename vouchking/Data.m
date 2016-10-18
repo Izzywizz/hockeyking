@@ -9,6 +9,7 @@
 #import "Data.h"
 #import "Promotion.h"
 #import "PListParser.h"
+#import "NSObject+logProperties.h"
 
 @implementation Data
 
@@ -27,11 +28,13 @@
 
 
 -(void) createPromotionDict  {
+    
     _promotionsDict = [NSMutableDictionary new];
     
     for (NSDictionary *d in [[PListParser new] readPlistValuesFromPlist:@"promotions"]) {
         Promotion *promotionsObj = [[Promotion alloc]initWithDict:d];
         [_promotionsDict setObject:promotionsObj forKey:[NSString stringWithFormat:@"%@", promotionsObj.promotionId]];
+        [promotionsObj logProperties];
     }
     NSLog(@"Promotions Dictionary: %@", _promotionsDict);
 }

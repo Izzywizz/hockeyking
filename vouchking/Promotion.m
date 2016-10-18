@@ -7,6 +7,9 @@
 //
 
 #import "Promotion.h"
+//#import <objc/runtime.h>
+
+
 
 @implementation Promotion
 
@@ -17,7 +20,8 @@
         self.promotionId = [dict valueForKey:@"promotionId"];
         self.totalPoints = [dict valueForKey:@"totalPoints"];
         self.currentRank = [dict valueForKey:@"currentRank"];
-        self.totalUsers = [dict valueForKey:@"expiryEpoch"];
+        self.totalUsers = [dict valueForKey:@"totalUsers"];
+        self.expiryEpoch = [dict valueForKey:@"expiryEpoch"];
         self.promotionDescription = [dict valueForKey:@"promotionDescription"];
         self.pointsEarned = [dict valueForKey:@"pointsEarned"];
         self.promotionNotes = [dict valueForKey:@"promotionNotes"];
@@ -29,8 +33,33 @@
     }
     
     return self;
-
 }
 
+/*
+-(Promotion*)populatePromotion:(Promotion*)p
+{
+    @autoreleasepool {
+        unsigned int numberOfProperties = 0;
+        objc_property_t *propertyArray = class_copyPropertyList([self class], &numberOfProperties);
+        for (NSUInteger i = 0; i < numberOfProperties; i++) {
+            objc_property_t property = propertyArray[i];
+            
+            NSString *name = [[NSString alloc] initWithUTF8String:property_getName(property)];
+            NSLog(@"Property %@ Value: %@", name, [self valueForKey:name]);
+            
+            NSString *selString = [NSString stringWithFormat:@"set%@", [name capitalizedString]];
+            
+            SEL s = NSSelectorFromString(selString);
+            
+            [p performSelector:s withObject:[self valueForKey:name]];
+            
+            
+        }
+        free(propertyArray);
+    }
+        
+    return p;
+}
+ */
 
 @end

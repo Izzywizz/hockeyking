@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface Promotion : NSObject
 
 @property (nonatomic, strong) NSNumber *promotionId;
@@ -25,6 +26,5 @@
 @property (nonatomic, strong) NSURL *website;
 
 -(Promotion*)initWithDict:(NSDictionary*)dict;
-
-
+//-(Promotion*)populatePromotion:(Promotion*)p; Andy Method to parse data based on the number of properties
 @end

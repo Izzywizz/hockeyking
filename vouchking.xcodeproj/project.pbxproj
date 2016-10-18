@@ -19,6 +19,7 @@
 		43C7BA301DB62C4100FDD9F1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA2F1DB62C4100FDD9F1 /* TestViewController.m */; };
 		43C7BA321DB62D6600FDD9F1 /* promotions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43C7BA311DB62D6600FDD9F1 /* promotions.plist */; };
 		43C7BA351DB634A600FDD9F1 /* PListParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA341DB634A600FDD9F1 /* PListParser.m */; };
+		43C7BA381DB644BF00FDD9F1 /* NSObject+logProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA371DB644BF00FDD9F1 /* NSObject+logProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		43C7BA311DB62D6600FDD9F1 /* promotions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = promotions.plist; sourceTree = "<group>"; };
 		43C7BA331DB634A600FDD9F1 /* PListParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PListParser.h; sourceTree = "<group>"; };
 		43C7BA341DB634A600FDD9F1 /* PListParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PListParser.m; sourceTree = "<group>"; };
+		43C7BA361DB644BF00FDD9F1 /* NSObject+logProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+logProperties.h"; sourceTree = "<group>"; };
+		43C7BA371DB644BF00FDD9F1 /* NSObject+logProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+logProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				43C7BA021DB611A700FDD9F1 /* Supporting Files */,
 				43C7BA2E1DB62C4100FDD9F1 /* TestViewController.h */,
 				43C7BA2F1DB62C4100FDD9F1 /* TestViewController.m */,
+				43C7BA361DB644BF00FDD9F1 /* NSObject+logProperties.h */,
+				43C7BA371DB644BF00FDD9F1 /* NSObject+logProperties.m */,
 			);
 			path = vouchking;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 				43C7BA2D1DB626D500FDD9F1 /* Data.m in Sources */,
 				43C7BA0A1DB611A700FDD9F1 /* ViewController.m in Sources */,
 				43C7BA2A1DB61CF800FDD9F1 /* Promotion.m in Sources */,
+				43C7BA381DB644BF00FDD9F1 /* NSObject+logProperties.m in Sources */,
 				43C7BA071DB611A700FDD9F1 /* AppDelegate.m in Sources */,
 				43C7BA041DB611A700FDD9F1 /* main.m in Sources */,
 			);
