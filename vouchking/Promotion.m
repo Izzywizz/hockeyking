@@ -13,7 +13,7 @@
 
 @implementation Promotion
 
-/** Create a promotion object  */
+/** Create a promotion object by taking in a dictionary and assigning the values assocaited the key*/
 -(Promotion*)initWithDict:(NSDictionary*)dict   {
     if (self)
     {

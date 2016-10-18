@@ -20,8 +20,6 @@
 #pragma mark - UI View Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
     [[Data sharedInstance] createPromotionDict];
 }
 
