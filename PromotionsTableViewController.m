@@ -12,6 +12,8 @@
 
 @interface PromotionsTableViewController()<UITableViewDelegate, UITableViewDataSource>
 
+@property NSArray *promoKeysArray;
+
 @end
 
 @implementation PromotionsTableViewController
@@ -20,6 +22,7 @@
 -(void)viewWillAppear:(BOOL)animated    {
     [self.navigationController setNavigationBarHidden:NO];
     NSLog(@"Promotion Count: %lu",(unsigned long)[Data sharedInstance].promotionsDict.count);
+    _promoKeysArray = [[Data sharedInstance].promotionsDict allKeys];
     [self setupTable];
 }
 
@@ -54,7 +57,14 @@
     NSString *nibName =@"PromotionTableCell";
     
     [self.tableView registerNib:[UINib nibWithNibName:nibName bundle:nil] forCellReuseIdentifier:reuseCellID];
+    
     PromotionTableCell *cell = [self.tableView dequeueReusableCellWithIdentifier:reuseCellID forIndexPath:indexPath];
+    
+    Promotion *p = [[Data sharedInstance].promotionsDict valueForKey:[_promoKeysArray objectAtIndex:indexPath.row]];
+    
+    cell.promotion = p;
+    
+    [cell configureCell];
     
     return cell;
 }

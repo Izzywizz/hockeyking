@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 
 @interface Promotion : NSObject
@@ -24,6 +25,7 @@
 @property (nonatomic, strong) NSURL *twitter;
 @property (nonatomic, strong) NSURL *facebook;
 @property (nonatomic, strong) NSURL *website;
+@property (nonatomic, strong) UIImage *gameSummaryLogo;
 
 -(Promotion*)initWithDict:(NSDictionary*)dict;
 //-(Promotion*)populatePromotion:(Promotion*)p; Andy Method to parse data based on the number of properties

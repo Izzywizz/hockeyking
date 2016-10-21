@@ -30,6 +30,7 @@
         self.twitter = [dict valueForKey:@"twitter"];
         self.facebook = [dict valueForKey:@"facebook"];
         self.website = [dict valueForKey:@"website"];
+        self.gameSummaryLogo = [UIImage imageNamed: [dict valueForKey:@"gameSummaryLogo"]];
     }
     
     return self;

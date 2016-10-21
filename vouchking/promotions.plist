@@ -3,8 +3,10 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>gameSummaryLogo</key>
+		<string>31</string>
 		<key>promotionId</key>
-		<integer>123456</integer>
+		<real>123456</real>
 		<key>totalPoints</key>
 		<integer>900</integer>
 		<key>currentRank</key>
@@ -31,8 +33,10 @@
 		<string>http://www.starbucks.co.uk</string>
 	</dict>
 	<dict>
+		<key>gameSummaryLogo</key>
+		<string>35</string>
 		<key>promotionId</key>
-		<integer>654321</integer>
+		<real>654321</real>
 		<key>totalPoints</key>
 		<integer>84</integer>
 		<key>currentRank</key>

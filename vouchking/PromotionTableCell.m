@@ -21,4 +21,12 @@
     // Configure the view for the selected state
 }
 
+-(void) configureCell
+{
+    UIImageView *iv = (UIImageView*) [self viewWithTag:31];
+    UILabel *descriptionLabel = (UILabel*)[self viewWithTag:100];
+    iv.image = _promotion.gameSummaryLogo;
+    descriptionLabel.text = _promotion.promotionDescription;
+}
+
 @end
