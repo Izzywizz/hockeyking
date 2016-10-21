@@ -16,7 +16,6 @@
 		43C7BA1D1DB611A700FDD9F1 /* vouchkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA1C1DB611A700FDD9F1 /* vouchkingTests.m */; };
 		43C7BA2A1DB61CF800FDD9F1 /* Promotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA291DB61CF800FDD9F1 /* Promotion.m */; };
 		43C7BA2D1DB626D500FDD9F1 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA2C1DB626D500FDD9F1 /* Data.m */; };
-		43C7BA301DB62C4100FDD9F1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA2F1DB62C4100FDD9F1 /* TestViewController.m */; };
 		43C7BA321DB62D6600FDD9F1 /* promotions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43C7BA311DB62D6600FDD9F1 /* promotions.plist */; };
 		43C7BA351DB634A600FDD9F1 /* PListParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA341DB634A600FDD9F1 /* PListParser.m */; };
 		43C7BA381DB644BF00FDD9F1 /* NSObject+logProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA371DB644BF00FDD9F1 /* NSObject+logProperties.m */; };
@@ -50,8 +49,6 @@
 		43C7BA291DB61CF800FDD9F1 /* Promotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Promotion.m; sourceTree = "<group>"; };
 		43C7BA2B1DB626D500FDD9F1 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		43C7BA2C1DB626D500FDD9F1 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
-		43C7BA2E1DB62C4100FDD9F1 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		43C7BA2F1DB62C4100FDD9F1 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		43C7BA311DB62D6600FDD9F1 /* promotions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = promotions.plist; sourceTree = "<group>"; };
 		43C7BA331DB634A600FDD9F1 /* PListParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PListParser.h; sourceTree = "<group>"; };
 		43C7BA341DB634A600FDD9F1 /* PListParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PListParser.m; sourceTree = "<group>"; };
@@ -110,8 +107,6 @@
 				43C7BA101DB611A700FDD9F1 /* LaunchScreen.storyboard */,
 				43C7BA131DB611A700FDD9F1 /* Info.plist */,
 				43C7BA021DB611A700FDD9F1 /* Supporting Files */,
-				43C7BA2E1DB62C4100FDD9F1 /* TestViewController.h */,
-				43C7BA2F1DB62C4100FDD9F1 /* TestViewController.m */,
 				43C7BA361DB644BF00FDD9F1 /* NSObject+logProperties.h */,
 				43C7BA371DB644BF00FDD9F1 /* NSObject+logProperties.m */,
 			);
@@ -248,7 +243,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43C7BA301DB62C4100FDD9F1 /* TestViewController.m in Sources */,
 				43C7BA351DB634A600FDD9F1 /* PListParser.m in Sources */,
 				43C7BA2D1DB626D500FDD9F1 /* Data.m in Sources */,
 				43C7BA0A1DB611A700FDD9F1 /* ViewController.m in Sources */,
@@ -334,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -373,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -446,6 +440,7 @@
 				43C7BA231DB611A700FDD9F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43C7BA241DB611A700FDD9F1 /* Build configuration list for PBXNativeTarget "vouchkingTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +449,7 @@
 				43C7BA261DB611A700FDD9F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

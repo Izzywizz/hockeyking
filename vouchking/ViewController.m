@@ -20,7 +20,8 @@
 #pragma mark - UI View Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[Data sharedInstance] createPromotionDict];
+    [[Data sharedInstance] createPromotionDict]; //Shared Data
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {
