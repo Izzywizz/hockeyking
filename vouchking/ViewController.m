@@ -18,10 +18,13 @@
 @implementation ViewController
 
 #pragma mark - UI View Methods
+
+-(void)viewWillAppear:(BOOL)animated    {
+    [self.navigationController setNavigationBarHidden:YES];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[Data sharedInstance] createPromotionDict]; //Shared Data
-    [self.navigationController setNavigationBarHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,6 +33,7 @@
 }
 - (IBAction)promotionButtonPressed:(UIButton *)sender {
     NSLog(@"Promotions Button Pressed");
+    [self performSegueWithIdentifier:@"GoToPromotions" sender:self];
 }
 - (IBAction)playButtonPressed:(UIButton *)sender {
     NSLog(@"Play Button Pressed");

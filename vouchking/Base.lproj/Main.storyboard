@@ -59,7 +59,6 @@
                                 <state key="normal" title="PROMOTIONS"/>
                                 <connections>
                                     <action selector="promotionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOi-4Z-aUW"/>
-                                    <segue destination="rm5-Lc-s0l" kind="show" id="rYU-Kt-6lL"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qef-gF-ZRv" userLabel="PLAY Image">
@@ -69,8 +68,8 @@
                                     <constraint firstAttribute="height" constant="111" id="qUf-aY-Ept"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPF-N8-uwB" userLabel="PLAY Button">
-                                <rect key="frame" x="202" y="393" width="199" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPF-N8-uwB" userLabel="PLAY Button">
+                                <rect key="frame" x="202" y="393" width="196" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="tII-Zk-QcG"/>
                                     <constraint firstAttribute="width" constant="196" id="x2i-Tj-fXI"/>
@@ -143,25 +142,28 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Eyj-TL-ayK"/>
+                    <connections>
+                        <segue destination="rm5-Lc-s0l" kind="show" identifier="GoToPromotions" id="mG1-0c-KI0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="559" y="447"/>
         </scene>
-        <!--Table View Controller-->
+        <!--PROMOTION STORE-->
         <scene sceneID="pmt-nS-RnY">
             <objects>
-                <tableViewController id="rm5-Lc-s0l" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UO5-p7-fwu">
+                <tableViewController storyboardIdentifier="PromotionsTableViewController" id="rm5-Lc-s0l" customClass="PromotionsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UO5-p7-fwu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gRJ-88-Es4">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="gRJ-88-Es4">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gRJ-88-Es4" id="XeD-e5-nbZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -171,6 +173,15 @@
                             <outlet property="delegate" destination="rm5-Lc-s0l" id="qrE-hC-D6W"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="PROMOTION STORE" id="Wxx-fB-ZBF">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="Apw-aC-Lv6">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CZj-6X-v8Q">
+                                <rect key="frame" x="20" y="11" width="11" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="29"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sW3-Ym-QLI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,6 +212,7 @@
         <image name="11" width="44" height="44"/>
         <image name="12" width="45" height="45"/>
         <image name="2" width="103" height="38"/>
+        <image name="29" width="11" height="17"/>
         <image name="3" width="375" height="667"/>
         <image name="9" width="250" height="90"/>
     </resources>
