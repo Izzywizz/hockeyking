@@ -17,7 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PromotionCell" rowHeight="258" id="qJN-ze-C9c" customClass="PromotionTableViewCell">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PromotionCell" rowHeight="258" id="qJN-ze-C9c" customClass="PromotionTableCell">
             <rect key="frame" x="0.0" y="0.0" width="340" height="140"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qJN-ze-C9c" id="H2N-WH-xnd">
@@ -104,7 +104,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="promotionDescription" destination="HQP-Tc-rvS" id="pP0-Z2-HE1"/>
-                <outlet property="promotionPointsNeeded" destination="2KO-KK-Tsn" id="JKJ-M9-nMn"/>
+                <outlet property="promotionPointsEarnedP" destination="2KO-KK-Tsn" id="eic-7p-vW2"/>
                 <outlet property="promotionTimeLeft" destination="Zzg-hM-aOv" id="88J-Ba-Rmq"/>
                 <outlet property="promotionsAvailable" destination="bar-dM-l5g" id="ReZ-Tk-Aha"/>
                 <outlet property="promotionsBackgroundImage" destination="dnM-1Q-3F9" id="UAT-9b-qwX"/>

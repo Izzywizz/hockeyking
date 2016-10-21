@@ -20,7 +20,7 @@
 		<key>promotionNotes</key>
 		<string>This is one time offer, you use it once thats it</string>
 		<key>totalPromotionsAvailable</key>
-		<integer>1</integer>
+		<integer>200</integer>
 		<key>businessName</key>
 		<string>StarBucks</string>
 		<key>twitter</key>
@@ -48,7 +48,7 @@
 		<key>promotionNotes</key>
 		<string>This offer can be used multiplen times baby</string>
 		<key>totalPromotionsAvailable</key>
-		<string>2</string>
+		<string>500</string>
 		<key>businessName</key>
 		<string>KFC</string>
 		<key>twitter</key>

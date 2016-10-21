@@ -6,9 +6,9 @@
 //  Copyright © 2016 Izzy. All rights reserved.
 //
 
-#import "PromotionTableViewCell.h"
+#import "PromotionTableCell.h"
 
-@implementation PromotionTableViewCell
+@implementation PromotionTableCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PromotionTableViewCell : UITableViewCell
+@interface PromotionTableCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *promotionsBackgroundImage;
 @property (weak, nonatomic) IBOutlet UILabel *promotionTimeLeft;
 @property (weak, nonatomic) IBOutlet UILabel *promotionDescription;
-@property (weak, nonatomic) IBOutlet UILabel *promotionPointsNeeded;
+@property (weak, nonatomic) IBOutlet UILabel *promotionPointsEarnedP;
 @property (weak, nonatomic) IBOutlet UILabel *promotionsAvailable;
 
 @end

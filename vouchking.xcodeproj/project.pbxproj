@@ -11,7 +11,7 @@
 		4321CDCC1DBA0ED3005C06AB /* LuckiestGuy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4321CDCA1DBA0ED3005C06AB /* LuckiestGuy.ttf */; };
 		4321CDDD1DBA2195005C06AB /* PromotionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321CDDC1DBA2195005C06AB /* PromotionsTableViewController.m */; };
 		4321CDE01DBA220F005C06AB /* PromotionTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4321CDDF1DBA220F005C06AB /* PromotionTableCell.xib */; };
-		4321CDE31DBA2634005C06AB /* PromotionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321CDE21DBA2634005C06AB /* PromotionTableViewCell.m */; };
+		4321CDE31DBA2634005C06AB /* PromotionTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321CDE21DBA2634005C06AB /* PromotionTableCell.m */; };
 		4321CDE81DBA2934005C06AB /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4321CDE51DBA2934005C06AB /* Montserrat-Bold.ttf */; };
 		4321CDE91DBA2934005C06AB /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4321CDE61DBA2934005C06AB /* Montserrat-Regular.ttf */; };
 		4321CDEA1DBA2934005C06AB /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4321CDE71DBA2934005C06AB /* OFL.txt */; };
@@ -45,8 +45,8 @@
 		4321CDDB1DBA2195005C06AB /* PromotionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PromotionsTableViewController.h; path = ../PromotionsTableViewController.h; sourceTree = "<group>"; };
 		4321CDDC1DBA2195005C06AB /* PromotionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PromotionsTableViewController.m; path = ../PromotionsTableViewController.m; sourceTree = "<group>"; };
 		4321CDDF1DBA220F005C06AB /* PromotionTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromotionTableCell.xib; sourceTree = "<group>"; };
-		4321CDE11DBA2634005C06AB /* PromotionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromotionTableViewCell.h; sourceTree = "<group>"; };
-		4321CDE21DBA2634005C06AB /* PromotionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromotionTableViewCell.m; sourceTree = "<group>"; };
+		4321CDE11DBA2634005C06AB /* PromotionTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromotionTableCell.h; sourceTree = "<group>"; };
+		4321CDE21DBA2634005C06AB /* PromotionTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromotionTableCell.m; sourceTree = "<group>"; };
 		4321CDE51DBA2934005C06AB /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		4321CDE61DBA2934005C06AB /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		4321CDE71DBA2934005C06AB /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
@@ -114,8 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				4321CDDF1DBA220F005C06AB /* PromotionTableCell.xib */,
-				4321CDE11DBA2634005C06AB /* PromotionTableViewCell.h */,
-				4321CDE21DBA2634005C06AB /* PromotionTableViewCell.m */,
+				4321CDE11DBA2634005C06AB /* PromotionTableCell.h */,
+				4321CDE21DBA2634005C06AB /* PromotionTableCell.m */,
 			);
 			name = "Custom Table Cells";
 			sourceTree = "<group>";
@@ -317,7 +317,7 @@
 				43C7BA381DB644BF00FDD9F1 /* NSObject+logProperties.m in Sources */,
 				43C7BA071DB611A700FDD9F1 /* AppDelegate.m in Sources */,
 				43C7BA041DB611A700FDD9F1 /* main.m in Sources */,
-				4321CDE31DBA2634005C06AB /* PromotionTableViewCell.m in Sources */,
+				4321CDE31DBA2634005C06AB /* PromotionTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
