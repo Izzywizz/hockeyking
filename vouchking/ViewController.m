@@ -28,5 +28,17 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)promotionButtonPressed:(UIButton *)sender {
+    NSLog(@"Promotions Button Pressed");
+}
+- (IBAction)playButtonPressed:(UIButton *)sender {
+    NSLog(@"Play Button Pressed");
+}
+- (IBAction)infoButtonPressed:(UIButton *)sender {
+    NSLog(@"Info Button Presssed");
+}
+- (IBAction)termsButtonPressed:(UIButton *)sender {
+    NSLog(@"Terms Button Pressed");
+}
 
 @end

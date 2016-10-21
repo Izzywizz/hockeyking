@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4321CDCB1DBA0ED3005C06AB /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4321CDC91DBA0ED3005C06AB /* LICENSE.txt */; };
+		4321CDCC1DBA0ED3005C06AB /* LuckiestGuy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4321CDCA1DBA0ED3005C06AB /* LuckiestGuy.ttf */; };
 		43C7BA041DB611A700FDD9F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA031DB611A700FDD9F1 /* main.m */; };
 		43C7BA071DB611A700FDD9F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA061DB611A700FDD9F1 /* AppDelegate.m */; };
 		43C7BA0A1DB611A700FDD9F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA091DB611A700FDD9F1 /* ViewController.m */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4321CDC91DBA0ED3005C06AB /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		4321CDCA1DBA0ED3005C06AB /* LuckiestGuy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LuckiestGuy.ttf; sourceTree = "<group>"; };
 		43C7B9FF1DB611A700FDD9F1 /* vouchking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vouchking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C7BA031DB611A700FDD9F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43C7BA051DB611A700FDD9F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,9 +78,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4321CDC81DBA0ED3005C06AB /* Luckiest_Guy */ = {
+			isa = PBXGroup;
+			children = (
+				4321CDC91DBA0ED3005C06AB /* LICENSE.txt */,
+				4321CDCA1DBA0ED3005C06AB /* LuckiestGuy.ttf */,
+			);
+			path = Luckiest_Guy;
+			sourceTree = "<group>";
+		};
+		4321CDCD1DBA0ED7005C06AB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4321CDC81DBA0ED3005C06AB /* Luckiest_Guy */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		43C7B9F61DB611A700FDD9F1 = {
 			isa = PBXGroup;
 			children = (
+				4321CDCD1DBA0ED7005C06AB /* Fonts */,
 				43C7BA011DB611A700FDD9F1 /* vouchking */,
 				43C7BA1B1DB611A700FDD9F1 /* vouchkingTests */,
 				43C7BA001DB611A700FDD9F1 /* Products */,
@@ -225,6 +247,8 @@
 				43C7BA321DB62D6600FDD9F1 /* promotions.plist in Resources */,
 				43C7BA121DB611A700FDD9F1 /* LaunchScreen.storyboard in Resources */,
 				43C7BA0F1DB611A700FDD9F1 /* Assets.xcassets in Resources */,
+				4321CDCB1DBA0ED3005C06AB /* LICENSE.txt in Resources */,
+				4321CDCC1DBA0ED3005C06AB /* LuckiestGuy.ttf in Resources */,
 				43C7BA0D1DB611A700FDD9F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
