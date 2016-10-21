@@ -26,6 +26,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="3dx-RG-ZsN" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.45882352939999999" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.12156862745098039" green="0.32941176470588235" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="pHB-tq-ahw" userLabel="Logo">
                                 <rect key="frame" x="168" y="173" width="265" height="92"/>
@@ -58,6 +59,7 @@
                                 <state key="normal" title="PROMOTIONS"/>
                                 <connections>
                                     <action selector="promotionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOi-4Z-aUW"/>
+                                    <segue destination="rm5-Lc-s0l" kind="show" id="rYU-Kt-6lL"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qef-gF-ZRv" userLabel="PLAY Image">
@@ -145,6 +147,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="559" y="447"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="pmt-nS-RnY">
+            <objects>
+                <tableViewController id="rm5-Lc-s0l" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UO5-p7-fwu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gRJ-88-Es4">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gRJ-88-Es4" id="XeD-e5-nbZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rm5-Lc-s0l" id="6l5-6y-MAc"/>
+                            <outlet property="delegate" destination="rm5-Lc-s0l" id="qrE-hC-D6W"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sW3-Ym-QLI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1346" y="447"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TW4-Ev-zog">
