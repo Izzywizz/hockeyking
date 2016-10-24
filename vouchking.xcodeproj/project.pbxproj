@@ -18,11 +18,6 @@
 		43BAC37F1DBDFC1300C8A518 /* UnderlayNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC37E1DBDFC1300C8A518 /* UnderlayNavigationBar.m */; };
 		43BAC3851DBE25D900C8A518 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC3841DBE25D900C8A518 /* CustomNavigationController.m */; };
 		43BAC3891DBE3D3900C8A518 /* TermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC3881DBE3D3900C8A518 /* TermsViewController.m */; };
-		43BAC3C21DBE4A9A00C8A518 /* BRCommonMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC3B51DBE4A9A00C8A518 /* BRCommonMethods.m */; };
-		43BAC3C31DBE4A9A00C8A518 /* BRScrollBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC3B81DBE4A9A00C8A518 /* BRScrollBarController.m */; };
-		43BAC3C41DBE4A9A00C8A518 /* BRScrollBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC3BB1DBE4A9A00C8A518 /* BRScrollBarView.m */; };
-		43BAC3C51DBE4A9A00C8A518 /* BRScrollHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC3BE1DBE4A9A00C8A518 /* BRScrollHandle.m */; };
-		43BAC3C61DBE4A9A00C8A518 /* BRScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC3C11DBE4A9A00C8A518 /* BRScrollLabel.m */; };
 		43C7BA041DB611A700FDD9F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA031DB611A700FDD9F1 /* main.m */; };
 		43C7BA071DB611A700FDD9F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA061DB611A700FDD9F1 /* AppDelegate.m */; };
 		43C7BA0A1DB611A700FDD9F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA091DB611A700FDD9F1 /* ViewController.m */; };
@@ -65,16 +60,6 @@
 		43BAC3841DBE25D900C8A518 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
 		43BAC3871DBE3D3900C8A518 /* TermsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TermsViewController.h; sourceTree = "<group>"; };
 		43BAC3881DBE3D3900C8A518 /* TermsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TermsViewController.m; sourceTree = "<group>"; };
-		43BAC3B41DBE4A9A00C8A518 /* BRCommonMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRCommonMethods.h; sourceTree = "<group>"; };
-		43BAC3B51DBE4A9A00C8A518 /* BRCommonMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRCommonMethods.m; sourceTree = "<group>"; };
-		43BAC3B71DBE4A9A00C8A518 /* BRScrollBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRScrollBarController.h; sourceTree = "<group>"; };
-		43BAC3B81DBE4A9A00C8A518 /* BRScrollBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRScrollBarController.m; sourceTree = "<group>"; };
-		43BAC3BA1DBE4A9A00C8A518 /* BRScrollBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRScrollBarView.h; sourceTree = "<group>"; };
-		43BAC3BB1DBE4A9A00C8A518 /* BRScrollBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRScrollBarView.m; sourceTree = "<group>"; };
-		43BAC3BD1DBE4A9A00C8A518 /* BRScrollHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRScrollHandle.h; sourceTree = "<group>"; };
-		43BAC3BE1DBE4A9A00C8A518 /* BRScrollHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRScrollHandle.m; sourceTree = "<group>"; };
-		43BAC3C01DBE4A9A00C8A518 /* BRScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRScrollLabel.h; sourceTree = "<group>"; };
-		43BAC3C11DBE4A9A00C8A518 /* BRScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRScrollLabel.m; sourceTree = "<group>"; };
 		43C7B9FF1DB611A700FDD9F1 /* vouchking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vouchking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C7BA031DB611A700FDD9F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43C7BA051DB611A700FDD9F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -158,68 +143,10 @@
 		43BAC3861DBE283600C8A518 /* Helper Classes */ = {
 			isa = PBXGroup;
 			children = (
-				43BAC3B21DBE4A9A00C8A518 /* BRScrollBarClasses */,
 				43BAC3831DBE25D900C8A518 /* CustomNavigationController.h */,
 				43BAC3841DBE25D900C8A518 /* CustomNavigationController.m */,
 			);
 			name = "Helper Classes";
-			sourceTree = "<group>";
-		};
-		43BAC3B21DBE4A9A00C8A518 /* BRScrollBarClasses */ = {
-			isa = PBXGroup;
-			children = (
-				43BAC3B31DBE4A9A00C8A518 /* BRCommmon */,
-				43BAC3B61DBE4A9A00C8A518 /* BRScrollBarController */,
-				43BAC3B91DBE4A9A00C8A518 /* BRScrollBarView */,
-				43BAC3BC1DBE4A9A00C8A518 /* BRScrollHandle */,
-				43BAC3BF1DBE4A9A00C8A518 /* BRScrollLabel */,
-			);
-			path = BRScrollBarClasses;
-			sourceTree = "<group>";
-		};
-		43BAC3B31DBE4A9A00C8A518 /* BRCommmon */ = {
-			isa = PBXGroup;
-			children = (
-				43BAC3B41DBE4A9A00C8A518 /* BRCommonMethods.h */,
-				43BAC3B51DBE4A9A00C8A518 /* BRCommonMethods.m */,
-			);
-			path = BRCommmon;
-			sourceTree = "<group>";
-		};
-		43BAC3B61DBE4A9A00C8A518 /* BRScrollBarController */ = {
-			isa = PBXGroup;
-			children = (
-				43BAC3B71DBE4A9A00C8A518 /* BRScrollBarController.h */,
-				43BAC3B81DBE4A9A00C8A518 /* BRScrollBarController.m */,
-			);
-			path = BRScrollBarController;
-			sourceTree = "<group>";
-		};
-		43BAC3B91DBE4A9A00C8A518 /* BRScrollBarView */ = {
-			isa = PBXGroup;
-			children = (
-				43BAC3BA1DBE4A9A00C8A518 /* BRScrollBarView.h */,
-				43BAC3BB1DBE4A9A00C8A518 /* BRScrollBarView.m */,
-			);
-			path = BRScrollBarView;
-			sourceTree = "<group>";
-		};
-		43BAC3BC1DBE4A9A00C8A518 /* BRScrollHandle */ = {
-			isa = PBXGroup;
-			children = (
-				43BAC3BD1DBE4A9A00C8A518 /* BRScrollHandle.h */,
-				43BAC3BE1DBE4A9A00C8A518 /* BRScrollHandle.m */,
-			);
-			path = BRScrollHandle;
-			sourceTree = "<group>";
-		};
-		43BAC3BF1DBE4A9A00C8A518 /* BRScrollLabel */ = {
-			isa = PBXGroup;
-			children = (
-				43BAC3C01DBE4A9A00C8A518 /* BRScrollLabel.h */,
-				43BAC3C11DBE4A9A00C8A518 /* BRScrollLabel.m */,
-			);
-			path = BRScrollLabel;
 			sourceTree = "<group>";
 		};
 		43C7B9F61DB611A700FDD9F1 = {
@@ -413,16 +340,11 @@
 				43C7BA0A1DB611A700FDD9F1 /* ViewController.m in Sources */,
 				4321CDDD1DBA2195005C06AB /* PromotionsTableViewController.m in Sources */,
 				43BAC3851DBE25D900C8A518 /* CustomNavigationController.m in Sources */,
-				43BAC3C31DBE4A9A00C8A518 /* BRScrollBarController.m in Sources */,
 				43BAC3891DBE3D3900C8A518 /* TermsViewController.m in Sources */,
-				43BAC3C41DBE4A9A00C8A518 /* BRScrollBarView.m in Sources */,
 				43C7BA2A1DB61CF800FDD9F1 /* Promotion.m in Sources */,
-				43BAC3C61DBE4A9A00C8A518 /* BRScrollLabel.m in Sources */,
-				43BAC3C51DBE4A9A00C8A518 /* BRScrollHandle.m in Sources */,
 				43C7BA381DB644BF00FDD9F1 /* NSObject+logProperties.m in Sources */,
 				43C7BA071DB611A700FDD9F1 /* AppDelegate.m in Sources */,
 				43C7BA041DB611A700FDD9F1 /* main.m in Sources */,
-				43BAC3C21DBE4A9A00C8A518 /* BRCommonMethods.m in Sources */,
 				4321CDE31DBA2634005C06AB /* PromotionTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

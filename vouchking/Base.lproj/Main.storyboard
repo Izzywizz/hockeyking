@@ -8,6 +8,10 @@
         <mutableArray key="LuckiestGuy.ttf">
             <string>LuckiestGuy-Regular</string>
             <string>LuckiestGuy-Regular</string>
+            <string>LuckiestGuy-Regular</string>
+        </mutableArray>
+        <mutableArray key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -179,28 +183,38 @@
                                             <action selector="termsButtonPressed:" destination="Ux7-cv-Dl9" eventType="touchUpInside" id="Zxw-Zj-DU3"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XdG-BM-i9T">
-                                        <rect key="frame" x="8" y="36" width="544" height="516"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TERMS AND CONDITIONS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="9h7-6o-6Ek">
+                                        <rect key="frame" x="189" y="44" width="182" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="182" id="MQd-cU-aUM"/>
+                                            <constraint firstAttribute="height" constant="21" id="xQV-f5-d7I"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p9b-7x-YKO">
+                                        <rect key="frame" x="22" y="73" width="524" height="469"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="XdG-BM-i9T" secondAttribute="trailing" constant="8" id="3l5-W6-alj"/>
+                                    <constraint firstAttribute="trailing" secondItem="p9b-7x-YKO" secondAttribute="trailing" constant="14" id="9Sy-Du-kbe"/>
                                     <constraint firstAttribute="bottom" secondItem="CY4-wv-ky9" secondAttribute="bottom" id="FHh-K2-TbP"/>
                                     <constraint firstItem="CY4-wv-ky9" firstAttribute="leading" secondItem="ZfL-rj-rMg" secondAttribute="leading" id="K8d-rN-bPj"/>
                                     <constraint firstItem="0Lg-NI-l0l" firstAttribute="top" secondItem="ZfL-rj-rMg" secondAttribute="top" id="KxS-FX-TWg"/>
                                     <constraint firstItem="0Lg-NI-l0l" firstAttribute="centerX" secondItem="ZfL-rj-rMg" secondAttribute="centerX" id="P0p-0P-H7r"/>
-                                    <constraint firstAttribute="bottom" secondItem="XdG-BM-i9T" secondAttribute="bottom" constant="8" id="Y3i-VZ-nj5"/>
+                                    <constraint firstItem="9h7-6o-6Ek" firstAttribute="top" secondItem="0Lg-NI-l0l" secondAttribute="bottom" constant="16" id="Zyq-YQ-Iql"/>
+                                    <constraint firstItem="p9b-7x-YKO" firstAttribute="top" secondItem="9h7-6o-6Ek" secondAttribute="bottom" constant="8" id="eRi-dM-2hw"/>
                                     <constraint firstItem="CY4-wv-ky9" firstAttribute="top" secondItem="ZfL-rj-rMg" secondAttribute="top" id="fSN-bT-7Fk"/>
-                                    <constraint firstItem="XdG-BM-i9T" firstAttribute="centerY" secondItem="ZfL-rj-rMg" secondAttribute="centerY" constant="14" id="jsH-U5-kEd"/>
-                                    <constraint firstItem="XdG-BM-i9T" firstAttribute="centerX" secondItem="ZfL-rj-rMg" secondAttribute="centerX" id="occ-ry-EK3"/>
-                                    <constraint firstItem="XdG-BM-i9T" firstAttribute="leading" secondItem="ZfL-rj-rMg" secondAttribute="leading" constant="8" id="t0s-bt-Yh1"/>
+                                    <constraint firstAttribute="bottom" secondItem="p9b-7x-YKO" secondAttribute="bottom" constant="18" id="qfI-WD-KIf"/>
+                                    <constraint firstItem="p9b-7x-YKO" firstAttribute="leading" secondItem="ZfL-rj-rMg" secondAttribute="leading" constant="22" id="vJn-Sg-J0P"/>
+                                    <constraint firstItem="9h7-6o-6Ek" firstAttribute="centerX" secondItem="ZfL-rj-rMg" secondAttribute="centerX" id="vZP-5R-Ai3"/>
                                     <constraint firstAttribute="trailing" secondItem="CY4-wv-ky9" secondAttribute="trailing" id="xUb-gV-w2j"/>
-                                    <constraint firstItem="XdG-BM-i9T" firstAttribute="top" secondItem="ZfL-rj-rMg" secondAttribute="top" constant="36" id="yMG-1a-Vb2"/>
                                 </constraints>
                             </view>
                         </subviews>
