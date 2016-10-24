@@ -17,7 +17,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 
@@ -28,9 +28,52 @@
     UIImageView *iv = (UIImageView*) [self viewWithTag:31];
     UILabel *descriptionLabel = (UILabel*)[self viewWithTag:100];
     UILabel *pointsEarned = (UILabel*)[self viewWithTag:90];
+    UILabel *promotionTimeLeft = (UILabel *)[self viewWithTag:80];
     iv.image = _promotion.gameSummaryLogo;
     descriptionLabel.text = _promotion.promotionDescription;
-    pointsEarned.text = [NSString stringWithFormat:@"%@/500", _promotion.pointsEarned]; //Totalout is hardset
+    pointsEarned.text = [NSString stringWithFormat:@"%@/500", _promotion.pointsEarned]; //Total points Earned is 500 and hardset
+    promotionTimeLeft.text = [NSString stringWithFormat:@"%@ Left", [self convertToEpochTime:_promotion.expiryEpoch]]; //Calcualtions needed to set whether it is DAys/ Hours
+    
+}
+
+/** Method that takes the current time and the date set within the Promotion object itself and returns the difference as string
+ The grammar format is handle by another method below which takes into account Days/ day or Hours/ hour. 
+ The method also account for daylight saving time*/
+-(NSString *) convertToEpochTime: (NSNumber *) epochTime    {
+    
+    NSCalendar *c = [NSCalendar currentCalendar];
+    double doubleTime = [epochTime doubleValue];
+    NSDate *futureDate = [NSDate dateWithTimeIntervalSince1970:doubleTime];
+    NSDate *dateNow = [NSDate date];
+    
+    NSDateComponents *components = [c components:NSCalendarUnitHour fromDate:dateNow toDate:futureDate options:0];
+    NSInteger diff = components.hour;
+    if (diff < 24) {
+        NSLog(@"Time: Hours: %ld", (long)diff);
+        return  [self isTheTimeLeftInDays:NO andTimeLeft:diff];
+    } else  {
+        NSDateComponents *components = [c components:NSCalendarUnitDay fromDate:dateNow toDate:futureDate options:0];
+        NSInteger diff = components.day;
+        NSLog(@"Time: Days: %ld", (long)diff);
+        return [self isTheTimeLeftInDays:YES andTimeLeft:diff];
+    }
+}
+
+-(NSString *) isTheTimeLeftInDays:(BOOL) isTimeDifferenceDay andTimeLeft:(NSInteger) timeLeft{
+    
+    if (isTimeDifferenceDay) {
+        if (timeLeft <= 1) {
+            return [NSString stringWithFormat:@"%ld Day", timeLeft];
+        } else  {
+            return [NSString stringWithFormat:@"%ld Days", timeLeft];
+        }
+    } else  {
+        if (timeLeft <= 1) {
+            return [NSString stringWithFormat:@"%ld Hour", timeLeft];
+        } else  {
+            return [NSString stringWithFormat:@"%ld Hours", timeLeft];
+        }
+    }
 }
 
 @end

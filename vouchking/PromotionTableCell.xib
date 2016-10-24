@@ -74,7 +74,7 @@
                         <color key="textColor" red="0.1215686275" green="0.3294117647" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="bar-dM-l5g" userLabel="Promotions Available">
+                    <label opaque="NO" userInteractionEnabled="NO" tag="70" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="bar-dM-l5g" userLabel="Promotions Available">
                         <rect key="frame" x="287" y="103" width="37" height="21.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="37" id="7LB-6T-nth"/>
@@ -84,8 +84,8 @@
                         <color key="textColor" red="0.1215686275" green="0.3294117647" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Hours Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzg-hM-aOv">
-                        <rect key="frame" x="14" y="114" width="74" height="14"/>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="80" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Hours Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzg-hM-aOv" userLabel="Promotion Time Left">
+                        <rect key="frame" x="13" y="114" width="74" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="74" id="FR1-mQ-36E"/>
                             <constraint firstAttribute="height" constant="14" id="RWJ-ye-F3Y"/>
@@ -123,7 +123,7 @@
                     <constraint firstItem="bar-dM-l5g" firstAttribute="centerX" secondItem="dHx-OH-VgE" secondAttribute="centerX" constant="0.5" id="ppQ-BL-fO4"/>
                     <constraint firstAttribute="trailing" secondItem="bar-dM-l5g" secondAttribute="trailing" constant="16" id="spV-f9-yCg"/>
                     <constraint firstAttribute="bottom" secondItem="Zzg-hM-aOv" secondAttribute="bottom" constant="11.5" id="uVw-ul-gUS"/>
-                    <constraint firstItem="Zzg-hM-aOv" firstAttribute="leading" secondItem="H2N-WH-xnd" secondAttribute="leading" constant="14" id="vAL-F9-2ik"/>
+                    <constraint firstItem="Zzg-hM-aOv" firstAttribute="leading" secondItem="H2N-WH-xnd" secondAttribute="leading" constant="13" id="vAL-F9-2ik"/>
                     <constraint firstAttribute="bottom" secondItem="dHx-OH-VgE" secondAttribute="bottom" constant="5.5" id="vK9-QM-Y0l"/>
                     <constraint firstItem="dnM-1Q-3F9" firstAttribute="centerX" secondItem="H2N-WH-xnd" secondAttribute="centerX" id="yZ0-zc-U1W"/>
                     <constraint firstAttribute="bottom" secondItem="bar-dM-l5g" secondAttribute="bottom" constant="15" id="yvl-rt-RXC"/>
