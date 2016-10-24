@@ -15,6 +15,7 @@
 		4321CDE81DBA2934005C06AB /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4321CDE51DBA2934005C06AB /* Montserrat-Bold.ttf */; };
 		4321CDE91DBA2934005C06AB /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4321CDE61DBA2934005C06AB /* Montserrat-Regular.ttf */; };
 		4321CDEA1DBA2934005C06AB /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4321CDE71DBA2934005C06AB /* OFL.txt */; };
+		43BAC37F1DBDFC1300C8A518 /* UnderlayNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC37E1DBDFC1300C8A518 /* UnderlayNavigationBar.m */; };
 		43C7BA041DB611A700FDD9F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA031DB611A700FDD9F1 /* main.m */; };
 		43C7BA071DB611A700FDD9F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA061DB611A700FDD9F1 /* AppDelegate.m */; };
 		43C7BA0A1DB611A700FDD9F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA091DB611A700FDD9F1 /* ViewController.m */; };
@@ -50,6 +51,8 @@
 		4321CDE51DBA2934005C06AB /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		4321CDE61DBA2934005C06AB /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		4321CDE71DBA2934005C06AB /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		43BAC37D1DBDFC1300C8A518 /* UnderlayNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderlayNavigationBar.h; sourceTree = "<group>"; };
+		43BAC37E1DBDFC1300C8A518 /* UnderlayNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnderlayNavigationBar.m; sourceTree = "<group>"; };
 		43C7B9FF1DB611A700FDD9F1 /* vouchking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vouchking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C7BA031DB611A700FDD9F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43C7BA051DB611A700FDD9F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 				43C7BA0B1DB611A700FDD9F1 /* Main.storyboard */,
 				4321CDDB1DBA2195005C06AB /* PromotionsTableViewController.h */,
 				4321CDDC1DBA2195005C06AB /* PromotionsTableViewController.m */,
+				43BAC37D1DBDFC1300C8A518 /* UnderlayNavigationBar.h */,
+				43BAC37E1DBDFC1300C8A518 /* UnderlayNavigationBar.m */,
 				43C7BA0E1DB611A700FDD9F1 /* Assets.xcassets */,
 				43C7BA101DB611A700FDD9F1 /* LaunchScreen.storyboard */,
 				43C7BA131DB611A700FDD9F1 /* Info.plist */,
@@ -310,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C7BA351DB634A600FDD9F1 /* PListParser.m in Sources */,
+				43BAC37F1DBDFC1300C8A518 /* UnderlayNavigationBar.m in Sources */,
 				43C7BA2D1DB626D500FDD9F1 /* Data.m in Sources */,
 				43C7BA0A1DB611A700FDD9F1 /* ViewController.m in Sources */,
 				4321CDDD1DBA2195005C06AB /* PromotionsTableViewController.m in Sources */,

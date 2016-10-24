@@ -9,6 +9,7 @@
 #import "PromotionsTableViewController.h"
 #import "Data.h"
 #import "PromotionTableCell.h"
+#import "UnderlayNavigationBar.h"
 
 @interface PromotionsTableViewController()<UITableViewDelegate, UITableViewDataSource>
 
@@ -26,11 +27,26 @@
     [self setupTable];
 }
 
+-(void) viewDidLoad {
+    [self setupNavigationController];
+}
+
 #pragma mark - Helper Methods
 -(void) setupTable  {
     self.tableView.allowsSelectionDuringEditing=YES;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 258;
+}
+
+-(void) setupNavigationController   {
+    NSArray *ver = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
+    if ([[ver objectAtIndex:0] intValue] >= 7) {
+        // iOS 7.0 or later
+        self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:31.0/255.0 green:84.0/255.0 blue:118.0/255.0 alpha:1.0];
+        [self.navigationController.navigationBar
+         setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+        self.navigationController.navigationBar.translucent = NO;
+    }
 }
 
 #pragma mark - TableView <Delgate>
@@ -59,14 +75,18 @@
     [self.tableView registerNib:[UINib nibWithNibName:nibName bundle:nil] forCellReuseIdentifier:reuseCellID];
     
     PromotionTableCell *cell = [self.tableView dequeueReusableCellWithIdentifier:reuseCellID forIndexPath:indexPath];
-    
-    Promotion *p = [[Data sharedInstance].promotionsDict valueForKey:[_promoKeysArray objectAtIndex:indexPath.row]];
-    
-    cell.promotion = p;
+    Promotion *p = [[Data sharedInstance].promotionsDict valueForKey:[_promoKeysArray objectAtIndex:indexPath.row]]; //Access the object associated the ID
+    cell.promotion = p; //reference the object associated with the Cell
     
     [cell configureCell];
     
     return cell;
 }
+
+#pragma mark - Action Method
+- (IBAction)backButtonPressed:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 @end

@@ -24,8 +24,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="340" height="139.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" tag="31" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="35" translatesAutoresizingMaskIntoConstraints="NO" id="dnM-1Q-3F9" userLabel="Background Image">
-                        <rect key="frame" x="0.0" y="0.5" width="340" height="139.5"/>
+                    <imageView userInteractionEnabled="NO" tag="31" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="35" translatesAutoresizingMaskIntoConstraints="NO" id="dnM-1Q-3F9" userLabel="Background Image">
+                        <rect key="frame" x="0.0" y="0.5" width="340" height="138.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="340" id="X6i-h8-0oK"/>
                             <constraint firstAttribute="width" constant="340" id="e9c-YL-iZ5"/>
@@ -40,7 +40,7 @@
                         </variation>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 FREE COFFESS AT LOCAL STORE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="HQP-Tc-rvS">
-                        <rect key="frame" x="8" y="60" width="324" height="40"/>
+                        <rect key="frame" x="8" y="65" width="324" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="1uF-4C-hIM"/>
                             <constraint firstAttribute="width" constant="200" id="SXc-yF-RXW"/>
@@ -54,7 +54,7 @@
                             </mask>
                         </variation>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="083/500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KO-KK-Tsn" userLabel="Points Needed">
+                    <label opaque="NO" userInteractionEnabled="NO" tag="90" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="083/500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KO-KK-Tsn" userLabel="Points Needed">
                         <rect key="frame" x="140" y="117" width="60" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="1ma-oQ-0Uj"/>
@@ -85,7 +85,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Hours Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzg-hM-aOv">
-                        <rect key="frame" x="8" y="117" width="74" height="14"/>
+                        <rect key="frame" x="14" y="114" width="74" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="74" id="FR1-mQ-36E"/>
                             <constraint firstAttribute="height" constant="14" id="RWJ-ye-F3Y"/>
@@ -118,12 +118,12 @@
                     <constraint firstItem="Zzg-hM-aOv" firstAttribute="leading" secondItem="H2N-WH-xnd" secondAttribute="leading" constant="8" id="j3F-Gg-pxd"/>
                     <constraint firstItem="dnM-1Q-3F9" firstAttribute="top" secondItem="H2N-WH-xnd" secondAttribute="top" id="kVc-PB-7HB"/>
                     <constraint firstAttribute="bottom" secondItem="2KO-KK-Tsn" secondAttribute="bottom" constant="8.5" id="lvw-Wh-Mhn"/>
-                    <constraint firstItem="HQP-Tc-rvS" firstAttribute="top" secondItem="H2N-WH-xnd" secondAttribute="top" constant="60" id="moq-Kz-dKE"/>
+                    <constraint firstItem="HQP-Tc-rvS" firstAttribute="top" secondItem="H2N-WH-xnd" secondAttribute="top" constant="65" id="moq-Kz-dKE"/>
                     <constraint firstItem="HQP-Tc-rvS" firstAttribute="centerY" secondItem="H2N-WH-xnd" secondAttribute="centerY" constant="10" id="pPe-is-pgG"/>
                     <constraint firstItem="bar-dM-l5g" firstAttribute="centerX" secondItem="dHx-OH-VgE" secondAttribute="centerX" constant="0.5" id="ppQ-BL-fO4"/>
                     <constraint firstAttribute="trailing" secondItem="bar-dM-l5g" secondAttribute="trailing" constant="16" id="spV-f9-yCg"/>
-                    <constraint firstAttribute="bottom" secondItem="Zzg-hM-aOv" secondAttribute="bottom" constant="8" id="uVw-ul-gUS"/>
-                    <constraint firstItem="Zzg-hM-aOv" firstAttribute="leading" secondItem="H2N-WH-xnd" secondAttribute="leading" constant="8" id="vAL-F9-2ik"/>
+                    <constraint firstAttribute="bottom" secondItem="Zzg-hM-aOv" secondAttribute="bottom" constant="11.5" id="uVw-ul-gUS"/>
+                    <constraint firstItem="Zzg-hM-aOv" firstAttribute="leading" secondItem="H2N-WH-xnd" secondAttribute="leading" constant="14" id="vAL-F9-2ik"/>
                     <constraint firstAttribute="bottom" secondItem="dHx-OH-VgE" secondAttribute="bottom" constant="5.5" id="vK9-QM-Y0l"/>
                     <constraint firstItem="dnM-1Q-3F9" firstAttribute="centerX" secondItem="H2N-WH-xnd" secondAttribute="centerX" id="yZ0-zc-U1W"/>
                     <constraint firstAttribute="bottom" secondItem="bar-dM-l5g" secondAttribute="bottom" constant="15" id="yvl-rt-RXC"/>

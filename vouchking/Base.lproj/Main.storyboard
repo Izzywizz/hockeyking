@@ -180,6 +180,9 @@
                                 <rect key="frame" x="20" y="11" width="11" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="29"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="rm5-Lc-s0l" eventType="touchUpInside" id="SE0-Fj-UvT"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
