@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TermsViewController : UIViewController <UIScrollViewDelegate>
-
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@interface TermsViewController : UIViewController
 
 @end
