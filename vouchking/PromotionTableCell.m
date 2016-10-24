@@ -64,15 +64,15 @@
     
     if (isTimeDifferenceDay) {
         if (timeLeft <= 1) {
-            return [NSString stringWithFormat:@"%ld Day", timeLeft];
+            return [NSString stringWithFormat:@"%ld Day", (long)timeLeft];
         } else  {
-            return [NSString stringWithFormat:@"%ld Days", timeLeft];
+            return [NSString stringWithFormat:@"%ld Days", (long)timeLeft];
         }
     } else  {
         if (timeLeft <= 1) {
-            return [NSString stringWithFormat:@"%ld Hour", timeLeft];
+            return [NSString stringWithFormat:@"%ld Hour", (long)timeLeft];
         } else  {
-            return [NSString stringWithFormat:@"%ld Hours", timeLeft];
+            return [NSString stringWithFormat:@"%ld Hours", (long)timeLeft];
         }
     }
 }

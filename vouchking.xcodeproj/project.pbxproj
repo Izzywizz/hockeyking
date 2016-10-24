@@ -17,6 +17,7 @@
 		4321CDEA1DBA2934005C06AB /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4321CDE71DBA2934005C06AB /* OFL.txt */; };
 		43BAC37F1DBDFC1300C8A518 /* UnderlayNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC37E1DBDFC1300C8A518 /* UnderlayNavigationBar.m */; };
 		43BAC3851DBE25D900C8A518 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC3841DBE25D900C8A518 /* CustomNavigationController.m */; };
+		43BAC3891DBE3D3900C8A518 /* TermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC3881DBE3D3900C8A518 /* TermsViewController.m */; };
 		43C7BA041DB611A700FDD9F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA031DB611A700FDD9F1 /* main.m */; };
 		43C7BA071DB611A700FDD9F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA061DB611A700FDD9F1 /* AppDelegate.m */; };
 		43C7BA0A1DB611A700FDD9F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA091DB611A700FDD9F1 /* ViewController.m */; };
@@ -57,6 +58,8 @@
 		43BAC3801DBE205700C8A518 /* vouchking-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vouchking-Bridging-Header.h"; sourceTree = "<group>"; };
 		43BAC3831DBE25D900C8A518 /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
 		43BAC3841DBE25D900C8A518 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
+		43BAC3871DBE3D3900C8A518 /* TermsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TermsViewController.h; sourceTree = "<group>"; };
+		43BAC3881DBE3D3900C8A518 /* TermsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TermsViewController.m; sourceTree = "<group>"; };
 		43C7B9FF1DB611A700FDD9F1 /* vouchking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vouchking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C7BA031DB611A700FDD9F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43C7BA051DB611A700FDD9F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -178,6 +181,8 @@
 				43C7BA331DB634A600FDD9F1 /* PListParser.h */,
 				43C7BA341DB634A600FDD9F1 /* PListParser.m */,
 				43C7BA0B1DB611A700FDD9F1 /* Main.storyboard */,
+				43BAC3871DBE3D3900C8A518 /* TermsViewController.h */,
+				43BAC3881DBE3D3900C8A518 /* TermsViewController.m */,
 				4321CDDB1DBA2195005C06AB /* PromotionsTableViewController.h */,
 				4321CDDC1DBA2195005C06AB /* PromotionsTableViewController.m */,
 				43BAC37D1DBDFC1300C8A518 /* UnderlayNavigationBar.h */,
@@ -335,6 +340,7 @@
 				43C7BA0A1DB611A700FDD9F1 /* ViewController.m in Sources */,
 				4321CDDD1DBA2195005C06AB /* PromotionsTableViewController.m in Sources */,
 				43BAC3851DBE25D900C8A518 /* CustomNavigationController.m in Sources */,
+				43BAC3891DBE3D3900C8A518 /* TermsViewController.m in Sources */,
 				43C7BA2A1DB61CF800FDD9F1 /* Promotion.m in Sources */,
 				43C7BA381DB644BF00FDD9F1 /* NSObject+logProperties.m in Sources */,
 				43C7BA071DB611A700FDD9F1 /* AppDelegate.m in Sources */,

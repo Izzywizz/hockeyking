@@ -100,6 +100,7 @@
                                 <state key="normal" image="12"/>
                                 <connections>
                                     <action selector="termsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uRM-yd-eiM"/>
+                                    <segue destination="Ux7-cv-Dl9" kind="show" id="BVS-Rx-Xdx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -149,6 +150,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="559" y="447"/>
+        </scene>
+        <!--Terms View Controller-->
+        <scene sceneID="zPF-sf-yPH">
+            <objects>
+                <viewController id="Ux7-cv-Dl9" customClass="TermsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ngJ-8U-31A"/>
+                        <viewControllerLayoutGuide type="bottom" id="fOY-8d-jeZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UJR-E6-R7V">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZfL-rj-rMg" userLabel="InnerView">
+                                <rect key="frame" x="20" y="20" width="560" height="560"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="34" translatesAutoresizingMaskIntoConstraints="NO" id="CY4-wv-ky9">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="560"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Lg-NI-l0l" userLabel="Dismiss Terms">
+                                        <rect key="frame" x="247" y="0.0" width="66" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="66" id="EBH-H7-N6p"/>
+                                            <constraint firstAttribute="height" constant="28" id="Fhr-XL-xdN"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="termsButtonPressed:" destination="Ux7-cv-Dl9" eventType="touchUpInside" id="Zxw-Zj-DU3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="CY4-wv-ky9" secondAttribute="bottom" id="FHh-K2-TbP"/>
+                                    <constraint firstItem="CY4-wv-ky9" firstAttribute="leading" secondItem="ZfL-rj-rMg" secondAttribute="leading" id="K8d-rN-bPj"/>
+                                    <constraint firstItem="0Lg-NI-l0l" firstAttribute="top" secondItem="ZfL-rj-rMg" secondAttribute="top" id="KxS-FX-TWg"/>
+                                    <constraint firstItem="0Lg-NI-l0l" firstAttribute="centerX" secondItem="ZfL-rj-rMg" secondAttribute="centerX" id="P0p-0P-H7r"/>
+                                    <constraint firstItem="CY4-wv-ky9" firstAttribute="top" secondItem="ZfL-rj-rMg" secondAttribute="top" id="fSN-bT-7Fk"/>
+                                    <constraint firstAttribute="trailing" secondItem="CY4-wv-ky9" secondAttribute="trailing" id="xUb-gV-w2j"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1803921568627451" green="0.45882352941176469" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Lg-NI-l0l" firstAttribute="leading" secondItem="UJR-E6-R7V" secondAttribute="leadingMargin" constant="248" id="ElH-aL-VAo"/>
+                            <constraint firstItem="ZfL-rj-rMg" firstAttribute="top" secondItem="ngJ-8U-31A" secondAttribute="bottom" id="Nbb-vG-OgS"/>
+                            <constraint firstAttribute="trailing" secondItem="ZfL-rj-rMg" secondAttribute="trailing" constant="20" id="blE-V1-1Bs"/>
+                            <constraint firstItem="fOY-8d-jeZ" firstAttribute="top" secondItem="ZfL-rj-rMg" secondAttribute="bottom" constant="20" id="p4z-i9-FO7"/>
+                            <constraint firstItem="ZfL-rj-rMg" firstAttribute="leading" secondItem="UJR-E6-R7V" secondAttribute="leading" constant="20" id="zVr-ut-X7z"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ElH-aL-VAo"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RMd-go-6Ji" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="1223"/>
         </scene>
         <!--PROMOTION STORE-->
         <scene sceneID="pmt-nS-RnY">
@@ -218,6 +279,7 @@
         <image name="2" width="103" height="38"/>
         <image name="29" width="11" height="17"/>
         <image name="3" width="375" height="667"/>
+        <image name="34" width="341" height="617"/>
         <image name="9" width="250" height="90"/>
     </resources>
 </document>
