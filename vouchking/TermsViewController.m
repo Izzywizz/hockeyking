@@ -9,13 +9,13 @@
 #import "TermsViewController.h"
 
 @interface TermsViewController()
-
-
+@property (weak, nonatomic) IBOutlet UITextView *termsTextView;
 @end
 
 @implementation TermsViewController
 
 -(void)viewDidLoad  {
+    NSLog(@"%@", _termsTextView.text);
 }
 
 
