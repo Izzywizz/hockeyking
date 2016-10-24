@@ -29,11 +29,14 @@
     UILabel *descriptionLabel = (UILabel*)[self viewWithTag:100];
     UILabel *pointsEarned = (UILabel*)[self viewWithTag:90];
     UILabel *promotionTimeLeft = (UILabel *)[self viewWithTag:80];
+    UILabel *totalPromotionsAvailable = (UILabel *)[self viewWithTag:70];
+    
+    //Setting up the values/images by referencing the Promotion object
     iv.image = _promotion.gameSummaryLogo;
     descriptionLabel.text = _promotion.promotionDescription;
     pointsEarned.text = [NSString stringWithFormat:@"%@/500", _promotion.pointsEarned]; //Total points Earned is 500 and hardset
     promotionTimeLeft.text = [NSString stringWithFormat:@"%@ Left", [self convertToEpochTime:_promotion.expiryEpoch]]; //Calcualtions needed to set whether it is DAys/ Hours
-    
+    totalPromotionsAvailable.text = [NSString stringWithFormat:@"%@", _promotion.totalPromotionsAvailable];
 }
 
 /** Method that takes the current time and the date set within the Promotion object itself and returns the difference as string
@@ -49,12 +52,10 @@
     NSDateComponents *components = [c components:NSCalendarUnitHour fromDate:dateNow toDate:futureDate options:0];
     NSInteger diff = components.hour;
     if (diff < 24) {
-        NSLog(@"Time: Hours: %ld", (long)diff);
         return  [self isTheTimeLeftInDays:NO andTimeLeft:diff];
     } else  {
         NSDateComponents *components = [c components:NSCalendarUnitDay fromDate:dateNow toDate:futureDate options:0];
         NSInteger diff = components.day;
-        NSLog(@"Time: Days: %ld", (long)diff);
         return [self isTheTimeLeftInDays:YES andTimeLeft:diff];
     }
 }
