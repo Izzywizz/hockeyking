@@ -10,6 +10,7 @@
 #import "Data.h"
 #import "PromotionTableCell.h"
 #import "UnderlayNavigationBar.h"
+#import "CustomNavigationController.h"
 
 @interface PromotionsTableViewController()<UITableViewDelegate, UITableViewDataSource>
 
@@ -38,45 +39,17 @@
     self.tableView.estimatedRowHeight = 258;
 }
 
+/** This method setups up the navigation controller to include text and image side by side */
 -(void) setupNavigationController   {
-    if (self.navigationController == nil) {
-        return;
-    }
-    NSArray *ver = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
-    if ([[ver objectAtIndex:0] intValue] >= 7) {
-        // iOS 7.0 or later, create the label and view that will hold the image/ text together
-        UIView *navView = [UIView new];
-        UILabel *label = [UILabel new];
-        label.text = @" PROMOTIONS STORE";
-        label.textColor = [UIColor whiteColor];
-        [label setFont:[UIFont fontWithName:@"LuckiestGuy-Regular" size:16]];
-        [label sizeToFit];
-        label.center = navView.center;
-        label.textAlignment = NSTextAlignmentCenter;
-
-        //create imageView, ensure that the aspect ratio of the image doesnt overlap the image
-        UIImageView* img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"30.png"]];
-        // To maintain the image's aspect ratio:
-        CGFloat imageAspect =img.image.size.width/img.image.size.height;
-        // Setting the image frame so that it's immediately before the text:
-        img.frame = CGRectMake(label.frame.origin.x-label.frame.size.height*imageAspect, label.frame.origin.y, label.frame.size.height*imageAspect, label.frame.size.height);
-        img.contentMode = UIViewContentModeScaleAspectFit;
-        
-        // Add both the label and image view to the navView
-        [navView addSubview:label];
-        [navView addSubview:img];
-        
-        // Set the navigation bar's navigation item's titleView to the navView
-        self.navigationItem.titleView = navView;
-        
-        //set the colour of nav bar
-        self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:31.0/255.0 green:84.0/255.0 blue:118.0/255.0 alpha:1.0];
-                [self.navigationController.navigationBar
-         setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-        self.navigationController.navigationBar.translucent = NO;
-        
-        [navView sizeToFit];
-    }
+    
+    CustomNavigationController *customNavBar = [[CustomNavigationController alloc] init];
+    // Set the custom NavgiationView returned by the methodto the titleView.
+    self.navigationItem.titleView =  [customNavBar setupNavigationControllerWithImage:@"30.png" AndTitle:@"PROMOTIONS STORE"];
+    //set the colour of the whole nav bar to that blue suggested in the design
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:31.0/255.0 green:84.0/255.0 blue:118.0/255.0 alpha:1.0];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 #pragma mark - TableView <Delgate>
