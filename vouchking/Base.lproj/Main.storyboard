@@ -93,6 +93,7 @@
                                 <state key="normal" image="11"/>
                                 <connections>
                                     <action selector="infoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YuF-Fm-cQN"/>
+                                    <segue destination="d4f-Eb-pod" kind="presentation" modalTransitionStyle="crossDissolve" id="9D1-d0-b1F"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DC4-b5-mHh" userLabel="Info Button">
@@ -154,6 +155,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="559" y="447"/>
+        </scene>
+        <!--Times Up View Controller-->
+        <scene sceneID="KlG-SD-gMd">
+            <objects>
+                <viewController id="d4f-Eb-pod" customClass="TimesUpViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V0V-22-8C9"/>
+                        <viewControllerLayoutGuide type="bottom" id="wVX-Qm-igg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wan-gD-X7E" customClass="TimesUpOverlayView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="32" translatesAutoresizingMaskIntoConstraints="NO" id="Vju-7e-PWV" userLabel="TimesUp">
+                                <rect key="frame" x="175" y="233.5" width="250" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="7bN-jw-VB6"/>
+                                    <constraint firstAttribute="height" constant="134" id="j8I-xq-Axp"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.75479525859999996" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vju-7e-PWV" firstAttribute="centerY" secondItem="Wan-gD-X7E" secondAttribute="centerY" id="KKL-ht-tH3"/>
+                            <constraint firstItem="Vju-7e-PWV" firstAttribute="centerX" secondItem="Wan-gD-X7E" secondAttribute="centerX" id="Xf4-38-tGG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="luS-nd-Na9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259" y="1230"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pn5-PE-Nat">
+            <objects>
+                <viewController storyboardIdentifier="GameSummaryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="u6l-f5-BfB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FON-bN-JjQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="VmY-CN-5a9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yuw-4d-wzX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yIf-ZE-yQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259" y="1886"/>
         </scene>
         <!--Terms View Controller-->
         <scene sceneID="zPF-sf-yPH">
@@ -253,7 +303,7 @@ If you have any questions about our Privacy Policy, or if you want to know what 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RMd-go-6Ji" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="1223"/>
+            <point key="canvasLocation" x="1001" y="1230"/>
         </scene>
         <!--PROMOTION STORE-->
         <scene sceneID="pmt-nS-RnY">
@@ -323,6 +373,7 @@ If you have any questions about our Privacy Policy, or if you want to know what 
         <image name="2" width="103" height="38"/>
         <image name="29" width="11" height="17"/>
         <image name="3" width="375" height="667"/>
+        <image name="32" width="250" height="133"/>
         <image name="34" width="341" height="617"/>
         <image name="9" width="250" height="90"/>
     </resources>

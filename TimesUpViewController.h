@@ -1,5 +1,5 @@
 //
-//  TimesUpOverlayView.h
+//  TimesUpViewController.h
 //  vouchking
 //
 //  Created by Izzy on 25/10/2016.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TimesUpOverlayView : UIView
-
-+ (id)createOverlayView;
+@interface TimesUpViewController : UIViewController
 
 @end
