@@ -14,10 +14,10 @@
 
 @implementation TermsViewController
 
--(void)viewDidLoad  {
-    NSLog(@"%@", _termsTextView.text);
+#pragma mark - UI View Methods
+- (void)viewDidLayoutSubviews {
+    [self.termsTextView setContentOffset:CGPointZero animated:NO];
 }
-
 
 #pragma mark - Action Methods
 - (IBAction)termsButtonPressed:(UIButton *)sender {
