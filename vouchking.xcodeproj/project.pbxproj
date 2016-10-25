@@ -34,7 +34,8 @@
 		434E30891DBE589600A29280 /* MontserratAlternates-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 434E30761DBE589600A29280 /* MontserratAlternates-SemiBold.otf */; };
 		434E308A1DBE589600A29280 /* MontserratAlternates-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 434E30771DBE589600A29280 /* MontserratAlternates-Thin.otf */; };
 		434E308B1DBE589600A29280 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 434E30781DBE589600A29280 /* SIL Open Font License.txt */; };
-		43BAC37F1DBDFC1300C8A518 /* UnderlayNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC37E1DBDFC1300C8A518 /* UnderlayNavigationBar.m */; };
+		435C4F721DBF4A5D001DD279 /* TimesUpOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 435C4F711DBF4A5D001DD279 /* TimesUpOverlay.xib */; };
+		435C4F761DBF4EDC001DD279 /* TimesUpOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 435C4F751DBF4EDC001DD279 /* TimesUpOverlayView.m */; };
 		43BAC3851DBE25D900C8A518 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC3841DBE25D900C8A518 /* CustomNavigationController.m */; };
 		43BAC3891DBE3D3900C8A518 /* TermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC3881DBE3D3900C8A518 /* TermsViewController.m */; };
 		43C7BA041DB611A700FDD9F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA031DB611A700FDD9F1 /* main.m */; };
@@ -91,8 +92,9 @@
 		434E30761DBE589600A29280 /* MontserratAlternates-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-SemiBold.otf"; sourceTree = "<group>"; };
 		434E30771DBE589600A29280 /* MontserratAlternates-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Thin.otf"; sourceTree = "<group>"; };
 		434E30781DBE589600A29280 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
-		43BAC37D1DBDFC1300C8A518 /* UnderlayNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderlayNavigationBar.h; sourceTree = "<group>"; };
-		43BAC37E1DBDFC1300C8A518 /* UnderlayNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnderlayNavigationBar.m; sourceTree = "<group>"; };
+		435C4F711DBF4A5D001DD279 /* TimesUpOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimesUpOverlay.xib; sourceTree = "<group>"; };
+		435C4F741DBF4EDC001DD279 /* TimesUpOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimesUpOverlayView.h; sourceTree = "<group>"; };
+		435C4F751DBF4EDC001DD279 /* TimesUpOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimesUpOverlayView.m; sourceTree = "<group>"; };
 		43BAC3801DBE205700C8A518 /* vouchking-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vouchking-Bridging-Header.h"; sourceTree = "<group>"; };
 		43BAC3831DBE25D900C8A518 /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
 		43BAC3841DBE25D900C8A518 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
@@ -205,6 +207,16 @@
 			path = "montserrat-2";
 			sourceTree = "<group>";
 		};
+		435C4F731DBF4E9A001DD279 /* Custom xib */ = {
+			isa = PBXGroup;
+			children = (
+				435C4F711DBF4A5D001DD279 /* TimesUpOverlay.xib */,
+				435C4F741DBF4EDC001DD279 /* TimesUpOverlayView.h */,
+				435C4F751DBF4EDC001DD279 /* TimesUpOverlayView.m */,
+			);
+			name = "Custom xib";
+			sourceTree = "<group>";
+		};
 		43BAC3861DBE283600C8A518 /* Helper Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +248,7 @@
 		43C7BA011DB611A700FDD9F1 /* vouchking */ = {
 			isa = PBXGroup;
 			children = (
+				435C4F731DBF4E9A001DD279 /* Custom xib */,
 				43BAC3861DBE283600C8A518 /* Helper Classes */,
 				4321CDDE1DBA21E5005C06AB /* Custom Table Cells */,
 				43C7BA271DB61C8A00FDD9F1 /* Model */,
@@ -250,8 +263,6 @@
 				43BAC3881DBE3D3900C8A518 /* TermsViewController.m */,
 				4321CDDB1DBA2195005C06AB /* PromotionsTableViewController.h */,
 				4321CDDC1DBA2195005C06AB /* PromotionsTableViewController.m */,
-				43BAC37D1DBDFC1300C8A518 /* UnderlayNavigationBar.h */,
-				43BAC37E1DBDFC1300C8A518 /* UnderlayNavigationBar.m */,
 				43C7BA0E1DB611A700FDD9F1 /* Assets.xcassets */,
 				43C7BA101DB611A700FDD9F1 /* LaunchScreen.storyboard */,
 				43C7BA131DB611A700FDD9F1 /* Info.plist */,
@@ -396,6 +407,7 @@
 				434E30871DBE589600A29280 /* MontserratAlternates-Medium.otf in Resources */,
 				434E307B1DBE589600A29280 /* Montserrat-ExtraBold.otf in Resources */,
 				434E308A1DBE589600A29280 /* MontserratAlternates-Thin.otf in Resources */,
+				435C4F721DBF4A5D001DD279 /* TimesUpOverlay.xib in Resources */,
 				434E30851DBE589600A29280 /* MontserratAlternates-ExtraLight.otf in Resources */,
 				4321CDCC1DBA0ED3005C06AB /* LuckiestGuy.ttf in Resources */,
 				434E30891DBE589600A29280 /* MontserratAlternates-SemiBold.otf in Resources */,
@@ -419,9 +431,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C7BA351DB634A600FDD9F1 /* PListParser.m in Sources */,
-				43BAC37F1DBDFC1300C8A518 /* UnderlayNavigationBar.m in Sources */,
 				43C7BA2D1DB626D500FDD9F1 /* Data.m in Sources */,
 				43C7BA0A1DB611A700FDD9F1 /* ViewController.m in Sources */,
+				435C4F761DBF4EDC001DD279 /* TimesUpOverlayView.m in Sources */,
 				4321CDDD1DBA2195005C06AB /* PromotionsTableViewController.m in Sources */,
 				43BAC3851DBE25D900C8A518 /* CustomNavigationController.m in Sources */,
 				43BAC3891DBE3D3900C8A518 /* TermsViewController.m in Sources */,

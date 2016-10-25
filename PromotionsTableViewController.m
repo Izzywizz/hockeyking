@@ -9,7 +9,6 @@
 #import "PromotionsTableViewController.h"
 #import "Data.h"
 #import "PromotionTableCell.h"
-#import "UnderlayNavigationBar.h"
 #import "CustomNavigationController.h"
 
 @interface PromotionsTableViewController()<UITableViewDelegate, UITableViewDataSource>
@@ -23,8 +22,7 @@
 #pragma mark - UI TableView Methods
 -(void)viewWillAppear:(BOOL)animated    {
     [self.navigationController setNavigationBarHidden:NO];
-    NSLog(@"Promotion Count: %lu",(unsigned long)[Data sharedInstance].promotionsDict.count);
-    _promoKeysArray = [[Data sharedInstance].promotionsDict allKeys];
+    _promoKeysArray = [[Data sharedInstance].promotionsDict allKeys];//PromotionID number assoicated with the Promotion Object
     [self setupTable];
 }
 
