@@ -35,6 +35,9 @@
 		434E308A1DBE589600A29280 /* MontserratAlternates-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 434E30771DBE589600A29280 /* MontserratAlternates-Thin.otf */; };
 		434E308B1DBE589600A29280 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 434E30781DBE589600A29280 /* SIL Open Font License.txt */; };
 		435C4F791DBF55F7001DD279 /* TimesUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 435C4F781DBF55F7001DD279 /* TimesUpViewController.m */; };
+		43B5CFF81DC0B7FD00117316 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 43B5CFF51DC0B7FD00117316 /* GameScene.sks */; };
+		43B5CFF91DC0B7FD00117316 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5CFF61DC0B7FD00117316 /* GameScene.swift */; };
+		43B5CFFA1DC0B7FD00117316 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5CFF71DC0B7FD00117316 /* GameViewController.swift */; };
 		43BAC3851DBE25D900C8A518 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC3841DBE25D900C8A518 /* CustomNavigationController.m */; };
 		43BAC3891DBE3D3900C8A518 /* TermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC3881DBE3D3900C8A518 /* TermsViewController.m */; };
 		43C7BA041DB611A700FDD9F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA031DB611A700FDD9F1 /* main.m */; };
@@ -93,6 +96,9 @@
 		434E30781DBE589600A29280 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
 		435C4F771DBF55F7001DD279 /* TimesUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimesUpViewController.h; path = ../TimesUpViewController.h; sourceTree = "<group>"; };
 		435C4F781DBF55F7001DD279 /* TimesUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimesUpViewController.m; path = ../TimesUpViewController.m; sourceTree = "<group>"; };
+		43B5CFF51DC0B7FD00117316 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		43B5CFF61DC0B7FD00117316 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		43B5CFF71DC0B7FD00117316 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		43BAC3801DBE205700C8A518 /* vouchking-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vouchking-Bridging-Header.h"; sourceTree = "<group>"; };
 		43BAC3831DBE25D900C8A518 /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
 		43BAC3841DBE25D900C8A518 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
@@ -205,6 +211,16 @@
 			path = "montserrat-2";
 			sourceTree = "<group>";
 		};
+		43B5CFF41DC0B7D800117316 /* SwiftPlay */ = {
+			isa = PBXGroup;
+			children = (
+				43B5CFF51DC0B7FD00117316 /* GameScene.sks */,
+				43B5CFF61DC0B7FD00117316 /* GameScene.swift */,
+				43B5CFF71DC0B7FD00117316 /* GameViewController.swift */,
+			);
+			name = SwiftPlay;
+			sourceTree = "<group>";
+		};
 		43BAC3861DBE283600C8A518 /* Helper Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +252,7 @@
 		43C7BA011DB611A700FDD9F1 /* vouchking */ = {
 			isa = PBXGroup;
 			children = (
+				43B5CFF41DC0B7D800117316 /* SwiftPlay */,
 				43BAC3861DBE283600C8A518 /* Helper Classes */,
 				4321CDDE1DBA21E5005C06AB /* Custom Table Cells */,
 				43C7BA271DB61C8A00FDD9F1 /* Model */,
@@ -388,6 +405,7 @@
 				434E30861DBE589600A29280 /* MontserratAlternates-Light.otf in Resources */,
 				43C7BA0F1DB611A700FDD9F1 /* Assets.xcassets in Resources */,
 				434E307E1DBE589600A29280 /* Montserrat-Medium.otf in Resources */,
+				43B5CFF81DC0B7FD00117316 /* GameScene.sks in Resources */,
 				434E308B1DBE589600A29280 /* SIL Open Font License.txt in Resources */,
 				4321CDE81DBA2934005C06AB /* Montserrat-Bold.ttf in Resources */,
 				434E30821DBE589600A29280 /* MontserratAlternates-Black.otf in Resources */,
@@ -418,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B5CFFA1DC0B7FD00117316 /* GameViewController.swift in Sources */,
 				435C4F791DBF55F7001DD279 /* TimesUpViewController.m in Sources */,
 				43C7BA351DB634A600FDD9F1 /* PListParser.m in Sources */,
 				43C7BA2D1DB626D500FDD9F1 /* Data.m in Sources */,
@@ -426,6 +445,7 @@
 				43BAC3851DBE25D900C8A518 /* CustomNavigationController.m in Sources */,
 				43BAC3891DBE3D3900C8A518 /* TermsViewController.m in Sources */,
 				43C7BA2A1DB61CF800FDD9F1 /* Promotion.m in Sources */,
+				43B5CFF91DC0B7FD00117316 /* GameScene.swift in Sources */,
 				43C7BA381DB644BF00FDD9F1 /* NSObject+logProperties.m in Sources */,
 				43C7BA071DB611A700FDD9F1 /* AppDelegate.m in Sources */,
 				43C7BA041DB611A700FDD9F1 /* main.m in Sources */,

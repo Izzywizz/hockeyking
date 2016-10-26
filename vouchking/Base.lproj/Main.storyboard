@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wfd-yn-1De">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wfd-yn-1De">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -82,6 +82,7 @@
                                 <state key="normal" title="   PLAY"/>
                                 <connections>
                                     <action selector="playButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uk9-03-hlQ"/>
+                                    <segue destination="gva-Hk-TvM" kind="show" id="C2T-bw-ZfY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vl-wP-Bun" userLabel="Info Button">
@@ -93,7 +94,6 @@
                                 <state key="normal" image="11"/>
                                 <connections>
                                     <action selector="infoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YuF-Fm-cQN"/>
-                                    <segue destination="d4f-Eb-pod" kind="presentation" modalTransitionStyle="crossDissolve" id="9D1-d0-b1F"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DC4-b5-mHh" userLabel="Info Button">
@@ -185,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="luS-nd-Na9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="259" y="1230"/>
+            <point key="canvasLocation" x="-164" y="1199"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pn5-PE-Nat">
@@ -364,6 +364,58 @@ If you have any questions about our Privacy Policy, or if you want to know what 
             </objects>
             <point key="canvasLocation" x="559" y="-314"/>
         </scene>
+        <!--Game View Controller-->
+        <scene sceneID="mJu-eH-WCc">
+            <objects>
+                <viewController id="gva-Hk-TvM" customClass="GameViewController" customModule="vouchking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KZ5-Tb-ylN"/>
+                        <viewControllerLayoutGuide type="bottom" id="y3E-mA-o1O"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="hn5-SJ-P4S" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="22" translatesAutoresizingMaskIntoConstraints="NO" id="PIO-4i-YBq" userLabel="Right Logo">
+                                <rect key="frame" x="460" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="GUd-iP-TyZ"/>
+                                    <constraint firstAttribute="width" constant="100" id="byh-qZ-JUf"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="22" translatesAutoresizingMaskIntoConstraints="NO" id="3ya-BU-IbC" userLabel="Left Logo">
+                                <rect key="frame" x="40" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7GH-e7-VVi"/>
+                                    <constraint firstAttribute="height" constant="100" id="8cL-dS-oax"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PIO-4i-YBq" firstAttribute="centerX" secondItem="hn5-SJ-P4S" secondAttribute="centerX" constant="25" id="7qW-Xe-B6o"/>
+                            <constraint firstItem="PIO-4i-YBq" firstAttribute="centerY" secondItem="hn5-SJ-P4S" secondAttribute="centerY" id="H7L-iM-jrx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PIO-4i-YBq" secondAttribute="trailing" constant="20" id="LLz-mI-Pj2"/>
+                            <constraint firstItem="3ya-BU-IbC" firstAttribute="centerY" secondItem="hn5-SJ-P4S" secondAttribute="centerY" id="ZBu-hi-LRU"/>
+                            <constraint firstItem="3ya-BU-IbC" firstAttribute="leading" secondItem="hn5-SJ-P4S" secondAttribute="leadingMargin" constant="20" id="qog-oi-rtK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7qW-Xe-B6o"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="hC4-37-V1V"/>
+                    <connections>
+                        <outlet property="leftLogoImageView" destination="3ya-BU-IbC" id="iy6-ae-xTu"/>
+                        <outlet property="rightLogoImageView" destination="PIO-4i-YBq" id="FtI-gd-0AE"/>
+                        <segue destination="d4f-Eb-pod" kind="presentation" identifier="GoToMenu" modalTransitionStyle="crossDissolve" id="ETP-36-F8G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RUD-2u-C80" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-169" y="453"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1" width="294" height="123"/>
@@ -371,6 +423,7 @@ If you have any questions about our Privacy Policy, or if you want to know what 
         <image name="11" width="44" height="44"/>
         <image name="12" width="45" height="45"/>
         <image name="2" width="103" height="38"/>
+        <image name="22" width="81" height="80"/>
         <image name="29" width="11" height="17"/>
         <image name="3" width="375" height="667"/>
         <image name="32" width="250" height="133"/>
