@@ -13,7 +13,7 @@
 
 @interface PromotionsTableViewController()<UITableViewDelegate, UITableViewDataSource>
 
-@property NSArray *promoKeysArray;
+@property NSArray *promoKeysArray; //Previously used when the Promotion where Dict
 
 @end
 
@@ -59,7 +59,8 @@
 // Need to pull in data count from DataShared Instance
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section    {
     
-    return [Data sharedInstance].promotionsDict.count;
+//    return [Data sharedInstance].promotionsDict.count;
+    return [Data sharedInstance].promotionsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath  {
@@ -76,7 +77,8 @@
     [self.tableView registerNib:[UINib nibWithNibName:nibName bundle:nil] forCellReuseIdentifier:reuseCellID];
     
     PromotionTableCell *cell = [self.tableView dequeueReusableCellWithIdentifier:reuseCellID forIndexPath:indexPath];
-    Promotion *p = [[Data sharedInstance].promotionsDict valueForKey:[_promoKeysArray objectAtIndex:indexPath.row]]; //Access the object associated the ID
+    Promotion *p = [[Data sharedInstance].promotionsArray objectAtIndex:indexPath.row];
+//    Promotion *p = [[Data sharedInstance].promotionsDict valueForKey:[_promoKeysArray objectAtIndex:indexPath.row]]; //Access the object associated the ID
     cell.promotion = p; //reference the object associated with the Cell
     
     [cell configureCell];

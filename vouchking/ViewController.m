@@ -24,8 +24,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[Data sharedInstance] createPromotionDict]; //Shared DataDictionary
-    [[Data sharedInstance] createPromotionArray]; //Shard Array
+//    [[Data sharedInstance] createPromotionDict]; //Shared DataDictionary, no longer needed
+    [[Data sharedInstance] createPromotionArray]; //Shard Array used instead
 }
 
 - (void)didReceiveMemoryWarning {

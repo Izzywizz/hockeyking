@@ -29,7 +29,7 @@ class GameViewController: UIViewController {
 
     //MARK: UIVIew Methods
     override func viewDidLoad() {
-        let data = Data.sharedInstance().promotionsDict
+        let data = Data.sharedInstance().promotionsArray
         
         print("Data: \(data)")
         
