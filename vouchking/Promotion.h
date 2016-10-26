@@ -26,6 +26,7 @@
 @property (nonatomic, strong) NSURL *facebook;
 @property (nonatomic, strong) NSURL *website;
 @property (nonatomic, strong) UIImage *gameSummaryLogo;
+@property (nonatomic, strong) UIImage *businessLogo;
 
 -(Promotion*)initWithDict:(NSDictionary*)dict;
 //-(Promotion*)populatePromotion:(Promotion*)p; Andy Method to parse data based on the number of properties

@@ -32,15 +32,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         arrayCount = Data.sharedInstance().promotionsArray.count
-        let promotions = returnTwoObjects()
-//        print("Promotion One: \(promotions.0)")
-//        print("Promotion Two: \(promotions.1)")
-        
-        let starbucks = promotions.0
-        let chickenWorld = promotions.1
-        
-        print("Promotion Object One: \(starbucks.businessName)")
-        print("Promotion Object Two: \(chickenWorld.businessName)")
+        setupBusinessPromotions()
 
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
@@ -53,7 +45,6 @@ class GameViewController: UIViewController {
             let skView = self.view as! SKView
             skView.showsFPS = true
             skView.showsNodeCount = true
-            
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
@@ -87,8 +78,7 @@ class GameViewController: UIViewController {
         return true
     }
     
-    //MARK: Promotion
-    
+    //MARK: Promotion Methods
     func returnTwoObjects() -> (promotionOne: Promotion, promotionTwo: Promotion) {
         let dataArray = Data.sharedInstance().promotionsArray
         let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(dataArray.count) //create random number based on total array count
@@ -99,8 +89,19 @@ class GameViewController: UIViewController {
 //        print("Array Object: \(promotionObject.facebook)")
     }
     
+    func setupBusinessPromotions() {
+        let promotions = returnTwoObjects()
+        let businessOnTheLeft = promotions.0
+        let businessOnTheRight = promotions.1
+        
+        print("Promotion Object One: \(businessOnTheLeft.businessName)") //left block/ logo/ promotion
+        leftLogoImageView.image = businessOnTheLeft.businessLogo
+        print("Promotion Object Two: \(businessOnTheRight.businessName)")
+        rightLogoImageView.image = businessOnTheRight.businessLogo
+    }
+    
     /**
-     Functions that returns only a unique random number, this will be used to produce, TWO unique Promotion objects
+     Functions that returns only a unique random number, this will be used to produce TWO unique Promotion objects
      */
     func checkUniqueRandomNumber(firstRandomNumber: Int) -> Int {
 

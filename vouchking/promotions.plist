@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>businessLogo</key>
+		<string>22</string>
 		<key>gameSummaryLogo</key>
 		<string>31</string>
 		<key>promotionId</key>
@@ -33,6 +35,8 @@
 		<string>http://www.starbucks.co.uk</string>
 	</dict>
 	<dict>
+		<key>businessLogo</key>
+		<string>bs-lg</string>
 		<key>gameSummaryLogo</key>
 		<string>35</string>
 		<key>promotionId</key>
@@ -46,7 +50,7 @@
 		<key>expiryEpoch</key>
 		<integer>1477476878</integer>
 		<key>promotionDescription</key>
-		<string>Buy one KFC burger and get one free</string>
+		<string>Buy one BodyShop lotion and get one free</string>
 		<key>pointsEarned</key>
 		<string>123</string>
 		<key>promotionNotes</key>
@@ -54,13 +58,13 @@
 		<key>totalPromotionsAvailable</key>
 		<string>500</string>
 		<key>businessName</key>
-		<string>KFC</string>
+		<string>BodyShop</string>
 		<key>twitter</key>
 		<string>https://twitter.com/kfc_uki?lang=en</string>
 		<key>facebook</key>
-		<string>https://www.facebook.com/KFC.uk/</string>
+		<string>https://www.facebook.com/BodyShop/</string>
 		<key>website</key>
-		<string>https://www.kfc.co.uk</string>
+		<string>https://www.bodyshop.co.uk</string>
 	</dict>
 </array>
 </plist>

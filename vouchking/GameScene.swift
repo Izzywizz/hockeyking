@@ -14,6 +14,7 @@ struct PhysicsCategory {
     static let All       : UInt32 = UInt32.max
     static let Block   : UInt32 = 0b1       // 1
     static let Ball         : UInt32 = 0b10      // 2
+    static let Edge         : UInt32 = 0x1 << 3      // 2
 }
 
 let BallCategoryName = "ball"
@@ -30,7 +31,6 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     var ball = SKSpriteNode(imageNamed: "ball")
     var blockRightCount: Int = 0
     var blockLeftCount: Int = 0
-    
     
     //MARK: GameScence Methods
     override func didMoveToView(view: SKView) {
@@ -91,9 +91,9 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         if let blockName = block.name {
             print("Hit: \(blockName)")
             if blockName == "block0" {
-                blockLeftCount += 1
+                blockLeftCount += 2
             } else {
-                blockRightCount += 1
+                blockRightCount += 2
             }
             
             print("Block Left Count: \(blockLeftCount)")
@@ -102,7 +102,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     }
     
     func didBeginContact(contact: SKPhysicsContact) {
-        
+    
         // 1
         var firstBody: SKPhysicsBody
         var secondBody: SKPhysicsBody
@@ -114,7 +114,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
             secondBody = contact.bodyA
         }
         
-        // 2
+        // 2: Dectecting the hit and calling the method to do with scores
         if ((firstBody.categoryBitMask & PhysicsCategory.Block != 0) &&
             (secondBody.categoryBitMask & PhysicsCategory.Ball != 0)) {
             projectileDidCollideWithBlock(firstBody.node as! SKSpriteNode, ball: secondBody.node as! SKSpriteNode)
@@ -144,6 +144,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
             let moveRight = SKAction.moveTo(CGPointMake(3000,450), duration:2.0) //orginally the values where 4000
             let actionMoveDone = SKAction.removeFromParent()
             ball.runAction(SKAction.sequence([moveRight, actionMoveDone]), withKey: "GoRightBall")
+            blockRightCount -= 1
             
         case UISwipeGestureRecognizerDirection.Left:
             print("LEFT")
@@ -151,6 +152,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
             let moveLeft = SKAction.moveTo(CGPointMake(-3000,450), duration:2.0)
             let actionMoveDone = SKAction.removeFromParent()
             ball.runAction(SKAction.sequence([moveLeft, actionMoveDone]), withKey: "GoLeftBall")
+            blockLeftCount -= 1
         default:
             print("Gesture Direction Not Needed")
         }

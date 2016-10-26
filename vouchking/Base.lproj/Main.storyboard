@@ -176,7 +176,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.75479525859999996" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Vju-7e-PWV" firstAttribute="centerY" secondItem="Wan-gD-X7E" secondAttribute="centerY" id="KKL-ht-tH3"/>
                             <constraint firstItem="Vju-7e-PWV" firstAttribute="centerX" secondItem="Wan-gD-X7E" secondAttribute="centerX" id="Xf4-38-tGG"/>
@@ -376,14 +376,14 @@ If you have any questions about our Privacy Policy, or if you want to know what 
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="22" translatesAutoresizingMaskIntoConstraints="NO" id="PIO-4i-YBq" userLabel="Right Logo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dominos-lg" translatesAutoresizingMaskIntoConstraints="NO" id="PIO-4i-YBq" userLabel="Right Logo">
                                 <rect key="frame" x="460" y="250" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="GUd-iP-TyZ"/>
                                     <constraint firstAttribute="width" constant="100" id="byh-qZ-JUf"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bs-lg" translatesAutoresizingMaskIntoConstraints="NO" id="3ya-BU-IbC" userLabel="Left Logo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amazon-lg" translatesAutoresizingMaskIntoConstraints="NO" id="3ya-BU-IbC" userLabel="Left Logo">
                                 <rect key="frame" x="40" y="250" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="7GH-e7-VVi"/>
@@ -423,12 +423,12 @@ If you have any questions about our Privacy Policy, or if you want to know what 
         <image name="11" width="44" height="44"/>
         <image name="12" width="45" height="45"/>
         <image name="2" width="103" height="38"/>
-        <image name="22" width="81" height="80"/>
         <image name="29" width="11" height="17"/>
         <image name="3" width="375" height="667"/>
         <image name="32" width="250" height="133"/>
         <image name="34" width="341" height="617"/>
         <image name="9" width="250" height="90"/>
-        <image name="bs-lg" width="99" height="98"/>
+        <image name="amazon-lg" width="97" height="31"/>
+        <image name="dominos-lg" width="100" height="100"/>
     </resources>
 </document>
