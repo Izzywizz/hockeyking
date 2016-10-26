@@ -29,6 +29,9 @@ class GameViewController: UIViewController {
 
     //MARK: UIVIew Methods
     override func viewDidLoad() {
+        let data = Data.sharedInstance().promotionsDict
+        print("Data: \(data)")
+        
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
 //        timer.text = "\(timerCount)"
