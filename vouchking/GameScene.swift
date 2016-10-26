@@ -87,7 +87,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     }
     
     //MARK: Contact Delegates
-    func projectileDidCollideWithMonster(block:SKSpriteNode, ball:SKSpriteNode) {
+    func projectileDidCollideWithBlock(block:SKSpriteNode, ball:SKSpriteNode) {
         if let blockName = block.name {
             print("Hit: \(blockName)")
             if blockName == "block0" {
@@ -117,7 +117,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         // 2
         if ((firstBody.categoryBitMask & PhysicsCategory.Block != 0) &&
             (secondBody.categoryBitMask & PhysicsCategory.Ball != 0)) {
-            projectileDidCollideWithMonster(firstBody.node as! SKSpriteNode, ball: secondBody.node as! SKSpriteNode)
+            projectileDidCollideWithBlock(firstBody.node as! SKSpriteNode, ball: secondBody.node as! SKSpriteNode)
         }
         
     }

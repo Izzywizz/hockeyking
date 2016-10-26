@@ -8,10 +8,12 @@
 
 import UIKit
 import SpriteKit
+import GameKit
 
 class GameViewController: UIViewController {
 
     //MARK: Properties
+    var arrayCount: Int!
     var timerCount = 10
     var clockTimer = NSTimer()
     var label: UILabel!
@@ -25,15 +27,22 @@ class GameViewController: UIViewController {
         leftLogoImageView.frame.origin.y = 20.0 // 20 down from the top
         leftLogoImageView.frame.origin.x = (self.view.bounds.size.width - leftLogoImageView.frame.size.width) / 2.0 // centered left to right
     }
-    
 
     //MARK: UIVIew Methods
     override func viewDidLoad() {
-        let data = Data.sharedInstance().promotionsArray
-        
-        print("Data: \(data)")
-        
         super.viewDidLoad()
+        arrayCount = Data.sharedInstance().promotionsArray.count
+        let promotions = returnTwoObjects()
+//        print("Promotion One: \(promotions.0)")
+//        print("Promotion Two: \(promotions.1)")
+        
+        let starbucks = promotions.0
+        let chickenWorld = promotions.1
+        
+        print("Promotion Object One: \(starbucks.businessName)")
+        print("Promotion Object Two: \(chickenWorld.businessName)")
+
+        
         self.navigationController?.setNavigationBarHidden(true, animated: false)
 //        timer.text = "\(timerCount)"
         createLabel()
@@ -78,6 +87,34 @@ class GameViewController: UIViewController {
         return true
     }
     
+    //MARK: Promotion
+    
+    func returnTwoObjects() -> (promotionOne: Promotion, promotionTwo: Promotion) {
+        let dataArray = Data.sharedInstance().promotionsArray
+        let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(dataArray.count) //create random number based on total array count
+        let promotionOne = dataArray[randomNumber] as! Promotion //grab the Promtion object based on the array value given by the random number
+        let promotionTwo = dataArray[checkUniqueRandomNumber(randomNumber)] as! Promotion //create another random Promotion object but ensure that it is not the same object by ensuring that it is not the same random number
+        
+        return (promotionOne, promotionTwo)
+//        print("Array Object: \(promotionObject.facebook)")
+    }
+    
+    /**
+     Functions that returns only a unique random number, this will be used to produce, TWO unique Promotion objects
+     */
+    func checkUniqueRandomNumber(firstRandomNumber: Int) -> Int {
+
+        let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(arrayCount)
+        if firstRandomNumber == randomNumber
+        {
+            print("Same, FirstNumber: \(firstRandomNumber) and Second: \(randomNumber)")
+            print("call again")
+            return checkUniqueRandomNumber(randomNumber)
+        } else  {
+            print("DIFFERENT, FirstNumber: \(firstRandomNumber) and Second: \(randomNumber)")
+            return randomNumber
+        }
+    }
     
     //MARK: Helper Functions
     func countdown() {
