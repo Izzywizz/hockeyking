@@ -24,7 +24,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[Data sharedInstance] createPromotionDict]; //Shared Data
+    [[Data sharedInstance] createPromotionDict]; //Shared DataDictionary
+    [[Data sharedInstance] createPromotionArray]; //Shard Array
 }
 
 - (void)didReceiveMemoryWarning {

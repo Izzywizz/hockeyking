@@ -11,8 +11,11 @@
 @interface Data : NSObject
 
 @property (nonatomic, strong) NSMutableDictionary *promotionsDict;
-@property int score;
+@property (nonatomic, strong) NSMutableArray *promotionsArray;
+
+@property int score;// Test to see whether Swift can see variable
 
 +(instancetype) sharedInstance;
 -(void) createPromotionDict;
+-(void) createPromotionArray;
 @end

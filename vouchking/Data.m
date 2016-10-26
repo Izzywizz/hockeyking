@@ -47,5 +47,17 @@
     NSLog(@"Promotions Dictionary: %@", _promotionsDict);
 }
 
+-(void) createPromotionArray  {
+    
+    _promotionsArray = [NSMutableArray new];
+    
+    for (NSDictionary *d in [[PListParser new] readPlistValuesFromPlist:@"promotions"]) {
+        Promotion *promotionsObj = [[Promotion alloc]initWithDict:d];
+        [_promotionsArray addObject:promotionsObj];
+        [promotionsObj logProperties];
+    }
+    NSLog(@"Promotions Array: %@", _promotionsArray);
+}
+
 
 @end
