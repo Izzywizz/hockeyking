@@ -383,7 +383,7 @@ If you have any questions about our Privacy Policy, or if you want to know what 
                                     <constraint firstAttribute="width" constant="100" id="byh-qZ-JUf"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="22" translatesAutoresizingMaskIntoConstraints="NO" id="3ya-BU-IbC" userLabel="Left Logo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bs-lg" translatesAutoresizingMaskIntoConstraints="NO" id="3ya-BU-IbC" userLabel="Left Logo">
                                 <rect key="frame" x="40" y="250" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="7GH-e7-VVi"/>
@@ -429,5 +429,6 @@ If you have any questions about our Privacy Policy, or if you want to know what 
         <image name="32" width="250" height="133"/>
         <image name="34" width="341" height="617"/>
         <image name="9" width="250" height="90"/>
+        <image name="bs-lg" width="99" height="98"/>
     </resources>
 </document>

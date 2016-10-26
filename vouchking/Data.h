@@ -11,6 +11,7 @@
 @interface Data : NSObject
 
 @property (nonatomic, strong) NSMutableDictionary *promotionsDict;
+@property int score;
 
 +(instancetype) sharedInstance;
 -(void) createPromotionDict;

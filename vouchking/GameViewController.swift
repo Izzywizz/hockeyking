@@ -12,7 +12,7 @@ import SpriteKit
 class GameViewController: UIViewController {
 
     //MARK: Properties
-    var timerCount = 99
+    var timerCount = 10
     var clockTimer = NSTimer()
     var label: UILabel!
     
@@ -30,6 +30,7 @@ class GameViewController: UIViewController {
     //MARK: UIVIew Methods
     override func viewDidLoad() {
         let data = Data.sharedInstance().promotionsDict
+        
         print("Data: \(data)")
         
         super.viewDidLoad()
