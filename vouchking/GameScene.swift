@@ -257,7 +257,12 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     
     func methodOfReceivedNotification(notification: NSNotification){
         print("Game Over baby")
+        
+//        NSNotificationCenter.defaultCenter().postNotificationName("FinalScores", object: self)
         //Pause the scene
+        NSNotificationCenter.defaultCenter().postNotificationName("FinalScores", object: self, userInfo:
+            ["LeftScore": blockLeftCount, "RightScore" : blockRightCount])
+        
         scene!.view?.paused = true
         self.viewController!.performSegueWithIdentifier("GoToMenu", sender: viewController)
     }

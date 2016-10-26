@@ -11,7 +11,7 @@ import SpriteKit
 import GameKit
 
 class GameViewController: UIViewController {
-
+    
     //MARK: Properties
     var arrayCount: Int!
     var timerCount = 10
@@ -27,16 +27,16 @@ class GameViewController: UIViewController {
         leftLogoImageView.frame.origin.y = 20.0 // 20 down from the top
         leftLogoImageView.frame.origin.x = (self.view.bounds.size.width - leftLogoImageView.frame.size.width) / 2.0 // centered left to right
     }
-
+    
     //MARK: UIVIew Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         arrayCount = Data.sharedInstance().promotionsArray.count
         setupBusinessPromotions()
-
+        
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-//        timer.text = "\(timerCount)"
+        //        timer.text = "\(timerCount)"
         createLabel()
         clockTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(GameViewController.countdown), userInfo: nil, repeats: true)
         
@@ -49,7 +49,7 @@ class GameViewController: UIViewController {
             skView.ignoresSiblingOrder = true
             
             /* Set the scale mode to scale to fit the window, The scene is not scaled to match the view. Instead, the scene is automatically resized so that its dimensions always matches those of the view. */
-//            skView.showsPhysics = true
+            //            skView.showsPhysics = true
             scene.scaleMode = SKSceneScaleMode.ResizeFill
             scene.viewController = self
             scene.size = skView.bounds.size
@@ -86,7 +86,7 @@ class GameViewController: UIViewController {
         let promotionTwo = dataArray[checkUniqueRandomNumber(randomNumber)] as! Promotion //create another random Promotion object but ensure that it is not the same object by ensuring that it is not the same random number
         
         return (promotionOne, promotionTwo)
-//        print("Array Object: \(promotionObject.facebook)")
+        //        print("Array Object: \(promotionObject.facebook)")
     }
     
     func setupBusinessPromotions() {
@@ -104,7 +104,7 @@ class GameViewController: UIViewController {
      Functions that returns only a unique random number, this will be used to produce TWO unique Promotion objects
      */
     func checkUniqueRandomNumber(firstRandomNumber: Int) -> Int {
-
+        
         let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(arrayCount)
         if firstRandomNumber == randomNumber
         {
@@ -126,6 +126,7 @@ class GameViewController: UIViewController {
             self.clockTimer.invalidate()
             print("FINSHED")
             NSNotificationCenter.defaultCenter().postNotificationName("gameOver", object: self)
+//            NSNotificationCenter.defaultCenter().postNotificationName("FinalScores", object: self)            
         }
     }
     
@@ -151,7 +152,7 @@ class GameViewController: UIViewController {
         self.view.addConstraint(xConstraint)
         self.view.addConstraint(yConstraint)
     }
-
+    
     
     
 }

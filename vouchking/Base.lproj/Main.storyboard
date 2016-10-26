@@ -10,7 +10,7 @@
             <string>LuckiestGuy-Regular</string>
             <string>LuckiestGuy-Regular</string>
         </mutableArray>
-        <mutableArray key="Montserrat-Bold.ttf">
+        <mutableArray key="Montserrat-Bold.otf">
             <string>Montserrat-Bold</string>
         </mutableArray>
     </customFonts>
@@ -182,15 +182,18 @@
                             <constraint firstItem="Vju-7e-PWV" firstAttribute="centerX" secondItem="Wan-gD-X7E" secondAttribute="centerX" id="Xf4-38-tGG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="u6l-f5-BfB" kind="presentation" identifier="GoToSummary" modalTransitionStyle="crossDissolve" id="V3c-H9-GK1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="luS-nd-Na9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-164" y="1199"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Summary View Controller-->
         <scene sceneID="pn5-PE-Nat">
             <objects>
-                <viewController storyboardIdentifier="GameSummaryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="u6l-f5-BfB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameSummaryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="u6l-f5-BfB" customClass="GameSummaryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FON-bN-JjQ"/>
                         <viewControllerLayoutGuide type="bottom" id="VmY-CN-5a9"/>
@@ -203,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yIf-ZE-yQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="259" y="1886"/>
+            <point key="canvasLocation" x="-164" y="1941"/>
         </scene>
         <!--Terms View Controller-->
         <scene sceneID="zPF-sf-yPH">

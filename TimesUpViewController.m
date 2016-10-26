@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"Times Up");
-    [self performSelector:@selector(moveToGameSummaryViewController) withObject:nil afterDelay:3.0];
+    [self performSelector:@selector(moveToGameSummary) withObject:nil afterDelay:3.0];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,14 +27,7 @@
 
 #pragma mark - Helper Functions
 -(void) moveToGameSummary   {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"GameSummaryViewController"];
-    [vc setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
-    [self presentViewController:vc animated:YES completion:nil];
-
-}
--(void) moveToGameSummaryViewController {
-    [self moveToGameSummary];
+    [self performSegueWithIdentifier:@"GoToSummary" sender:self];
 }
 
 @end
