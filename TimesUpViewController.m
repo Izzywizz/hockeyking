@@ -17,7 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"Times Up");
-    [self performSelector:@selector(moveToGameSummary) withObject:nil afterDelay:3.0];
+//    [self performSelector:@selector(moveToGameSummary) withObject:nil afterDelay:3.0];
+    [self performSelector:@selector(moveToPromotionsTable) withObject:nil afterDelay:3.0];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,4 +32,7 @@
     [self performSegueWithIdentifier:@"GoToSummary" sender:self];
 }
 
+-(void) moveToPromotionsTable   {
+    [self performSegueWithIdentifier:@"GoToPromotions" sender:self];
+}
 @end

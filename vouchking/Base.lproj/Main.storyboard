@@ -184,11 +184,12 @@
                     </view>
                     <connections>
                         <segue destination="u6l-f5-BfB" kind="presentation" identifier="GoToSummary" modalTransitionStyle="crossDissolve" id="V3c-H9-GK1"/>
+                        <segue destination="rm5-Lc-s0l" kind="show" identifier="GoToPromotions" id="o56-aI-ata"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="luS-nd-Na9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-164" y="1199"/>
+            <point key="canvasLocation" x="-164" y="1221"/>
         </scene>
         <!--Game Summary View Controller-->
         <scene sceneID="pn5-PE-Nat">
@@ -306,7 +307,7 @@ If you have any questions about our Privacy Policy, or if you want to know what 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RMd-go-6Ji" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001" y="1230"/>
+            <point key="canvasLocation" x="1737" y="1210"/>
         </scene>
         <!--PROMOTION STORE-->
         <scene sceneID="pmt-nS-RnY">
@@ -347,7 +348,7 @@ If you have any questions about our Privacy Policy, or if you want to know what 
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sW3-Ym-QLI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1346" y="447"/>
+            <point key="canvasLocation" x="559" y="1229"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TW4-Ev-zog">
@@ -412,7 +413,7 @@ If you have any questions about our Privacy Policy, or if you want to know what 
                     <connections>
                         <outlet property="leftLogoImageView" destination="3ya-BU-IbC" id="iy6-ae-xTu"/>
                         <outlet property="rightLogoImageView" destination="PIO-4i-YBq" id="FtI-gd-0AE"/>
-                        <segue destination="d4f-Eb-pod" kind="presentation" identifier="GoToMenu" modalTransitionStyle="crossDissolve" id="ETP-36-F8G"/>
+                        <segue destination="d4f-Eb-pod" kind="show" identifier="GoToTimesUp" id="ETP-36-F8G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RUD-2u-C80" sceneMemberID="firstResponder"/>
@@ -434,4 +435,7 @@ If you have any questions about our Privacy Policy, or if you want to know what 
         <image name="amazon-lg" width="97" height="31"/>
         <image name="dominos-lg" width="100" height="100"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="o56-aI-ata"/>
+    </inferredMetricsTieBreakers>
 </document>

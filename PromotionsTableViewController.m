@@ -88,7 +88,7 @@
 
 #pragma mark - Action Method
 - (IBAction)backButtonPressed:(UIButton *)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 

@@ -269,6 +269,8 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     //MARK: Promotion Scores
     func calculateTotalScores()  {
         print("Final Scores: LEFT: \(blockLeftCount) RIGHT: \(blockRightCount)")
+        
+//        GameViewController.instance.businessOneLeft.pointsEarned += NSNumber(integer: blockLeftCount)
         GameViewController.instance.businessOneLeft.pointsEarned = blockLeftCount
         GameViewController.instance.businessTwoRight.pointsEarned = blockRightCount
     }
