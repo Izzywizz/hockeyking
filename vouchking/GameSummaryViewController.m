@@ -7,6 +7,8 @@
 //
 
 #import "GameSummaryViewController.h"
+#import "Data.h"
+#import "Promotion.h"
 
 @interface GameSummaryViewController ()
 
@@ -17,12 +19,19 @@
 #pragma mark - UIVIew Methods
 
 -(void) viewDidAppear:(BOOL)animated    {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(totalPointsTally:) name:@"FinalScores" object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(totalPointsTally:) name:@"FinalScores" object:nil];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"Working out Scores");
+    NSLog(@"Promotion ARRAY: %@", [[Data sharedInstance] promotionsArray]); //Shard Array used instead
+    Promotion *promtion = [Promotion new];
+    promtion = [Data sharedInstance].promotionsArray.firstObject;
+    NSLog(@"Business: %@, Points Earned: %@", promtion.businessName, promtion.pointsEarned);
+    promtion = [Data sharedInstance].promotionsArray.lastObject;
+    NSLog(@"Business: %@, Points Earned: %@", promtion.businessName, promtion.pointsEarned);
+
 }
 
 - (void)didReceiveMemoryWarning {

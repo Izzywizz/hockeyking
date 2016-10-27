@@ -20,7 +20,7 @@
 		<key>promotionDescription</key>
 		<string>Two for One offer on coffees and get a free cookie</string>
 		<key>pointsEarned</key>
-		<integer>50</integer>
+		<integer>0</integer>
 		<key>promotionNotes</key>
 		<string>This is one time offer, you use it once thats it</string>
 		<key>totalPromotionsAvailable</key>
@@ -52,7 +52,7 @@
 		<key>promotionDescription</key>
 		<string>Buy one BodyShop lotion and get one free</string>
 		<key>pointsEarned</key>
-		<string>123</string>
+		<string>0</string>
 		<key>promotionNotes</key>
 		<string>This offer can be used multiplen times baby</string>
 		<key>totalPromotionsAvailable</key>

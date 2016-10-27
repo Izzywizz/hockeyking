@@ -42,7 +42,10 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         addSwipe()
         setupObservers()
         createBackground()
-
+        GameViewController.instance.setupBusinessPromotions()
+        print("NAME: \(GameViewController.instance.businessOneLeft.businessName)")
+        print("NAME: \(GameViewController.instance.businessTwoRight.businessName)")
+        
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -257,14 +260,21 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     
     func methodOfReceivedNotification(notification: NSNotification){
         print("Game Over baby")
-        
-//        NSNotificationCenter.defaultCenter().postNotificationName("FinalScores", object: self)
-        //Pause the scene
-        NSNotificationCenter.defaultCenter().postNotificationName("FinalScores", object: self, userInfo:
-            ["LeftScore": blockLeftCount, "RightScore" : blockRightCount])
-        
+        //Tally up the scores here!
+        calculateTotalScores()
         scene!.view?.paused = true
-        self.viewController!.performSegueWithIdentifier("GoToMenu", sender: viewController)
+//        self.viewController!.performSegueWithIdentifier("GoToMenu", sender: viewController)
     }
+    
+    //MARK: Promotion Scores
+    func calculateTotalScores()  {
+        print("Final Scores: LEFT: \(blockLeftCount) RIGHT: \(blockRightCount)")
+        GameViewController.instance.businessOneLeft.pointsEarned = blockLeftCount
+        GameViewController.instance.businessTwoRight.pointsEarned = blockRightCount
+    }
+    
+    
+    
+    
 
 }

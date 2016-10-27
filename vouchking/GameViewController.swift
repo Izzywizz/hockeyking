@@ -17,6 +17,11 @@ class GameViewController: UIViewController {
     var timerCount = 10
     var clockTimer = NSTimer()
     var label: UILabel!
+    static var instance: GameViewController!
+    var businessOneLeft: Promotion!
+    var businessOneRandomNumber: Int = 0
+    var businessTwoRandomNumber: Int! = 0
+    var businessTwoRight: Promotion!
     
     @IBOutlet weak var leftLogoImageView: UIImageView!
     @IBOutlet weak var rightLogoImageView: UIImageView!
@@ -31,10 +36,10 @@ class GameViewController: UIViewController {
     //MARK: UIVIew Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        GameViewController.instance = self
+
         arrayCount = Data.sharedInstance().promotionsArray.count
-        setupBusinessPromotions()
-        
-        
+//        setupBusinessPromotions()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         //        timer.text = "\(timerCount)"
         createLabel()
@@ -81,9 +86,10 @@ class GameViewController: UIViewController {
     //MARK: Promotion Methods
     func returnTwoObjects() -> (promotionOne: Promotion, promotionTwo: Promotion) {
         let dataArray = Data.sharedInstance().promotionsArray
-        let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(dataArray.count) //create random number based on total array count
-        let promotionOne = dataArray[randomNumber] as! Promotion //grab the Promtion object based on the array value given by the random number
-        let promotionTwo = dataArray[checkUniqueRandomNumber(randomNumber)] as! Promotion //create another random Promotion object but ensure that it is not the same object by ensuring that it is not the same random number
+        businessOneRandomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(dataArray.count) //create random number based on total array count
+        let promotionOne = dataArray[businessOneRandomNumber] as! Promotion //grab the Promtion object based on the array value given by the random number
+        businessTwoRandomNumber = checkUniqueRandomNumber(businessOneRandomNumber)
+        let promotionTwo = dataArray[businessTwoRandomNumber] as! Promotion //create another random Promotion object but ensure that it is not the same object by ensuring that it is not the same random number
         
         return (promotionOne, promotionTwo)
         //        print("Array Object: \(promotionObject.facebook)")
@@ -91,13 +97,13 @@ class GameViewController: UIViewController {
     
     func setupBusinessPromotions() {
         let promotions = returnTwoObjects()
-        let businessOnTheLeft = promotions.0
-        let businessOnTheRight = promotions.1
+        businessOneLeft = promotions.0
+        businessTwoRight = promotions.1
         
-        print("Promotion Object One: \(businessOnTheLeft.businessName)") //left block/ logo/ promotion
-        leftLogoImageView.image = businessOnTheLeft.businessLogo
-        print("Promotion Object Two: \(businessOnTheRight.businessName)")
-        rightLogoImageView.image = businessOnTheRight.businessLogo
+        print("Promotion Object One: \(businessOneLeft.businessName)") //left block/ logo/ promotion
+        leftLogoImageView.image = businessOneLeft.businessLogo
+        print("Promotion Object Two: \(businessTwoRight.businessName)")
+        rightLogoImageView.image = businessTwoRight.businessLogo
     }
     
     /**
@@ -125,10 +131,22 @@ class GameViewController: UIViewController {
         } else {
             self.clockTimer.invalidate()
             print("FINSHED")
+            print("RandomNumberLeft: \(businessOneRandomNumber) RandomNumberRight: \(businessTwoRandomNumber)")
             NSNotificationCenter.defaultCenter().postNotificationName("gameOver", object: self)
-//            NSNotificationCenter.defaultCenter().postNotificationName("FinalScores", object: self)            
+            self.performSegueWithIdentifier("GoToMenu", sender: self)
+            
+            Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessOneRandomNumber, withObject: businessOneLeft)
+            print("(LEFT) Business: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].businessName) Points Earned: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].pointsEarned)")
+
+//            NSNotificationCenter.defaultCenter().postNotificationName("FinalScores", object: self)
+            
+            //        NSNotificationCenter.defaultCenter().postNotificationName("FinalScores", object: self)
+            //Pause the scene
+//            NSNotificationCenter.defaultCenter().postNotificationName("FinalScores", object: self, userInfo:
+//                ["LeftScore": blockLeftCount, "RightScore" : blockRightCount])
         }
     }
+
     
     func createLabel() {
         //create label
