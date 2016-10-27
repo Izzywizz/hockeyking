@@ -268,20 +268,6 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     
     //MARK: Promotion Scores
     func calculateTotalScores()  {
-//        print("Final Scores: LEFT: \(blockLeftCount) RIGHT: \(blockRightCount)")        
-        
-//        let nsnumber = blockLeftCount as NSNumber
-//        let number = GameViewController.instance.businessOneLeft.pointsEarned!.intValue + nsnumber.intValue
-//        GameViewController.instance.businessOneLeft.pointsEarned = NSNumber(int: number)
-        
-//        GameViewController.instance.businessOneLeft.pointsEarned += NSNumber(integer: blockLeftCount)
-//        if Data.sharedInstance().promotionsArray[GameViewController.instance.businessOneRandomNumber] as! NSObject == 1 {
-//            <#code#>
-//        }
-        let arrayIndex = GameViewController.instance.businessOneRandomNumber
-        let number = Data.sharedInstance().promotionsArray[arrayIndex] as! Promotion
-        number.pointsEarned.integerValue
-        
         
         GameViewController.instance.businessOneLeft.pointsEarned = blockLeftCount
         GameViewController.instance.businessTwoRight.pointsEarned = blockRightCount

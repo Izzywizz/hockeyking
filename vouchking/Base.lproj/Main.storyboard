@@ -432,7 +432,7 @@ If you have any questions about our Privacy Policy, or if you want to know what 
         <image name="32" width="250" height="133"/>
         <image name="34" width="341" height="617"/>
         <image name="9" width="250" height="90"/>
-        <image name="amazon-lg" width="97" height="31"/>
+        <image name="amazon-lg" width="100" height="100"/>
         <image name="dominos-lg" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
