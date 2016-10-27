@@ -160,16 +160,18 @@ class GameViewController: UIViewController {
     }
     
     func saveDataFromSession() {
-        //Save instance of Data
         
         var result = Int(businessOneLeft.pointsEarned) // points earned from the game
         result += previousBusinessPointsOne // previous business points earned for that specific business
         print("RESULT \(businessOneLeft.businessName): \(result)")
+        businessOneLeft.pointsEarned = result
         
         var resultTwo = Int(businessTwoRight.pointsEarned) // points earned from the game
         resultTwo += previousBusinessPointsTwo // previous business points earned for that specific business
         print("RESULT \(businessTwoRight.businessName): \(resultTwo)")
+        businessTwoRight.pointsEarned = resultTwo
         
+        //Save instance of Data
         Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessOneRandomNumber, withObject: businessOneLeft)
         Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessTwoRandomNumber, withObject: businessTwoRight)
         print("(Points Earned AFTER - LEFT) Business: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].businessName) Points Earned: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].pointsEarned)")
