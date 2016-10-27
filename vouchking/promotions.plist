@@ -16,7 +16,7 @@
 		<key>totalUsers</key>
 		<integer>10</integer>
 		<key>expiryEpoch</key>
-		<integer>1477640792</integer>
+		<real>1477640792</real>
 		<key>promotionDescription</key>
 		<string>Two for One offer on coffees and get a free cookie</string>
 		<key>pointsEarned</key>
@@ -36,9 +36,9 @@
 	</dict>
 	<dict>
 		<key>businessLogo</key>
-		<string>bs-lg</string>
+		<string>dominos-lg</string>
 		<key>gameSummaryLogo</key>
-		<string>35</string>
+		<string>36</string>
 		<key>promotionId</key>
 		<real>654321</real>
 		<key>totalPoints</key>
@@ -48,23 +48,87 @@
 		<key>totalUsers</key>
 		<integer>42</integer>
 		<key>expiryEpoch</key>
-		<integer>1477476878</integer>
+		<real>1477476878</real>
 		<key>promotionDescription</key>
-		<string>Buy one BodyShop lotion and get one free</string>
+		<string>Buy one Dominoes lotion and get one free</string>
 		<key>pointsEarned</key>
-		<string>0</string>
+		<integer>0</integer>
 		<key>promotionNotes</key>
 		<string>This offer can be used multiplen times baby</string>
 		<key>totalPromotionsAvailable</key>
-		<string>500</string>
+		<integer>500</integer>
 		<key>businessName</key>
-		<string>BodyShop</string>
+		<string>Dominoes</string>
 		<key>twitter</key>
 		<string>https://twitter.com/kfc_uki?lang=en</string>
 		<key>facebook</key>
-		<string>https://www.facebook.com/BodyShop/</string>
+		<string>https://www.facebook.com/Dominoes/</string>
 		<key>website</key>
-		<string>https://www.bodyshop.co.uk</string>
+		<string>https://www.domeinoes.co.uk</string>
+	</dict>
+	<dict>
+		<key>businessLogo</key>
+		<string>amazon-lg</string>
+		<key>gameSummaryLogo</key>
+		<string>37</string>
+		<key>promotionId</key>
+		<integer>985789</integer>
+		<key>totalPoints</key>
+		<integer>164</integer>
+		<key>currentRank</key>
+		<integer>5</integer>
+		<key>totalUsers</key>
+		<integer>93</integer>
+		<key>expiryEpoch</key>
+		<real>1477476878</real>
+		<key>promotionDescription</key>
+		<string>Everything Free in Amazon</string>
+		<key>pointsEarned</key>
+		<integer>0</integer>
+		<key>promotionNotes</key>
+		<string>This is not real sorry</string>
+		<key>totalPromotionsAvailable</key>
+		<integer>70</integer>
+		<key>businessName</key>
+		<string>Amazon</string>
+		<key>twitter</key>
+		<string>twitter amazon</string>
+		<key>facebook</key>
+		<string>facebook Amazon</string>
+		<key>website</key>
+		<string>amazon world</string>
+	</dict>
+	<dict>
+		<key>businessLogo</key>
+		<string>bs-lg</string>
+		<key>gameSummaryLogo</key>
+		<string>bs-bg</string>
+		<key>promotionId</key>
+		<integer>398534</integer>
+		<key>totalPoints</key>
+		<integer>250</integer>
+		<key>currentRank</key>
+		<integer>4</integer>
+		<key>totalUsers</key>
+		<string>73</string>
+		<key>expiryEpoch</key>
+		<real>1477640792</real>
+		<key>promotionDescription</key>
+		<string>Free Facemask!</string>
+		<key>pointsEarned</key>
+		<integer>0</integer>
+		<key>promotionNotes</key>
+		<string>Available all year</string>
+		<key>totalPromotionsAvailable</key>
+		<integer>999</integer>
+		<key>businessName</key>
+		<string>BodyShop</string>
+		<key>twitter</key>
+		<string>bodyshop twitter</string>
+		<key>facebook</key>
+		<string>facebook bodbyshop</string>
+		<key>website</key>
+		<string>website boddshop</string>
 	</dict>
 </array>
 </plist>
