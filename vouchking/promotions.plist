@@ -10,7 +10,7 @@
 		<key>promotionId</key>
 		<real>123456</real>
 		<key>totalPoints</key>
-		<integer>900</integer>
+		<integer>0</integer>
 		<key>currentRank</key>
 		<integer>2</integer>
 		<key>totalUsers</key>
@@ -42,7 +42,7 @@
 		<key>promotionId</key>
 		<real>654321</real>
 		<key>totalPoints</key>
-		<integer>84</integer>
+		<integer>0</integer>
 		<key>currentRank</key>
 		<integer>1</integer>
 		<key>totalUsers</key>
@@ -74,7 +74,7 @@
 		<key>promotionId</key>
 		<integer>985789</integer>
 		<key>totalPoints</key>
-		<integer>164</integer>
+		<integer>0</integer>
 		<key>currentRank</key>
 		<integer>5</integer>
 		<key>totalUsers</key>
@@ -106,7 +106,7 @@
 		<key>promotionId</key>
 		<integer>398534</integer>
 		<key>totalPoints</key>
-		<integer>250</integer>
+		<integer>0</integer>
 		<key>currentRank</key>
 		<integer>4</integer>
 		<key>totalUsers</key>
@@ -138,7 +138,7 @@
 		<key>promotionId</key>
 		<integer>49582</integer>
 		<key>totalPoints</key>
-		<integer>845</integer>
+		<integer>0</integer>
 		<key>currentRank</key>
 		<integer>100</integer>
 		<key>totalUsers</key>

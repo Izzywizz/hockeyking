@@ -34,7 +34,7 @@
     //Setting up the values/images by referencing the Promotion object
     iv.image = _promotion.gameSummaryLogo;
     descriptionLabel.text = _promotion.promotionDescription;
-    pointsEarned.text = [NSString stringWithFormat:@"%@/500", _promotion.pointsEarned]; //Total points Earned is 500 and hardset
+    pointsEarned.text = [NSString stringWithFormat:@"(%@) %@/500", _promotion.pointsEarned, _promotion.totalPoints]; //Total points Earned is 500 and hardset
     promotionTimeLeft.text = [NSString stringWithFormat:@"%@ Left", [self convertToEpochTime:_promotion.expiryEpoch]]; //Calcualtions needed to set whether it is DAys/ Hours
     totalPromotionsAvailable.text = [NSString stringWithFormat:@"%@", _promotion.totalPromotionsAvailable];
 }
