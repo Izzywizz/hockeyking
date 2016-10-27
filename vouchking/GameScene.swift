@@ -199,8 +199,8 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
                 block.name = "block\(i)"
                 print("block: Bottom Left: \(block.name)")
                 block.position = CGPoint(x: (size.width - size.width) + 10, y: size.height - size.height) //bottom left, 10 + added to allow for paddle to be viewable
-                let actionMoveUp = SKAction.moveToY(size.height, duration: 2) //orginally set to 700/ 0
-                let actionMoveDown = SKAction.moveToY(size.height - size.height, duration: 2)
+                let actionMoveUp = SKAction.moveToY(size.height, duration: 1) //orginally set to 700/ 0
+                let actionMoveDown = SKAction.moveToY(size.height - size.height, duration: 1)
                 let actionMoveUpDown = SKAction.sequence([actionMoveUp, actionMoveDown])
                 let actionMoveDownRepeat = SKAction.repeatActionForever(actionMoveUpDown)
                 block.runAction(actionMoveDownRepeat, withKey: "leftBlockMove")
@@ -213,8 +213,8 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
                 block.name = "block\(i)"
                 print("block: Top Right: \(block.name)")
                 block.position = CGPoint(x: (size.width) - 10, y: size.height) //top right, - 10 (minus) to allow for the paddle to be viewable
-                let rightActionMoveDown = SKAction.moveToY(size.height - size.height, duration: 2)
-                let rightActionMoveUp = SKAction.moveToY(size.height, duration: 2)
+                let rightActionMoveDown = SKAction.moveToY(size.height - size.height, duration: 1)
+                let rightActionMoveUp = SKAction.moveToY(size.height, duration: 1)
                 let actionDownUp = SKAction.sequence([rightActionMoveDown, rightActionMoveUp])
                 let actionDownUpRepeat = SKAction.repeatActionForever(actionDownUp)
                 block.runAction(actionDownUpRepeat, withKey: "rightBlockMove")

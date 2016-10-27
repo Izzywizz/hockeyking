@@ -135,15 +135,12 @@ class GameViewController: UIViewController {
             NSNotificationCenter.defaultCenter().postNotificationName("gameOver", object: self)
             self.performSegueWithIdentifier("GoToMenu", sender: self)
             
+            //Save instance of Data
             Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessOneRandomNumber, withObject: businessOneLeft)
+            Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessTwoRandomNumber, withObject: businessTwoRight)
             print("(LEFT) Business: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].businessName) Points Earned: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].pointsEarned)")
+            print("(RIGHT) Business: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].businessName) Points Earned: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].pointsEarned)")
 
-//            NSNotificationCenter.defaultCenter().postNotificationName("FinalScores", object: self)
-            
-            //        NSNotificationCenter.defaultCenter().postNotificationName("FinalScores", object: self)
-            //Pause the scene
-//            NSNotificationCenter.defaultCenter().postNotificationName("FinalScores", object: self, userInfo:
-//                ["LeftScore": blockLeftCount, "RightScore" : blockRightCount])
         }
     }
 
