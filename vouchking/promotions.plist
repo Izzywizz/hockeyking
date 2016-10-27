@@ -130,5 +130,37 @@
 		<key>website</key>
 		<string>website boddshop</string>
 	</dict>
+	<dict>
+		<key>businessLogo</key>
+		<string>hm-lg</string>
+		<key>gameSummaryLogo</key>
+		<string>hm-bg</string>
+		<key>promotionId</key>
+		<integer>49582</integer>
+		<key>totalPoints</key>
+		<integer>845</integer>
+		<key>currentRank</key>
+		<integer>100</integer>
+		<key>totalUsers</key>
+		<integer>3</integer>
+		<key>expiryEpoch</key>
+		<real>1477640792</real>
+		<key>promotionDescription</key>
+		<string>Buy one T shirt and get another T shirt free</string>
+		<key>pointsEarned</key>
+		<integer>0</integer>
+		<key>promotionNotes</key>
+		<string>Only red T shirts apply</string>
+		<key>totalPromotionsAvailable</key>
+		<integer>99</integer>
+		<key>businessName</key>
+		<string>H&amp;M</string>
+		<key>twitter</key>
+		<string>H&amp;M twitter</string>
+		<key>facebook</key>
+		<string>H &amp; M Facebook</string>
+		<key>website</key>
+		<string>H &amp; M website</string>
+	</dict>
 </array>
 </plist>
