@@ -152,7 +152,9 @@ class GameViewController: UIViewController {
     
     func storePreviousPoints() {
         let business = Data.sharedInstance().promotionsArray[businessOneRandomNumber] as! Promotion
+        business.pointsEarned = 0
         let businessTwo = Data.sharedInstance().promotionsArray[businessTwoRandomNumber] as! Promotion
+        businessTwo.pointsEarned = 0
         previousBusinessPointsOne = Int (business.totalPoints)
         previousBusinessPointsTwo = Int (businessTwo.totalPoints)
         print("Hardcoded \(business.businessName) (Points: \(previousBusinessPointsOne)")
