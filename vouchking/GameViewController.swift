@@ -152,7 +152,7 @@ class GameViewController: UIViewController {
     
     func storePreviousPoints() {
         let business = Data.sharedInstance().promotionsArray[businessOneRandomNumber] as! Promotion
-        business.pointsEarned = 0
+        business.pointsEarned = 0 //get rid of the previous adding of points earned
         let businessTwo = Data.sharedInstance().promotionsArray[businessTwoRandomNumber] as! Promotion
         businessTwo.pointsEarned = 0
         previousBusinessPointsOne = Int (business.totalPoints)
