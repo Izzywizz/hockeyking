@@ -18,10 +18,15 @@ class GameViewController: UIViewController {
     var clockTimer = NSTimer()
     var label: UILabel!
     static var instance: GameViewController!
+    
     var businessOneLeft: Promotion!
+    var previousBusinessPointsOne = 0
     var businessOneRandomNumber: Int = 0
-    var businessTwoRandomNumber: Int! = 0
+    
+    var businessTwoRandomNumber: Int = 0
     var businessTwoRight: Promotion!
+    var previousBusinessPointsTwo = 0
+
     
     @IBOutlet weak var leftLogoImageView: UIImageView!
     @IBOutlet weak var rightLogoImageView: UIImageView!
@@ -37,8 +42,13 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         GameViewController.instance = self
-
         arrayCount = Data.sharedInstance().promotionsArray.count
+        
+        setupBusinessPromotions()
+        storePreviousPoints()
+        //find previous scores
+        
+        
 //        setupBusinessPromotions()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         //        timer.text = "\(timerCount)"
@@ -58,6 +68,7 @@ class GameViewController: UIViewController {
             scene.scaleMode = SKSceneScaleMode.ResizeFill
             scene.viewController = self
             scene.size = skView.bounds.size
+            
             skView.presentScene(scene)
         }
     }
@@ -131,7 +142,7 @@ class GameViewController: UIViewController {
         } else {
             self.clockTimer.invalidate()
             print("FINSHED")
-            print("RandomNumberLeft: \(businessOneRandomNumber) RandomNumberRight: \(businessTwoRandomNumber)")
+//            print("RandomNumberLeft: \(businessOneRandomNumber) RandomNumberRight: \(businessTwoRandomNumber)")
             NSNotificationCenter.defaultCenter().postNotificationName("gameOver", object: self)
             self.performSegueWithIdentifier("GoToTimesUp", sender: self)
             saveDataFromSession()
@@ -139,13 +150,30 @@ class GameViewController: UIViewController {
         }
     }
     
+    func storePreviousPoints() {
+        let business = Data.sharedInstance().promotionsArray[businessOneRandomNumber] as! Promotion
+        let businessTwo = Data.sharedInstance().promotionsArray[businessTwoRandomNumber] as! Promotion
+        previousBusinessPointsOne = Int (business.pointsEarned)
+        previousBusinessPointsTwo = Int (businessTwo.pointsEarned)
+        print("Hardcoded \(business.businessName) (Points: \(previousBusinessPointsOne)")
+        print("Hardcoded \(businessTwo.businessName) (Points: \(previousBusinessPointsTwo)")
+    }
+    
     func saveDataFromSession() {
         //Save instance of Data
+        
+        var result = Int(businessOneLeft.pointsEarned) // points earned from the game
+        result += previousBusinessPointsOne // previous business points earned for that specific business
+        print("RESULT \(businessOneLeft.businessName): \(result)")
+        
+        var resultTwo = Int(businessTwoRight.pointsEarned) // points earned from the game
+        resultTwo += previousBusinessPointsTwo // previous business points earned for that specific business
+        print("RESULT \(businessTwoRight.businessName): \(resultTwo)")
+        
         Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessOneRandomNumber, withObject: businessOneLeft)
         Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessTwoRandomNumber, withObject: businessTwoRight)
-        print("(LEFT) Business: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].businessName) Points Earned: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].pointsEarned)")
-        print("(RIGHT) Business: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].businessName) Points Earned: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].pointsEarned)")
-
+        print("(Points Earned AFTER - LEFT) Business: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].businessName) Points Earned: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].pointsEarned)")
+        print("(Points Earned AFTER - RIGHT) Business: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].businessName) Points Earned: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].pointsEarned)")
     }
     
     func createLabel() {

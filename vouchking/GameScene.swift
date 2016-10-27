@@ -42,10 +42,10 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         addSwipe()
         setupObservers()
         createBackground()
-        GameViewController.instance.setupBusinessPromotions()
+        
+//        GameViewController.instance.setupBusinessPromotions()
         print("NAME: \(GameViewController.instance.businessOneLeft.businessName)")
         print("NAME: \(GameViewController.instance.businessTwoRight.businessName)")
-        
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -197,6 +197,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
                 let texture = SKTexture(imageNamed: "17")
                 block = SKSpriteNode(texture: texture)
                 block.name = "block\(i)"
+//                block.name = GameViewController.instance.businessOneLeft.businessName
                 print("block: Bottom Left: \(block.name)")
                 block.position = CGPoint(x: (size.width - size.width) + 10, y: size.height - size.height) //bottom left, 10 + added to allow for paddle to be viewable
                 let actionMoveUp = SKAction.moveToY(size.height, duration: 1) //orginally set to 700/ 0
@@ -253,7 +254,6 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     }
     
     //MARK: Observer Methods
-    
     func setupObservers() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(GameScene.methodOfReceivedNotification(_:)), name:"gameOver", object: nil)
     }
@@ -268,9 +268,21 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     
     //MARK: Promotion Scores
     func calculateTotalScores()  {
-        print("Final Scores: LEFT: \(blockLeftCount) RIGHT: \(blockRightCount)")
+//        print("Final Scores: LEFT: \(blockLeftCount) RIGHT: \(blockRightCount)")        
+        
+//        let nsnumber = blockLeftCount as NSNumber
+//        let number = GameViewController.instance.businessOneLeft.pointsEarned!.intValue + nsnumber.intValue
+//        GameViewController.instance.businessOneLeft.pointsEarned = NSNumber(int: number)
         
 //        GameViewController.instance.businessOneLeft.pointsEarned += NSNumber(integer: blockLeftCount)
+//        if Data.sharedInstance().promotionsArray[GameViewController.instance.businessOneRandomNumber] as! NSObject == 1 {
+//            <#code#>
+//        }
+        let arrayIndex = GameViewController.instance.businessOneRandomNumber
+        let number = Data.sharedInstance().promotionsArray[arrayIndex] as! Promotion
+        number.pointsEarned.integerValue
+        
+        
         GameViewController.instance.businessOneLeft.pointsEarned = blockLeftCount
         GameViewController.instance.businessTwoRight.pointsEarned = blockRightCount
     }
