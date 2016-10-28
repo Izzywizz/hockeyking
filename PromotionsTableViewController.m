@@ -87,9 +87,16 @@
 }
 
 #pragma mark - Action Method
-- (IBAction)backButtonPressed:(UIButton *)sender {
+- (IBAction)backButtonPressed:(UIBarButtonItem *)sender {
+    if (sender.tag == 1) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
+
+
+
 
 
 @end

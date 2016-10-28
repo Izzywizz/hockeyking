@@ -85,7 +85,7 @@
                                     <segue destination="gva-Hk-TvM" kind="show" id="C2T-bw-ZfY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vl-wP-Bun" userLabel="Info Button">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vl-wP-Bun" userLabel="Info Button">
                                 <rect key="frame" x="40" y="541" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="c8b-z9-mxh"/>
@@ -182,32 +182,10 @@
                             <constraint firstItem="Vju-7e-PWV" firstAttribute="centerX" secondItem="Wan-gD-X7E" secondAttribute="centerX" id="Xf4-38-tGG"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="u6l-f5-BfB" kind="presentation" identifier="GoToSummary" modalTransitionStyle="crossDissolve" id="V3c-H9-GK1"/>
-                        <segue destination="rm5-Lc-s0l" kind="show" identifier="GoToPromotions" id="o56-aI-ata"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="luS-nd-Na9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-164" y="1221"/>
-        </scene>
-        <!--Game Summary View Controller-->
-        <scene sceneID="pn5-PE-Nat">
-            <objects>
-                <viewController storyboardIdentifier="GameSummaryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="u6l-f5-BfB" customClass="GameSummaryViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="FON-bN-JjQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="VmY-CN-5a9"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yuw-4d-wzX">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yIf-ZE-yQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-164" y="1941"/>
+            <point key="canvasLocation" x="-166" y="1978"/>
         </scene>
         <!--Terms View Controller-->
         <scene sceneID="zPF-sf-yPH">
@@ -307,7 +285,7 @@ If you have any questions about our Privacy Policy, or if you want to know what 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RMd-go-6Ji" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1737" y="1210"/>
+            <point key="canvasLocation" x="1743" y="1221"/>
         </scene>
         <!--PROMOTION STORE-->
         <scene sceneID="pmt-nS-RnY">
@@ -334,21 +312,20 @@ If you have any questions about our Privacy Policy, or if you want to know what 
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="PROMOTION STORE" id="Wxx-fB-ZBF">
-                        <barButtonItem key="leftBarButtonItem" style="done" id="Apw-aC-Lv6">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CZj-6X-v8Q">
-                                <rect key="frame" x="20" y="11" width="11" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="29"/>
-                                <connections>
-                                    <action selector="backButtonPressed:" destination="rm5-Lc-s0l" eventType="touchUpInside" id="SE0-Fj-UvT"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="leftBarButtonItem" image="29" id="Z65-bi-ZD2">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="rm5-Lc-s0l" id="ctx-oh-x2N"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="backButton" destination="Z65-bi-ZD2" id="goT-7b-lkq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sW3-Ym-QLI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="559" y="1229"/>
+            <point key="canvasLocation" x="1029" y="1221"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TW4-Ev-zog">
@@ -418,7 +395,7 @@ If you have any questions about our Privacy Policy, or if you want to know what 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RUD-2u-C80" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-169" y="453"/>
+            <point key="canvasLocation" x="-166" y="1221"/>
         </scene>
     </scenes>
     <resources>
@@ -435,7 +412,4 @@ If you have any questions about our Privacy Policy, or if you want to know what 
         <image name="amazon-lg" width="100" height="100"/>
         <image name="dominos-lg" width="100" height="100"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="o56-aI-ata"/>
-    </inferredMetricsTieBreakers>
 </document>

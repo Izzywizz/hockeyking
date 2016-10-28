@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PromotionsTableViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *backButton;
 
 @end

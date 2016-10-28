@@ -7,6 +7,7 @@
 //
 
 #import "TimesUpViewController.h"
+#import "PromotionsTableViewController.h"
 
 @interface TimesUpViewController ()
 
@@ -17,8 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"Times Up");
-//    [self performSelector:@selector(moveToGameSummary) withObject:nil afterDelay:3.0];
-    [self performSelector:@selector(moveToPromotionsTable) withObject:nil afterDelay:3.0];
+    [self performSelector:@selector(performAnimation) withObject:nil afterDelay:3.0];
 
 }
 
@@ -28,11 +28,18 @@
 }
 
 #pragma mark - Helper Functions
--(void) moveToGameSummary   {
-    [self performSegueWithIdentifier:@"GoToSummary" sender:self];
+
+- (void) performAnimation
+{
+    PromotionsTableViewController *nextView =[self.storyboard instantiateViewControllerWithIdentifier:@"PromotionsTableViewController"];
+    nextView.backButton.image = [UIImage imageNamed:@""];
+    nextView.backButton.title = @"Done";
+    nextView.backButton.tag = 1;
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.5;
+    transition.type = kCATransitionFade;
+    [self.navigationController.view.layer addAnimation:transition forKey:nil];
+    [self.navigationController pushViewController:nextView animated:NO];
 }
 
--(void) moveToPromotionsTable   {
-    [self performSegueWithIdentifier:@"GoToPromotions" sender:self];
-}
 @end
