@@ -44,8 +44,8 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         createBackground()
         
 //        GameViewController.instance.setupBusinessPromotions()
-        print("NAME: \(GameViewController.instance.businessOneLeft.businessName)")
-        print("NAME: \(GameViewController.instance.businessTwoRight.businessName)")
+        print("NAME: \(GameViewController.instance.leftBusiness.businessName)")
+        print("NAME: \(GameViewController.instance.rightBusiness.businessName)")
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -269,8 +269,8 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     //MARK: Promotion Scores
     func calculateTotalScores()  {
         
-        GameViewController.instance.businessOneLeft.pointsEarned = blockLeftCount
-        GameViewController.instance.businessTwoRight.pointsEarned = blockRightCount
+        GameViewController.instance.leftBusiness.pointsEarned = blockLeftCount
+        GameViewController.instance.rightBusiness.pointsEarned = blockRightCount
     }
     
     
