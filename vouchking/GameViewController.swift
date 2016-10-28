@@ -13,7 +13,6 @@ import GameKit
 class GameViewController: UIViewController {
     
     //MARK: Properties
-    var arrayCount: Int!
     var timerCount = 10
     var clockTimer = NSTimer()
     var label: UILabel!
@@ -41,7 +40,6 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         GameViewController.instance = self
-        arrayCount = Data.sharedInstance().promotionsArray.count
         setupBusinessPromotions()
         storePreviousPoints()
         //find previous scores
@@ -122,7 +120,7 @@ class GameViewController: UIViewController {
      */
     func checkUniqueRandomNumber(firstRandomNumber: Int) -> Int {
         
-        let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(arrayCount)
+        let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(Data.sharedInstance().promotionsArray.count)
         if firstRandomNumber == randomNumber
         {
             print("Same, FirstNumber: \(firstRandomNumber) and Second: \(randomNumber)")
@@ -173,7 +171,7 @@ class GameViewController: UIViewController {
     
     func saveDataFromSession() {
         
-        var result = Int(businessOneLeft.pointsEarned) // points earned from the game
+        var result = Int(businessOneLeft.pointsEarned) // cuurent points earned from the game
         result += previousBusinessPointsOne // previous business points earned for that specific business
         print("RESULT \(businessOneLeft.businessName): \(result)")
         businessOneLeft.totalPoints = result
