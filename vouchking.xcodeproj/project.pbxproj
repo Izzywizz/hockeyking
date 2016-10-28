@@ -38,7 +38,6 @@
 		43B5CFF81DC0B7FD00117316 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 43B5CFF51DC0B7FD00117316 /* GameScene.sks */; };
 		43B5CFF91DC0B7FD00117316 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5CFF61DC0B7FD00117316 /* GameScene.swift */; };
 		43B5CFFA1DC0B7FD00117316 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5CFF71DC0B7FD00117316 /* GameViewController.swift */; };
-		43B5CFFD1DC0F16200117316 /* GameSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B5CFFC1DC0F16200117316 /* GameSummaryViewController.m */; };
 		43BAC3851DBE25D900C8A518 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC3841DBE25D900C8A518 /* CustomNavigationController.m */; };
 		43BAC3891DBE3D3900C8A518 /* TermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BAC3881DBE3D3900C8A518 /* TermsViewController.m */; };
 		43C7BA041DB611A700FDD9F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA031DB611A700FDD9F1 /* main.m */; };
@@ -100,8 +99,6 @@
 		43B5CFF51DC0B7FD00117316 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		43B5CFF61DC0B7FD00117316 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		43B5CFF71DC0B7FD00117316 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		43B5CFFB1DC0F16200117316 /* GameSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSummaryViewController.h; sourceTree = "<group>"; };
-		43B5CFFC1DC0F16200117316 /* GameSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSummaryViewController.m; sourceTree = "<group>"; };
 		43BAC3801DBE205700C8A518 /* vouchking-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vouchking-Bridging-Header.h"; sourceTree = "<group>"; };
 		43BAC3831DBE25D900C8A518 /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
 		43BAC3841DBE25D900C8A518 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
@@ -214,14 +211,14 @@
 			path = "montserrat-2";
 			sourceTree = "<group>";
 		};
-		43B5CFF41DC0B7D800117316 /* SwiftPlay */ = {
+		43B5CFF41DC0B7D800117316 /* Game */ = {
 			isa = PBXGroup;
 			children = (
 				43B5CFF51DC0B7FD00117316 /* GameScene.sks */,
 				43B5CFF61DC0B7FD00117316 /* GameScene.swift */,
 				43B5CFF71DC0B7FD00117316 /* GameViewController.swift */,
 			);
-			name = SwiftPlay;
+			name = Game;
 			sourceTree = "<group>";
 		};
 		43BAC3861DBE283600C8A518 /* Helper Classes */ = {
@@ -255,7 +252,7 @@
 		43C7BA011DB611A700FDD9F1 /* vouchking */ = {
 			isa = PBXGroup;
 			children = (
-				43B5CFF41DC0B7D800117316 /* SwiftPlay */,
+				43B5CFF41DC0B7D800117316 /* Game */,
 				43BAC3861DBE283600C8A518 /* Helper Classes */,
 				4321CDDE1DBA21E5005C06AB /* Custom Table Cells */,
 				43C7BA271DB61C8A00FDD9F1 /* Model */,
@@ -272,8 +269,6 @@
 				43BAC3881DBE3D3900C8A518 /* TermsViewController.m */,
 				4321CDDB1DBA2195005C06AB /* PromotionsTableViewController.h */,
 				4321CDDC1DBA2195005C06AB /* PromotionsTableViewController.m */,
-				43B5CFFB1DC0F16200117316 /* GameSummaryViewController.h */,
-				43B5CFFC1DC0F16200117316 /* GameSummaryViewController.m */,
 				43C7BA0E1DB611A700FDD9F1 /* Assets.xcassets */,
 				43C7BA101DB611A700FDD9F1 /* LaunchScreen.storyboard */,
 				43C7BA131DB611A700FDD9F1 /* Info.plist */,
@@ -442,7 +437,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				43B5CFFA1DC0B7FD00117316 /* GameViewController.swift in Sources */,
-				43B5CFFD1DC0F16200117316 /* GameSummaryViewController.m in Sources */,
 				435C4F791DBF55F7001DD279 /* TimesUpViewController.m in Sources */,
 				43C7BA351DB634A600FDD9F1 /* PListParser.m in Sources */,
 				43C7BA2D1DB626D500FDD9F1 /* Data.m in Sources */,

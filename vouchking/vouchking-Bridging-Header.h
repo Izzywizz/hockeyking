@@ -4,4 +4,4 @@
 
 #import "Data.h"
 #import "Promotion.h"
-#import "GameSummaryViewController.h"
+#import "PromotionsTableViewController.h"

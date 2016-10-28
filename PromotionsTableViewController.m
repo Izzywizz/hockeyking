@@ -24,6 +24,12 @@
     [self.navigationController setNavigationBarHidden:NO];
     _promoKeysArray = [[Data sharedInstance].promotionsDict allKeys];//PromotionID number assoicated with the Promotion Object
     [self setupTable];
+    
+    if (_backButton.tag == 1) {
+        NSLog(@"Coming from the PLAY screen");
+        _backButton.image = [UIImage imageNamed:@""];
+        _backButton.title = @"Done";
+    }
 }
 
 -(void) viewDidLoad {

@@ -26,7 +26,6 @@ class GameViewController: UIViewController {
     var businessTwoRandomNumber: Int = 0
     var businessTwoRight: Promotion!
     var previousBusinessPointsTwo = 0
-
     
     @IBOutlet weak var leftLogoImageView: UIImageView!
     @IBOutlet weak var rightLogoImageView: UIImageView!
@@ -140,14 +139,24 @@ class GameViewController: UIViewController {
             timerCount -= 1
             label.text = "\(timerCount)"
         } else {
-            self.clockTimer.invalidate()
-            print("FINSHED")
+            self.clockTimer.invalidate() //stop the clock
 //            print("RandomNumberLeft: \(businessOneRandomNumber) RandomNumberRight: \(businessTwoRandomNumber)")
             NSNotificationCenter.defaultCenter().postNotificationName("gameOver", object: self)
-            self.performSegueWithIdentifier("GoToTimesUp", sender: self)
+//            self.performSegueWithIdentifier("GoToTimesUp", sender: self)
+            moveToGameSummary()
             saveDataFromSession()
             
         }
+    }
+    
+    func moveToGameSummary()  {
+        let gameSummaryVC = self.storyboard?.instantiateViewControllerWithIdentifier("PromotionsTableViewController") as! PromotionsTableViewController
+        gameSummaryVC.backButton.tag = 1
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = kCATransitionFade
+        self.navigationController!.view.layer.addAnimation(transition, forKey: nil)
+        self.navigationController?.pushViewController(gameSummaryVC, animated: false)
     }
     
     func storePreviousPoints() {
