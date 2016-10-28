@@ -10,7 +10,7 @@
             <string>LuckiestGuy-Regular</string>
             <string>LuckiestGuy-Regular</string>
         </mutableArray>
-        <mutableArray key="Montserrat-Bold.otf">
+        <mutableArray key="Montserrat-Bold.ttf">
             <string>Montserrat-Bold</string>
         </mutableArray>
     </customFonts>
@@ -371,34 +371,13 @@ If you have any questions about our Privacy Policy, or if you want to know what 
                                     <constraint firstAttribute="height" constant="100" id="8cL-dS-oax"/>
                                 </constraints>
                             </imageView>
-                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4NW-aI-1wP" customClass="TimesUpOverlayView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="32" translatesAutoresizingMaskIntoConstraints="NO" id="riF-9u-Hdb" userLabel="TimesUp">
-                                        <rect key="frame" x="175" y="233.5" width="250" height="134"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="134" id="6di-TV-Rfv"/>
-                                            <constraint firstAttribute="width" constant="250" id="6mV-MH-Vvc"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="riF-9u-Hdb" firstAttribute="centerX" secondItem="4NW-aI-1wP" secondAttribute="centerX" id="YPp-yv-1eR"/>
-                                    <constraint firstItem="riF-9u-Hdb" firstAttribute="centerY" secondItem="4NW-aI-1wP" secondAttribute="centerY" id="u9N-d5-bkZ"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="y3E-mA-o1O" firstAttribute="top" secondItem="4NW-aI-1wP" secondAttribute="bottom" id="2v3-C3-lhv"/>
                             <constraint firstItem="PIO-4i-YBq" firstAttribute="centerX" secondItem="hn5-SJ-P4S" secondAttribute="centerX" constant="25" id="7qW-Xe-B6o"/>
-                            <constraint firstItem="4NW-aI-1wP" firstAttribute="top" secondItem="hn5-SJ-P4S" secondAttribute="top" id="Crr-Du-uDv"/>
                             <constraint firstItem="PIO-4i-YBq" firstAttribute="centerY" secondItem="hn5-SJ-P4S" secondAttribute="centerY" id="H7L-iM-jrx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PIO-4i-YBq" secondAttribute="trailing" constant="20" id="LLz-mI-Pj2"/>
-                            <constraint firstItem="4NW-aI-1wP" firstAttribute="leading" secondItem="hn5-SJ-P4S" secondAttribute="leading" id="WUl-N5-dIN"/>
                             <constraint firstItem="3ya-BU-IbC" firstAttribute="centerY" secondItem="hn5-SJ-P4S" secondAttribute="centerY" id="ZBu-hi-LRU"/>
-                            <constraint firstAttribute="trailing" secondItem="4NW-aI-1wP" secondAttribute="trailing" id="muP-x2-dxM"/>
                             <constraint firstItem="3ya-BU-IbC" firstAttribute="leading" secondItem="hn5-SJ-P4S" secondAttribute="leadingMargin" constant="20" id="qog-oi-rtK"/>
                         </constraints>
                         <variation key="default">

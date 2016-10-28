@@ -10,16 +10,19 @@
 #import "Data.h"
 #import "PromotionTableCell.h"
 #import "CustomNavigationController.h"
+#import "OverlayView.h"
 
 @interface PromotionsTableViewController()<UITableViewDelegate, UITableViewDataSource>
 
 @property NSArray *promoKeysArray; //Previously used when the Promotion where Dict
+@property (nonatomic) UIView *overlayView; //timesUpScreen
 
 @end
 
 @implementation PromotionsTableViewController
 
 #pragma mark - UI TableView Methods
+
 -(void)viewWillAppear:(BOOL)animated    {
     [self.navigationController setNavigationBarHidden:NO];
     _promoKeysArray = [[Data sharedInstance].promotionsDict allKeys];//PromotionID number assoicated with the Promotion Object
@@ -29,6 +32,7 @@
         NSLog(@"Coming from the PLAY screen");
         _backButton.image = [UIImage imageNamed:@""];
         _backButton.title = @"Done";
+        [self setupTimesUpView]; //show times up view
     }
 }
 
@@ -100,7 +104,26 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+#pragma mark - OverlayVIew
+/*ensures that the view added streches properly to the screen*/
+- (void) stretchToSuperView:(UIView*) view {
+    view.translatesAutoresizingMaskIntoConstraints = NO;
+    NSDictionary *bindings = NSDictionaryOfVariableBindings(view);
+    NSString *formatTemplate = @"%@:|[view]|";
+    for (NSString * axis in @[@"H",@"V"]) {
+        NSString * format = [NSString stringWithFormat:formatTemplate,axis];
+        NSArray * constraints = [NSLayoutConstraint constraintsWithVisualFormat:format options:0 metrics:nil views:bindings];
+        [view.superview addConstraints:constraints];
+    }
+}
 
+-(void) setupTimesUpView   {
+    OverlayView *overlayVC = [OverlayView overlayView];
+    self.view.bounds = overlayVC.bounds;
+    [self.view addSubview:overlayVC];
+    [self stretchToSuperView:self.view];
+    self.overlayView = overlayVC;
+}
 
 
 

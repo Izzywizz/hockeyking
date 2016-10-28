@@ -11,4 +11,6 @@
 @interface PromotionsTableViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *backButton;
 
+
+-(void) setupTimesUpView;
 @end
