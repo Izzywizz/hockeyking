@@ -19,12 +19,12 @@ class GameViewController: UIViewController {
     static var instance: GameViewController!
     
     var leftBusiness: Promotion!
-    var previousBusinessPointsOne = 0
+    var previousBusinessTotalPoints = 0
     var businessOneRandomNumber: Int = 0
     
     var businessTwoRandomNumber: Int = 0
     var rightBusiness: Promotion!
-    var previousBusinessPointsTwo = 0
+    var previousBusinessTwoTotalPoints = 0
     
     @IBOutlet weak var leftLogoImageView: UIImageView!
     @IBOutlet weak var rightLogoImageView: UIImageView!
@@ -39,7 +39,7 @@ class GameViewController: UIViewController {
     //MARK: UIVIew Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        GameViewController.instance = self
+        GameViewController.instance = self //Allows shared access of ViewController to the GameSence
         setupBusinessPromotions()
         storePreviousPoints()
         //find previous scores
@@ -154,24 +154,23 @@ class GameViewController: UIViewController {
     
     func storePreviousPoints() {
         let business = Data.sharedInstance().promotionsArray[businessOneRandomNumber] as! Promotion
-        business.pointsEarned = 0 //get rid of the previous adding of points earned
+        business.pointsEarned = 0 //get rid of the previous adding of points earned (doesnt work)
         let businessTwo = Data.sharedInstance().promotionsArray[businessTwoRandomNumber] as! Promotion
         businessTwo.pointsEarned = 0
-        previousBusinessPointsOne = Int (business.totalPoints)
-        previousBusinessPointsTwo = Int (businessTwo.totalPoints)
-        print("Hardcoded \(business.businessName) (Points: \(previousBusinessPointsOne)")
-        print("Hardcoded \(businessTwo.businessName) (Points: \(previousBusinessPointsTwo)")
+        previousBusinessTotalPoints = Int (business.totalPoints)
+        previousBusinessTwoTotalPoints = Int (businessTwo.totalPoints)
+        print("Hardcoded \(business.businessName) (Points: \(previousBusinessTotalPoints)")
+        print("Hardcoded \(businessTwo.businessName) (Points: \(previousBusinessTwoTotalPoints)")
     }
     
     func saveDataFromSession() {
         
-        let result = Int(leftBusiness.pointsEarned) + previousBusinessPointsOne // current points earned from the game session just played + the total
-        //result += previousBusinessPointsOne // previous business points earned for that specific business
+        let result = Int(leftBusiness.pointsEarned) + previousBusinessTotalPoints // current points earned from the game session just played + the total
+        //result += previousBusinessTotalPoints // previous business points earned for that specific business
         print("RESULT \(leftBusiness.businessName): \(result)")
         leftBusiness.totalPoints = result
         
-        var resultTwo = Int(rightBusiness.pointsEarned) // points earned from the game
-        resultTwo += previousBusinessPointsTwo // previous business points earned for that specific business
+        let resultTwo = Int(rightBusiness.pointsEarned) + previousBusinessTwoTotalPoints
         print("RESULT \(rightBusiness.businessName): \(resultTwo)")
         rightBusiness.totalPoints = resultTwo
         
