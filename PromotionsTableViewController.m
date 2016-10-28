@@ -53,7 +53,7 @@
 -(void) setupNavigationController   {
     
     CustomNavigationController *customNavBar = [[CustomNavigationController alloc] init];
-    // Set the custom NavgiationView returned by the methodto the titleView.
+    // Set the custom NavgiationView returned by the method to the titleView.
     self.navigationItem.titleView =  [customNavBar setupNavigationControllerWithImage:@"30.png" AndTitle:@"PROMOTIONS STORE"];
     //set the colour of the whole nav bar to that blue suggested in the design
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:31.0/255.0 green:84.0/255.0 blue:118.0/255.0 alpha:1.0];
@@ -84,7 +84,7 @@
 -(PromotionTableCell *) promotionCellAtIndex: (NSIndexPath *) indexPath {
     
     NSString *reuseCellID = @"PromotionCell";
-    NSString *nibName =@"PromotionTableCell";
+    NSString *nibName = @"PromotionTableCell";
     
     [self.tableView registerNib:[UINib nibWithNibName:nibName bundle:nil] forCellReuseIdentifier:reuseCellID];
     

@@ -179,9 +179,7 @@ class GameViewController: UIViewController {
     //MARK: Save Session Data
     func storePreviousPoints() {
         let business = Data.sharedInstance().promotionsArray[businessOneRandomNumber] as! Promotion
-        business.pointsEarned = 0 //get rid of the previous adding of points earned (doesnt work)
         let businessTwo = Data.sharedInstance().promotionsArray[businessTwoRandomNumber] as! Promotion
-        businessTwo.pointsEarned = 0
         previousBusinessTotalPoints = Int (business.totalPoints)
         previousBusinessTwoTotalPoints = Int (businessTwo.totalPoints)
         print("Hardcoded \(business.businessName) (Points: \(previousBusinessTotalPoints)")
@@ -194,16 +192,18 @@ class GameViewController: UIViewController {
         //result += previousBusinessTotalPoints // previous business points earned for that specific business
         print("RESULT \(leftBusiness.businessName): \(result)")
         leftBusiness.totalPoints = result
+        leftBusiness.havePointsBeenEarned = true;
         
         let resultTwo = Int(rightBusiness.pointsEarned) + previousBusinessTwoTotalPoints
         print("RESULT \(rightBusiness.businessName): \(resultTwo)")
         rightBusiness.totalPoints = resultTwo
+        rightBusiness.havePointsBeenEarned = true;
         
         //Save instance of Data
         Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessOneRandomNumber, withObject: leftBusiness)
         Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessTwoRandomNumber, withObject: rightBusiness)
-        print("(Points Earned AFTER - LEFT) Business: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].businessName) Points Earned: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].pointsEarned)")
-        print("(Points Earned AFTER - RIGHT) Business: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].businessName) Points Earned: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].pointsEarned)")
+        print("(Points LEFT) Business: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].businessName) Points Earned: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].pointsEarned)")
+        print("(Points RIGHT) Business: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].businessName) Points Earned: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].pointsEarned)")
         
     }
     
