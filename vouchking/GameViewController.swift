@@ -127,7 +127,7 @@ class GameViewController: UIViewController {
         }
     }
     
-    //MARK: Helper Functions
+    //MARK: Timer Methods/ Timer Label
     func countdown() {
         if timerCount > 0 {
             timerCount -= 1
@@ -138,10 +138,34 @@ class GameViewController: UIViewController {
             NSNotificationCenter.defaultCenter().postNotificationName("gameOver", object: self)
             moveToGameSummary()
             saveDataFromSession()
-            
         }
     }
     
+    func createLabel() {
+        //create label
+        label = UILabel(frame: CGRectZero)
+        label.text = "\(timerCount)"
+        label.font = UIFont(name: "LuckiestGuy-Regular", size: 32.0)
+        label.textColor = UIColor(colorLiteralRed: 46/255.0, green: 117/255.0, blue: 161/255.0, alpha: 1)
+        label.textAlignment = .Center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(label)
+        let widthConstraint = NSLayoutConstraint(item: label, attribute: .Width, relatedBy: .Equal,
+                                                 toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 78.5)
+        label.addConstraint(widthConstraint)
+        
+        let heightConstraint = NSLayoutConstraint(item: label, attribute: .Height, relatedBy: .Equal,
+                                                  toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 37.5)
+        label.addConstraint(heightConstraint)
+        
+        let xConstraint = NSLayoutConstraint(item: label, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1, constant: 0)
+        let yConstraint = NSLayoutConstraint(item: label, attribute: .CenterY, relatedBy: .Equal, toItem: self.view, attribute: .CenterY, multiplier: 1, constant: (self.view.frame.height/4) + 10)
+        self.view.addConstraint(xConstraint)
+        self.view.addConstraint(yConstraint)
+    }
+
+    
+    //MARK: Helper Methods
     func moveToGameSummary()  {
         let gameSummaryVC = self.storyboard?.instantiateViewControllerWithIdentifier("PromotionsTableViewController") as! PromotionsTableViewController
         gameSummaryVC.backButton.tag = 1
@@ -152,6 +176,7 @@ class GameViewController: UIViewController {
         self.navigationController?.pushViewController(gameSummaryVC, animated: false)
     }
     
+    //MARK: Save Session Data
     func storePreviousPoints() {
         let business = Data.sharedInstance().promotionsArray[businessOneRandomNumber] as! Promotion
         business.pointsEarned = 0 //get rid of the previous adding of points earned (doesnt work)
@@ -182,28 +207,6 @@ class GameViewController: UIViewController {
         
     }
     
-    func createLabel() {
-        //create label
-        label = UILabel(frame: CGRectZero)
-        label.text = "\(timerCount)"
-        label.font = UIFont(name: "LuckiestGuy-Regular", size: 32.0)
-        label.textColor = UIColor(colorLiteralRed: 46/255.0, green: 117/255.0, blue: 161/255.0, alpha: 1)
-        label.textAlignment = .Center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(label)
-        let widthConstraint = NSLayoutConstraint(item: label, attribute: .Width, relatedBy: .Equal,
-                                                 toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 78.5)
-        label.addConstraint(widthConstraint)
-        
-        let heightConstraint = NSLayoutConstraint(item: label, attribute: .Height, relatedBy: .Equal,
-                                                  toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 37.5)
-        label.addConstraint(heightConstraint)
-        
-        let xConstraint = NSLayoutConstraint(item: label, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1, constant: 0)
-        let yConstraint = NSLayoutConstraint(item: label, attribute: .CenterY, relatedBy: .Equal, toItem: self.view, attribute: .CenterY, multiplier: 1, constant: (self.view.frame.height/4) + 10)
-        self.view.addConstraint(xConstraint)
-        self.view.addConstraint(yConstraint)
-    }
     
     
     

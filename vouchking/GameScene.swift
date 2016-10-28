@@ -42,31 +42,18 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         addSwipe()
         setupObservers()
         createBackground()
-        
-//        GameViewController.instance.setupBusinessPromotions()
         print("NAME: \(GameViewController.instance.leftBusiness.businessName)")
         print("NAME: \(GameViewController.instance.rightBusiness.businessName)")
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        /* Called when a touch begins */
-        let touch = touches.first
-        let touchLocation = touch!.locationInNode(self)
-        
-        if let body = physicsWorld.bodyAtPoint(touchLocation) {
-            if body.node!.name == BallCategoryName  {
-                print("Began touch on Ball")
-                isFingerOnBall = true
-            }
-        }
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent: UIEvent?) {
-        isFingerOnBall = false
-        print("Ball has lost its touch")
+
         
     }
     
