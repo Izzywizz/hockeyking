@@ -13,10 +13,7 @@
 #pragma mark - View Methods
 
 -(void)awakeFromNib {
-    NSLog(@"TEST");
-    [self setAlpha:1.0f];
     [self performSelector:@selector(performAnimation) withObject:nil afterDelay:2.0];
-//    [self performAnimation];
 }
 
 #pragma mark - Class Methods
@@ -32,11 +29,9 @@
 
 -(void) performAnimation    {
     [self setAlpha:1.0f];
-    
     [UIView animateWithDuration:2.0f animations:^{
         [self setAlpha:0.0f];
     }];
-
 }
 
 @end

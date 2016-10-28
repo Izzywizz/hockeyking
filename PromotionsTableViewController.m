@@ -30,6 +30,8 @@
     
     if (_backButton.tag == 1) {
         NSLog(@"Coming from the PLAY screen");
+        UIEdgeInsets inset = UIEdgeInsetsMake(64, 0, 0, 0);
+        self.tableView.contentInset = inset;
         _backButton.image = [UIImage imageNamed:@""];
         _backButton.title = @"Done";
         [self setupTimesUpView]; //show times up view
@@ -99,7 +101,7 @@
 #pragma mark - Action Method
 - (IBAction)backButtonPressed:(UIBarButtonItem *)sender {
     if (sender.tag == 1) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        [self.navigationController popToRootViewControllerAnimated:NO];
     }
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
@@ -124,8 +126,5 @@
     [self stretchToSuperView:self.view];
     self.overlayView = overlayVC;
 }
-
-
-
 
 @end

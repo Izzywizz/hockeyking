@@ -42,11 +42,12 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         GameViewController.instance = self
         arrayCount = Data.sharedInstance().promotionsArray.count
-        
         setupBusinessPromotions()
         storePreviousPoints()
         //find previous scores
         
+        //reset all points earend
+
         
 //        setupBusinessPromotions()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
@@ -187,6 +188,7 @@ class GameViewController: UIViewController {
         Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessTwoRandomNumber, withObject: businessTwoRight)
         print("(Points Earned AFTER - LEFT) Business: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].businessName) Points Earned: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].pointsEarned)")
         print("(Points Earned AFTER - RIGHT) Business: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].businessName) Points Earned: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].pointsEarned)")
+        
     }
     
     func createLabel() {
