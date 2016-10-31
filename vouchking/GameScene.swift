@@ -53,10 +53,9 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent: UIEvent?) {
-
-        
     }
     
+    //MARK: Off Screen MEthod
     override func update(currentTime: CFTimeInterval) {
         // Loop over all nodes in the scene
         self.enumerateChildNodesWithName("*") {
@@ -69,7 +68,21 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
                         || sprite.position.y < -sprite.size.height/2.0 || sprite.position.y > self.size.height+sprite.size.height/2.0) {
                         self.ballCounter += 1
                         sprite.removeFromParent()
-                        self.createBall()
+
+                        //Coin goes off screen, do the following methods
+                        //save points earned from the blocks
+                        self.calculateTotalScores()
+                        
+                        //store previous points earned
+                        GameViewController.instance.storePreviousPoints()
+//                        GameViewController.instance.saveDataFromSession()
+                        
+                        //randomise the objects
+                        GameViewController.instance.setupBusinessPromotions()
+                        self.createBall() //start again, reset the scores
+                        self.resetScores()
+                        
+                        //reset scores to 0
                     }
                 }
             }
@@ -260,7 +273,10 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         GameViewController.instance.rightBusiness.pointsEarned = blockRightCount
     }
     
-    
+    func resetScores()  {
+        blockLeftCount = 0
+        blockRightCount = 0
+    }
     
     
 

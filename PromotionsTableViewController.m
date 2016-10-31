@@ -92,7 +92,6 @@
     Promotion *p = [[Data sharedInstance].promotionsArray objectAtIndex:indexPath.row];
 //    Promotion *p = [[Data sharedInstance].promotionsDict valueForKey:[_promoKeysArray objectAtIndex:indexPath.row]]; //Access the object associated the ID
     cell.promotion = p; //reference the object associated with the Cell
-    
     [cell configureCell];
     
     return cell;

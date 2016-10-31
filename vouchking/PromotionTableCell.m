@@ -36,12 +36,12 @@
     descriptionLabel.text = _promotion.promotionDescription;
     //reset points to 0 so that the previous scores are not always showing
     
-    if (_promotion.havePointsBeenEarned == true) {
+//    if (_promotion.havePointsBeenEarned == true) {
         pointsEarned.text = [NSString stringWithFormat:@"(%@) %@/500", _promotion.pointsEarned, _promotion.totalPoints]; //Total points Earned is 500 and hardset
-        _promotion.havePointsBeenEarned = false; //set it back to false ie default
-    } else  {
-        pointsEarned.text = [NSString stringWithFormat:@"(0) %@/500", _promotion.totalPoints]; //no points earned for that promotion for that round so keep it at zero
-    }
+//        _promotion.havePointsBeenEarned = false; //set it back to false ie default
+//    } else  {
+//        pointsEarned.text = [NSString stringWithFormat:@"(0) %@/500", _promotion.totalPoints]; //no points earned for that promotion for that round so keep it at zero
+//    }
     promotionTimeLeft.text = [NSString stringWithFormat:@"%@ Left", [self convertToEpochTime:_promotion.expiryEpoch]]; //Calcualtions needed to set whether it is DAys/ Hours
     totalPromotionsAvailable.text = [NSString stringWithFormat:@"%@", _promotion.totalPromotionsAvailable];
 }

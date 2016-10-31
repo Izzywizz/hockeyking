@@ -41,7 +41,7 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         GameViewController.instance = self //Allows shared access of ViewController to the GameSence
         setupBusinessPromotions()
-        storePreviousPoints()
+//        storePreviousPoints()
         //find previous scores
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
@@ -137,7 +137,7 @@ class GameViewController: UIViewController {
 //            print("RandomNumberLeft: \(businessOneRandomNumber) RandomNumberRight: \(businessTwoRandomNumber)")
             NSNotificationCenter.defaultCenter().postNotificationName("gameOver", object: self)
             moveToGameSummary()
-            saveDataFromSession()
+//            saveDataFromSession()
         }
     }
     
@@ -182,22 +182,23 @@ class GameViewController: UIViewController {
         let businessTwo = Data.sharedInstance().promotionsArray[businessTwoRandomNumber] as! Promotion
         previousBusinessTotalPoints = Int (business.totalPoints)
         previousBusinessTwoTotalPoints = Int (businessTwo.totalPoints)
-        print("Hardcoded \(business.businessName) (Points: \(previousBusinessTotalPoints)")
-        print("Hardcoded \(businessTwo.businessName) (Points: \(previousBusinessTwoTotalPoints)")
+        print("Hardcoded \(business.businessName) Points: \(previousBusinessTotalPoints)")
+        print("Hardcoded \(businessTwo.businessName) Points: \(previousBusinessTwoTotalPoints)")
+        
+        saveDataFromSession()
     }
     
     func saveDataFromSession() {
-        
         let result = Int(leftBusiness.pointsEarned) + previousBusinessTotalPoints // current points earned from the game session just played + the total
         //result += previousBusinessTotalPoints // previous business points earned for that specific business
-        print("RESULT \(leftBusiness.businessName): \(result)")
+        print("NAME: \(leftBusiness.businessName): Previous Points: \(previousBusinessTotalPoints) PointsEarned: \(leftBusiness.pointsEarned)")
         leftBusiness.totalPoints = result
-        leftBusiness.havePointsBeenEarned = true;
+//        leftBusiness.havePointsBeenEarned = true;
         
         let resultTwo = Int(rightBusiness.pointsEarned) + previousBusinessTwoTotalPoints
-        print("RESULT \(rightBusiness.businessName): \(resultTwo)")
+        print("NAME \(rightBusiness.businessName): Previous Points: \(previousBusinessTwoTotalPoints) PointsEarned: \(rightBusiness.pointsEarned)")
         rightBusiness.totalPoints = resultTwo
-        rightBusiness.havePointsBeenEarned = true;
+//        rightBusiness.havePointsBeenEarned = true;
         
         //Save instance of Data
         Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessOneRandomNumber, withObject: leftBusiness)
@@ -207,7 +208,8 @@ class GameViewController: UIViewController {
         
     }
     
-    
-    
+//    func resetScores() {
+//        <#function body#>
+//    }
     
 }
