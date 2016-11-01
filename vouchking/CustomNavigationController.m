@@ -17,7 +17,8 @@
 @implementation CustomNavigationController
 
 /** 
- This method returns a UIView that can be used to include an image and text, side by side within the navigation controller 
+ This method returns a UIView that can be used to include an image and text, side by side within the navigation controller title, creating this effect:
+ [Image] [Titile Text]
 */
 -(UIView *) setupNavigationControllerWithImage: (NSString *) imageName AndTitle: (NSString *) title {
     UIView *navView = [UIView new];

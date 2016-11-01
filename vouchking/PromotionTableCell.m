@@ -19,7 +19,6 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-    
     // Configure the view for the selected state
 }
 
@@ -45,13 +44,14 @@
 }
 
 /**
- This method deciedes what colour the value should be for the label that clearly repsents a changge in the score, a blue colour is used for pstive numbers,
+ Deciedes what colour the value should be for the label that clearly repsents a changge in the score of the user pointsEarned for that round (NOT the total), a blue colour is used for positive numbers,
  the red colour for a negative score and green for neutral.
+ The UILabel uses a custom extension class UILabel+FormattedText to extend functionality and easily allow the text colour changed at a whim
  */
 -(void) setPostiveNegativeColours: (UILabel*) pointsEarned   {
     if ([_promotion.totalPointsEarnedPerRound intValue] > 0) {
         NSLog(@"Postive +ve Number");
-        [pointsEarned setTextColor:[UIColor blueColor] fromOccurenceOfString:@"(" toOccurenceOfString:@" "]; //uses extension class UILabel to extend functionality
+        [pointsEarned setTextColor:[UIColor blueColor] fromOccurenceOfString:@"(" toOccurenceOfString:@" "];
     } else if ([_promotion.totalPointsEarnedPerRound intValue] < 0)    {
         NSLog(@"Negative -ve Number Found");
         [pointsEarned setTextColor:[UIColor redColor] fromOccurenceOfString:@"(" toOccurenceOfString:@" "]; //uses extension class UILabel to extend functionality
@@ -62,9 +62,11 @@
 }
 
 
-/** Method that takes the current time and the date set within the Promotion object itself and returns the difference as string
+/** 
+ This method takes the current time and the date set within the Promotion object itself and returns the difference as string
  The grammar format is handle by another method below which takes into account Days/ day or Hours/ hour.
- The method also account for daylight saving time*/
+ The method also account for daylight saving time
+ */
 -(NSString *) convertToEpochTime: (NSNumber *) epochTime    {
     
     NSCalendar *c = [NSCalendar currentCalendar];
@@ -84,7 +86,10 @@
 }
 
 
-
+/**
+ Ensures that the correct grammar is used for the relevant days/ day and hours/ hour depending on the amount time left, for example
+ It wouldn't be appropiate to say 1 hours left, it would be better to say 1 hour left. This is essentially what this method does.
+ */
 -(NSString *) isTheTimeLeftInDays:(BOOL) isTimeDifferenceDay andTimeLeft:(NSInteger) timeLeft{
     
     if (isTimeDifferenceDay) {
