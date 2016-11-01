@@ -50,14 +50,11 @@
  */
 -(void) setPostiveNegativeColours: (UILabel*) pointsEarned   {
     if ([_promotion.totalPointsEarnedPerRound intValue] > 0) {
-        NSLog(@"Postive +ve Number");
         [pointsEarned setTextColor:[UIColor blueColor] fromOccurenceOfString:@"(" toOccurenceOfString:@" "];
     } else if ([_promotion.totalPointsEarnedPerRound intValue] < 0)    {
-        NSLog(@"Negative -ve Number Found");
         [pointsEarned setTextColor:[UIColor redColor] fromOccurenceOfString:@"(" toOccurenceOfString:@" "]; //uses extension class UILabel to extend functionality
     } else  {
-        NSLog(@"Neutral - 0");
-        [pointsEarned setTextColor:[UIColor greenColor] fromOccurenceOfString:@"(" toOccurenceOfString:@" "]; //uses extension class UILabel to extend functionality
+        [pointsEarned setTextColor:[UIColor blackColor] fromOccurenceOfString:@"(" toOccurenceOfString:@" "]; //uses extension class UILabel to extend functionality
     }
 }
 
