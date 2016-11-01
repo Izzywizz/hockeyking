@@ -45,9 +45,6 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         GameViewController.instance = self //Allows shared access of ViewController to the GameSence
         setupBusinessPromotions()
-//        storePreviousPoints()
-        //find previous scores
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(GameViewController.addPointsEarned), name: "pointsEarned", object: nil)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
         createLabel()
@@ -199,17 +196,11 @@ class GameViewController: UIViewController {
     
     func saveDataFromSession() {
         let result = Int(leftBusiness.pointsEarned) + previousBusinessTotalPoints // current points earned from the game session just played + the total from the actual business
-//        print("NAME: \(leftBusiness.businessName): Previous Points: \(previousBusinessTotalPoints) PointsEarned: \(leftBusiness.pointsEarned)")
         leftBusiness.totalPoints = result
         
         let resultTwo = Int(rightBusiness.pointsEarned) + previousBusinessTwoTotalPoints
-//        print("NAME \(rightBusiness.businessName): Previous Points: \(previousBusinessTwoTotalPoints) PointsEarned: \(rightBusiness.pointsEarned)")
         rightBusiness.totalPoints = resultTwo
-//        rightBusiness.havePointsBeenEarned = true;
-        
-        //points earned per round (LEFT)
-        //build points per round
-//        leftBusiness.havePointsBeenEarned = true;
+
         let total = leftResult + Int(leftBusiness.pointsEarned)
         leftBusiness.totalPointsEarnedPerRound = total
         let totalTwo = rightResult + Int(rightBusiness.pointsEarned)
@@ -221,8 +212,8 @@ class GameViewController: UIViewController {
         //Save instance of Data
         Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessOneRandomNumber, withObject: leftBusiness)
         Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessTwoRandomNumber, withObject: rightBusiness)
-        print("(Points LEFT) Business: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].businessName) Points Earned: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].pointsEarned)")
-        print("(Points RIGHT) Business: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].businessName) Points Earned: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].pointsEarned)")
+        print("(Points LEFT) Business: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].businessName) Total Points Earned: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].pointsEarned)")
+        print("(Points RIGHT) Business: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].businessName) Total Points Earned: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].pointsEarned)")
         
     }
     

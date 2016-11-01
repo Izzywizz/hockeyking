@@ -7,6 +7,8 @@
 //
 
 #import "PromotionTableCell.h"
+#import "UILabel+FormattedText.h"
+
 
 @implementation PromotionTableCell
 
@@ -36,19 +38,32 @@
     descriptionLabel.text = _promotion.promotionDescription;
     //reset points to 0 so that the previous scores are not always showing
     
-//    if (_promotion.havePointsBeenEarned == true) {
-        pointsEarned.text = [NSString stringWithFormat:@"(%@) %@/500", _promotion.totalPointsEarnedPerRound, _promotion.totalPoints]; //Total points Earned is 500 and hardset
-        _promotion.havePointsBeenEarned = false; //set it back to false ie default
-//    } else  {
-//        _promotion.totalPointsEarnedPerRound = 0;
-//        pointsEarned.text = [NSString stringWithFormat:@"(0) %@/500", _promotion.totalPoints]; //no points earned for that promotion for that round so keep it at zero
-//    }
+    pointsEarned.text = [NSString stringWithFormat:@"(%@) %@/500", _promotion.totalPointsEarnedPerRound, _promotion.totalPoints]; //Total points Earned is 500 and hardset
+    [self setPostiveNegativeColours:pointsEarned];
     promotionTimeLeft.text = [NSString stringWithFormat:@"%@ Left", [self convertToEpochTime:_promotion.expiryEpoch]]; //Calcualtions needed to set whether it is DAys/ Hours
     totalPromotionsAvailable.text = [NSString stringWithFormat:@"%@", _promotion.totalPromotionsAvailable];
 }
 
+/**
+ This method deciedes what colour the value should be for the label that clearly repsents a changge in the score, a blue colour is used for pstive numbers,
+ the red colour for a negative score and green for neutral.
+ */
+-(void) setPostiveNegativeColours: (UILabel*) pointsEarned   {
+    if ([_promotion.totalPointsEarnedPerRound intValue] > 0) {
+        NSLog(@"Postive +ve Number");
+        [pointsEarned setTextColor:[UIColor blueColor] fromOccurenceOfString:@"(" toOccurenceOfString:@" "]; //uses extension class UILabel to extend functionality
+    } else if ([_promotion.totalPointsEarnedPerRound intValue] < 0)    {
+        NSLog(@"Negative -ve Number Found");
+        [pointsEarned setTextColor:[UIColor redColor] fromOccurenceOfString:@"(" toOccurenceOfString:@" "]; //uses extension class UILabel to extend functionality
+    } else  {
+        NSLog(@"Neutral - 0");
+        [pointsEarned setTextColor:[UIColor greenColor] fromOccurenceOfString:@"(" toOccurenceOfString:@" "]; //uses extension class UILabel to extend functionality
+    }
+}
+
+
 /** Method that takes the current time and the date set within the Promotion object itself and returns the difference as string
- The grammar format is handle by another method below which takes into account Days/ day or Hours/ hour. 
+ The grammar format is handle by another method below which takes into account Days/ day or Hours/ hour.
  The method also account for daylight saving time*/
 -(NSString *) convertToEpochTime: (NSNumber *) epochTime    {
     
@@ -67,6 +82,8 @@
         return [self isTheTimeLeftInDays:YES andTimeLeft:diff];
     }
 }
+
+
 
 -(NSString *) isTheTimeLeftInDays:(BOOL) isTimeDifferenceDay andTimeLeft:(NSInteger) timeLeft{
     

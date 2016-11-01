@@ -17,6 +17,7 @@
 		4321CDEA1DBA2934005C06AB /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4321CDE71DBA2934005C06AB /* OFL.txt */; };
 		432312D81DC3533D0096C790 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432312D71DC3533D0096C790 /* OverlayView.xib */; };
 		432312DB1DC353670096C790 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 432312DA1DC353670096C790 /* OverlayView.m */; };
+		4337BCD01DC8D5810024CA74 /* UILabel+FormattedText.m in Sources */ = {isa = PBXBuildFile; fileRef = 4337BCCF1DC8D5810024CA74 /* UILabel+FormattedText.m */; };
 		434E30791DBE589600A29280 /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 434E30661DBE589600A29280 /* Montserrat-Black.otf */; };
 		434E307A1DBE589600A29280 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 434E30671DBE589600A29280 /* Montserrat-Bold.otf */; };
 		434E307B1DBE589600A29280 /* Montserrat-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 434E30681DBE589600A29280 /* Montserrat-ExtraBold.otf */; };
@@ -79,6 +80,8 @@
 		432312D71DC3533D0096C790 /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		432312D91DC353670096C790 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
 		432312DA1DC353670096C790 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
+		4337BCCE1DC8D5810024CA74 /* UILabel+FormattedText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+FormattedText.h"; sourceTree = "<group>"; };
+		4337BCCF1DC8D5810024CA74 /* UILabel+FormattedText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+FormattedText.m"; sourceTree = "<group>"; };
 		434E30661DBE589600A29280 /* Montserrat-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
 		434E30671DBE589600A29280 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		434E30681DBE589600A29280 /* Montserrat-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -231,6 +234,8 @@
 				432312DA1DC353670096C790 /* OverlayView.m */,
 				43BAC3831DBE25D900C8A518 /* CustomNavigationController.h */,
 				43BAC3841DBE25D900C8A518 /* CustomNavigationController.m */,
+				4337BCCE1DC8D5810024CA74 /* UILabel+FormattedText.h */,
+				4337BCCF1DC8D5810024CA74 /* UILabel+FormattedText.m */,
 			);
 			name = "Helper Classes";
 			sourceTree = "<group>";
@@ -446,6 +451,7 @@
 				43C7BA2D1DB626D500FDD9F1 /* Data.m in Sources */,
 				43C7BA0A1DB611A700FDD9F1 /* ViewController.m in Sources */,
 				4321CDDD1DBA2195005C06AB /* PromotionsTableViewController.m in Sources */,
+				4337BCD01DC8D5810024CA74 /* UILabel+FormattedText.m in Sources */,
 				43BAC3851DBE25D900C8A518 /* CustomNavigationController.m in Sources */,
 				43BAC3891DBE3D3900C8A518 /* TermsViewController.m in Sources */,
 				43C7BA2A1DB61CF800FDD9F1 /* Promotion.m in Sources */,

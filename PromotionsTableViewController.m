@@ -35,6 +35,8 @@
         _backButton.image = [UIImage imageNamed:@""];
         _backButton.title = @"Done";
         [self setupTimesUpView]; //show times up view
+        self.tableView.scrollEnabled = NO; //prevent scrolling till the timesup animaton completes
+        [self performSelector: @selector(setScroll) withObject:nil afterDelay:2.0];
     }
 }
 
@@ -43,6 +45,11 @@
 }
 
 #pragma mark - Helper Methods
+
+-(void) setScroll    {
+    self.tableView.scrollEnabled = YES;
+}
+
 -(void) setupTable  {
     self.tableView.allowsSelectionDuringEditing=YES;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
@@ -128,7 +135,6 @@
 }
 
 -(void) resetScores {
-    
     for (int i = 0; i < [Data sharedInstance].promotionsArray.count; i++) {
         Promotion *promotion = [Data sharedInstance].promotionsArray[i];
         promotion.totalPointsEarnedPerRound = @0;
