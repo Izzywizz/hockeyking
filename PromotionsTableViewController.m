@@ -101,6 +101,7 @@
 - (IBAction)backButtonPressed:(UIBarButtonItem *)sender {
     if (sender.tag == 1) {
         [self.navigationController popToRootViewControllerAnimated:NO];
+        [self resetScores];
     }
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
@@ -124,6 +125,15 @@
     [self.view addSubview:overlayVC];
     [self stretchToSuperView:self.view];
     self.overlayView = overlayVC;
+}
+
+-(void) resetScores {
+    
+    for (int i = 0; i < [Data sharedInstance].promotionsArray.count; i++) {
+        Promotion *promotion = [Data sharedInstance].promotionsArray[i];
+        promotion.totalPointsEarnedPerRound = @0;
+        [[Data sharedInstance].promotionsArray replaceObjectAtIndex:i withObject:promotion];
+    }
 }
 
 @end

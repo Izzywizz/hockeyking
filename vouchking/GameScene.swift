@@ -44,6 +44,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         createBackground()
         print("NAME: \(GameViewController.instance.leftBusiness.businessName)")
         print("NAME: \(GameViewController.instance.rightBusiness.businessName)")
+//        GameViewController.instance.resetPoints() //reset the total points earned
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -81,7 +82,6 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
                         GameViewController.instance.setupBusinessPromotions()
                         self.createBall() //start again, reset the scores
                         self.resetScores()
-                        
                         //reset scores to 0
                     }
                 }
@@ -270,6 +270,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     func calculateTotalScores()  {
         
         GameViewController.instance.leftBusiness.pointsEarned = blockLeftCount
+//        NSNotificationCenter.defaultCenter().postNotificationName("pointsEarned", object: self)
         GameViewController.instance.rightBusiness.pointsEarned = blockRightCount
     }
     

@@ -35,6 +35,8 @@
 		<string>http://www.starbucks.co.uk</string>
 		<key>havePointsBeenEarned</key>
 		<false/>
+		<key>totalPointsEarnedPerRound</key>
+		<integer>0</integer>
 	</dict>
 	<dict>
 		<key>businessLogo</key>
@@ -69,6 +71,8 @@
 		<string>https://www.domeinoes.co.uk</string>
 		<key>havePointsBeenEarned</key>
 		<false/>
+		<key>totalPointsEarnedPerRound</key>
+		<integer>0</integer>
 	</dict>
 	<dict>
 		<key>businessLogo</key>
@@ -103,6 +107,8 @@
 		<string>amazon world</string>
 		<key>havePointsBeenEarned</key>
 		<false/>
+		<key>totalPointsEarnedPerRound</key>
+		<integer>0</integer>
 	</dict>
 	<dict>
 		<key>businessLogo</key>
@@ -137,6 +143,8 @@
 		<string>website boddshop</string>
 		<key>havePointsBeenEarned</key>
 		<false/>
+		<key>totalPointsEarnedPerRound</key>
+		<integer>0</integer>
 	</dict>
 	<dict>
 		<key>businessLogo</key>
@@ -171,6 +179,8 @@
 		<string>H &amp; M website</string>
 		<key>havePointsBeenEarned</key>
 		<false/>
+		<key>totalPointsEarnedPerRound</key>
+		<integer>0</integer>
 	</dict>
 </array>
 </plist>

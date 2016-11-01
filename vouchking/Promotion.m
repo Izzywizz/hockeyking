@@ -33,10 +33,13 @@
         self.gameSummaryLogo = [UIImage imageNamed: [dict valueForKey:@"gameSummaryLogo"]];
         self.businessLogo = [UIImage imageNamed: [dict valueForKey:@"businessLogo"]];
         self.havePointsBeenEarned = [[dict valueForKey:@"havePointsBeenEarned"] boolValue];
+        self.totalPointsEarnedPerRound = [dict valueForKey:@"totalPointsEarnedPerRound"];
     }
     
     return self;
 }
+
+
 
 /*
 -(Promotion*)populatePromotion:(Promotion*)p
