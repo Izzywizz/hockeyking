@@ -162,6 +162,11 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         block1.removeActionForKey("rightBlockMove")
     }
     
+    func moveBlocksRandomely(randomNumber number: (Int, Int)) {
+        block0.runAction(setLeftBlockMoveDown(reducePanelDuration(level: number.0)), withKey: "newLeftPanelSpeed")
+        block1.runAction(setRightBlockMoveUp(reducePanelDuration(level: number.1)), withKey: "newRightPanelSpeed")
+    }
+    
     //MARK: Helper Functions
     func addSwipe() {
         let directions: [UISwipeGestureRecognizerDirection] = [.Right, .Left, .Up, .Down]
@@ -202,7 +207,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     func randomTupleNumbers() -> (Int, Int) {
         let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(4)
         let anotherRandomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(4)
-        
+        print("numbers: \(randomNumber) , \(anotherRandomNumber)")
         return (randomNumber, anotherRandomNumber)
     }
     
@@ -298,21 +303,20 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     func timeHasBeenDecreased() {
         //        print("Time Went Down: \(GameViewController.instance.timerCount)"
         let number = randomTupleNumbers()
-        if GameViewController.instance.timerCount == 14 {
+        
+        switch GameViewController.instance.timerCount {
+        case 14:
             removeActionsOnBlocks()
-            block0.runAction(setLeftBlockMoveDown(reducePanelDuration(level: number.0)), withKey: "newLeftPanelSpeed")
-            block1.runAction(setRightBlockMoveUp(reducePanelDuration(level: number.1)), withKey: "newRightPanelSpeed")
-            
-        } else if GameViewController.instance.timerCount == 10  {
+            moveBlocksRandomely(randomNumber: number)
+        case 10:
             removeActionsOnBlocks()
-            block0.runAction(setLeftBlockMoveDown(reducePanelDuration(level: number.0)), withKey: "newLeftPanelSpeed")
-            block1.runAction(setRightBlockMoveUp(reducePanelDuration(level: number.1)), withKey: "newRightPanelSpeed")
-            
-        } else if GameViewController.instance.timerCount == 6   {
+            moveBlocksRandomely(randomNumber: number)
+        case 6:
             removeActionsOnBlocks()
-            block0.runAction(setLeftBlockMoveDown(reducePanelDuration(level: number.0)), withKey: "newLeftPanelSpeed")
-            block1.runAction(setRightBlockMoveUp(reducePanelDuration(level: number.1)), withKey: "newRightPanelSpeed")
+            moveBlocksRandomely(randomNumber: number)
+        default: break
         }
+        
     }
     
     func methodOfReceivedNotification(notification: NSNotification){
