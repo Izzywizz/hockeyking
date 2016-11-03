@@ -305,6 +305,9 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         let number = randomTupleNumbers()
         
         switch GameViewController.instance.timerCount {
+        case 18:
+            removeActionsOnBlocks()
+            moveBlocksRandomely(randomNumber: number)
         case 14:
             removeActionsOnBlocks()
             moveBlocksRandomely(randomNumber: number)
