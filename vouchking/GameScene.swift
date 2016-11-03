@@ -29,6 +29,10 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     var isFingerOnBall = false
     var ballCounter = 0
     var ball = SKSpriteNode(imageNamed: "ball")
+    var block0 = SKSpriteNode(imageNamed: "18")
+    var panelDuration: NSTimeInterval = 0.0
+    
+    
     var blockRightCount: Int = 0
     var blockLeftCount: Int = 0
     
@@ -73,15 +77,15 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
                         //Coin goes off screen, do the following methods
                         //save points earned from the blocks
                         self.calculateTotalScores()
-                        
                         //store previous points earned
                         GameViewController.instance.storePreviousPoints()
-//                        GameViewController.instance.saveDataFromSession()
+//                        GameViewController.instance.saveDataFromSession() This is now
                         
                         //randomise the objects
                         GameViewController.instance.setupBusinessPromotions()
                         self.createBall() //start again, reset the scores
                         self.resetScores()
+                        
                         //reset scores to 0
                     }
                 }
@@ -92,7 +96,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     //MARK: Contact Delegates
     func projectileDidCollideWithBlock(block:SKSpriteNode, ball:SKSpriteNode) {
         if let blockName = block.name {
-            print("Hit: \(blockName)")
+            print("ç: \(blockName)")
             if blockName == "block0" {
                 blockLeftCount += 2
             } else {
@@ -122,10 +126,23 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
             (secondBody.categoryBitMask & PhysicsCategory.Ball != 0)) {
             projectileDidCollideWithBlock(firstBody.node as! SKSpriteNode, ball: secondBody.node as! SKSpriteNode)
         }
-        
     }
     
-    //MARK: Helper MEthods
+    //MARK: Helper Methods
+    func reducePanelDuration()-> NSTimeInterval  {
+        panelDuration = 0.5
+        return panelDuration
+    }
+    
+    //TODO: Potential Random Panels speed, remember that
+    func setLeftBlockMoveDown(panelDuration: NSTimeInterval) -> SKAction {
+        let actionMoveUp = SKAction.moveToY(self.size.height, duration: panelDuration) //orginally set to 700/ 0
+        let actionMoveDown = SKAction.moveToY(self.size.height - self.size.height, duration: panelDuration)
+        let actionMoveUpDown = SKAction.sequence([actionMoveUp, actionMoveDown])
+        let actionMoveDownRepeat = SKAction.repeatActionForever(actionMoveUpDown)
+        
+        return actionMoveDownRepeat
+    }
     
     func addSwipe() {
         let directions: [UISwipeGestureRecognizerDirection] = [.Right, .Left, .Up, .Down]
@@ -156,12 +173,14 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
             let actionMoveDone = SKAction.removeFromParent()
             ball.runAction(SKAction.sequence([moveLeft, actionMoveDone]), withKey: "GoLeftBall")
             blockLeftCount -= 1
+            
+//            block0.runAction(setLeftBlockMoveDown(2)) //experiement with variable random panel
         default:
             print("Gesture Direction Not Needed")
         }
     }
     
-    
+
     //MARK: Create Sprites/Ball/ Blocks/ background
     func createBall()  {
         print("create ball: \(ballCounter)")
@@ -206,7 +225,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
                 let actionMoveDownRepeat = SKAction.repeatActionForever(actionMoveUpDown)
                 block.runAction(actionMoveDownRepeat, withKey: "leftBlockMove")
                 block.zPosition = 1
-
+                block0 = block // a way to reference the panel back to change its speed
 
             } else  {
                 let texture = SKTexture(imageNamed: "18")
@@ -256,6 +275,16 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     //MARK: Observer Methods
     func setupObservers() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(GameScene.methodOfReceivedNotification(_:)), name:"gameOver", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(GameScene.timeHasBeenDecreased), name:"timeHasBeenDecreased", object: nil)
+    }
+    
+    func timeHasBeenDecreased() {
+//        print("Time Went Down: \(GameViewController.instance.timerCount)")
+        if GameViewController.instance.timerCount == 10 {
+            block0.removeAllActions()
+            block0.runAction(setLeftBlockMoveDown(reducePanelDuration()), withKey: "newLeftPanelSpeed")
+        }
+
     }
     
     func methodOfReceivedNotification(notification: NSNotification){
@@ -263,14 +292,12 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         //Tally up the scores here!
         calculateTotalScores()
         scene!.view?.paused = true
-//        self.viewController!.performSegueWithIdentifier("GoToMenu", sender: viewController)
     }
     
     //MARK: Promotion Scores
     func calculateTotalScores()  {
         
         GameViewController.instance.leftBusiness.pointsEarned = blockLeftCount
-//        NSNotificationCenter.defaultCenter().postNotificationName("pointsEarned", object: self)
         GameViewController.instance.rightBusiness.pointsEarned = blockRightCount
     }
     
@@ -278,7 +305,6 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         blockLeftCount = 0
         blockRightCount = 0
     }
-    
     
 
 }

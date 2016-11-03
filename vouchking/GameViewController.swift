@@ -43,6 +43,7 @@ class GameViewController: UIViewController {
     //MARK: UIVIew Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("New Game")
         GameViewController.instance = self //Allows shared access of ViewController to the GameSence
         setupBusinessPromotions()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
@@ -120,11 +121,12 @@ class GameViewController: UIViewController {
         let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(Data.sharedInstance().promotionsArray.count)
         if firstRandomNumber == randomNumber
         {
-            print("Same, FirstNumber: \(firstRandomNumber) and Second: \(randomNumber)")
-            print("call again")
+            //Random number generation, ensures
+//            print("Same, FirstNumber: \(firstRandomNumber) and Second: \(randomNumber)")
+//            print("call again")
             return checkUniqueRandomNumber(randomNumber)
         } else  {
-            print("DIFFERENT, FirstNumber: \(firstRandomNumber) and Second: \(randomNumber)")
+//            print("DIFFERENT, FirstNumber: \(firstRandomNumber) and Second: \(randomNumber)")
             return randomNumber
         }
     }
@@ -134,6 +136,7 @@ class GameViewController: UIViewController {
         if timerCount > 0 {
             timerCount -= 1
             label.text = "\(timerCount)"
+            NSNotificationCenter.defaultCenter().postNotificationName("timeHasBeenDecreased", object: self)
         } else {
             self.clockTimer.invalidate() //stop the clock
 //            print("RandomNumberLeft: \(businessOneRandomNumber) RandomNumberRight: \(businessTwoRandomNumber)")
@@ -188,8 +191,8 @@ class GameViewController: UIViewController {
         leftResult = Int(business.totalPointsEarnedPerRound)
         rightResult = Int(businessTwo.totalPointsEarnedPerRound)
         
-        print("Hardcoded \(business.businessName) Points: \(previousBusinessTotalPoints)")
-        print("Hardcoded \(businessTwo.businessName) Points: \(previousBusinessTwoTotalPoints)")
+        print("Previous Total Points (L) \(business.businessName) Points: \(previousBusinessTotalPoints)")
+        print("Previous Total Points (R)  \(businessTwo.businessName) Points: \(previousBusinessTwoTotalPoints)")
         
         saveDataFromSession()
     }
@@ -206,8 +209,8 @@ class GameViewController: UIViewController {
         let totalTwo = rightResult + Int(rightBusiness.pointsEarned)
         rightBusiness.totalPointsEarnedPerRound = totalTwo
         
-        print("TOTAL: \(leftBusiness.businessName) Points Earned \(leftBusiness.totalPointsEarnedPerRound)")
-        print("TOTAL: \(rightBusiness.businessName) Points Earned \(rightBusiness.totalPointsEarnedPerRound)")
+        print("Points Earned Total (L): \(leftBusiness.businessName) Points Earned \(leftBusiness.totalPointsEarnedPerRound)")
+        print("Points Earned Total (R): \(rightBusiness.businessName) Points Earned \(rightBusiness.totalPointsEarnedPerRound)")
 
         //Save instance of Data
         Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessOneRandomNumber, withObject: leftBusiness)
