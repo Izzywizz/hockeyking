@@ -66,7 +66,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
                         sprite.removeFromParent()
                         // Coin goes off screen, remove it, do the following methods
                         // Save points earned from the blocks
-                        self.calculateTotalScores()
+                        self.pointsEarnedTotal()
                         // Store previous points earned
                         GameViewController.instance.storePreviousPoints()
                         // GameViewController.instance.saveDataFromSession() This is now
@@ -163,6 +163,11 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     }
     
     //MARK: Helper Functions
+    
+    /**
+     The method creates the swipping gesture functionality for up/down/right/left, the direction is then handled in separate method (handleSwipe).
+     Everytime a swipe is regeistered, it stored it in array and then a method is called on a specific direction within that method
+     */
     func addSwipe() {
         let directions: [UISwipeGestureRecognizerDirection] = [.Right, .Left, .Up, .Down]
         for direction in directions {
@@ -172,6 +177,12 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         }
     }
     
+    /**
+     This method handles the actual swipe direction, when the relevant direction is regsitred left/right then the coin is forced in that direction.
+     The count is given an initial negative count because it will aid with scoring, so if the user misses then they are given -1 score, however if they
+     score a hit then the points given +2, thus avoiding the hassle of a complex scoring mechanic because the +2 gets rids of -ve number and the use ends up with
+     +1 (-1 + 2 = 1)
+     */
     func handleSwipe(sender: UISwipeGestureRecognizer) {
         print(sender.direction)
         let gestureDirection = sender.direction
@@ -236,6 +247,11 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         newCoin.runAction(SKAction.sequence([actionMoveDownForever, actionMoveDone]), withKey: "downForever")
     }
     
+    /**
+     Create the blocks(Left = block0, Right = block1) with their respective images, since this is created using a loop,
+     a reference to a property is used for the movement of the blocks in order to abstract out the movement but to also make
+     it easier to manipulate the blocks speed at certain levels of the game
+     */
     
     func createBlocks()  {
         let numberOfBlocks = 2
@@ -277,6 +293,12 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         }
     }
     
+    
+    /**
+     The background is a static sprite which is the same size as the scene area, the clock/timer also takes in to account the relative postion of the
+     background to ensure that regardless of the device size it will position the assests/ sprite correctly
+     */
+    
     func createBackground() {
         let background = SKSpriteNode(imageNamed: "no-clock")
         let clock = SKSpriteNode(imageNamed: "14")
@@ -303,6 +325,11 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(GameScene.timeHasBeenDecreased), name:"timeHasBeenDecreased", object: nil)
     }
     
+    /**
+     The timer method is called from the observer/target/action. The timer is set between four distint time parameters 
+     which calls a method that brings back a random blocks speed based on the number that is genreated from randomNumber generator.
+     */
+    
     func timeHasBeenDecreased() {
         // print("Time Went Down: \(GameViewController.instance.timerCount)"
         let number = randomTupleNumbers()
@@ -322,18 +349,17 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
             moveBlocksRandomely(randomNumber: number)
         default: break
         }
-        
     }
     
     func methodOfReceivedNotification(notification: NSNotification){
         print("Game Over baby")
         //Tally up the scores here!
-        calculateTotalScores()
+        pointsEarnedTotal()
         scene!.view?.paused = true
     }
     
     //MARK: Promotion Scores
-    func calculateTotalScores()  {
+    func pointsEarnedTotal()  {
         
         GameViewController.instance.leftBusiness.pointsEarned = blockLeftCount
         GameViewController.instance.rightBusiness.pointsEarned = blockRightCount
