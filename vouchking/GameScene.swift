@@ -118,14 +118,18 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     }
     
     //MARK: Panel/Block Helper Methods
+    
+    /**
+     
+     
+     */
     func reducePanelDuration(level level: Int)-> NSTimeInterval  {
-        if level == 1 {
-            panelDuration = 0.7
-        } else if level == 2    {
-            panelDuration = 0.5
-        } else if level == 3    {
-            panelDuration = 0.3
-        } else  {
+        
+        switch level {
+        case 1: panelDuration = 0.7
+        case 2: panelDuration = 0.5
+        case 3: panelDuration = 0.3
+        default:
             panelDuration = 1
         }
         
@@ -326,7 +330,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     }
     
     /**
-     The timer method is called from the observer/target/action. The timer is set between four distint time parameters 
+     The timer method is called from the observer/target/action. The timer is set between four distint time parameters
      which calls a method that brings back a random blocks speed based on the number that is genreated from randomNumber generator.
      */
     
