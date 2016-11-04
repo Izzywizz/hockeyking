@@ -120,8 +120,8 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     //MARK: Panel/Block Helper Methods
     
     /**
-     
-     
+     This method takes in a level variable as a parameter, it then sets speed by which the panel should move along the y axis.
+     Its movement is manipulated by these speed levels and creates the illusion of a dynamic and ever changing panel
      */
     func reducePanelDuration(level level: Int)-> NSTimeInterval  {
         
@@ -136,6 +136,11 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         return panelDuration
     }
     
+    
+    /**
+     (Left Block) This method handles the physical movement of the Left block and takes in to account the panel duration, the action
+     is repeated in order to established the up/down affect
+     */
     func setLeftBlockMoveDown(panelDuration: NSTimeInterval) -> SKAction {
         
         let actionMoveDown = SKAction.moveToY(self.size.height, duration: panelDuration) //orginally set to 700/ 0
@@ -146,6 +151,10 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         return actionMoveDownRepeat
     }
     
+    /**
+     (Right Block) This method handles the physical movement of the Left block and takes in to account the panel duration, the action
+     is repeated in order to established the up/down affect
+     */
     func setRightBlockMoveUp(panelDuration: NSTimeInterval) -> SKAction {
         
         let rightActionMoveUp = SKAction.moveToY(size.height - size.height, duration: panelDuration)
