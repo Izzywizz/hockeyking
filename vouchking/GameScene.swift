@@ -1,6 +1,6 @@
 //
 //  GameScene.swift
-//  BallDropping
+//  CoinDropping
 //
 //  Created by Izzy on 19/10/2016.
 //  Copyright (c) 2016 Izzy. All rights reserved.
@@ -14,11 +14,11 @@ struct PhysicsCategory {
     static let None      : UInt32 = 0
     static let All       : UInt32 = UInt32.max
     static let Block     : UInt32 = 0b1
-    static let Ball      : UInt32 = 0b10
+    static let Coin      : UInt32 = 0b10
     static let Edge      : UInt32 = 0x1 << 3
 }
 
-let BallCategoryName = "ball"
+let CoinCategoryName = "coin"
 let BlockCategoryName = "block"
 
 
@@ -27,13 +27,11 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     
     //MARK: Properties
     var viewController: UIViewController?
-    var isFingerOnBall = false
-    var ballCounter = 0
-    var ball = SKSpriteNode(imageNamed: "ball")
+    var coinCounter = 0
+    var coin = SKSpriteNode(imageNamed: "coin")
     var block0 = SKSpriteNode(imageNamed: "17")
     var block1 = SKSpriteNode(imageNamed: "18")
     var panelDuration: NSTimeInterval = 1.0 //Its' bsically the speed
-    
     
     var blockRightCount: Int = 0
     var blockLeftCount: Int = 0
@@ -43,16 +41,15 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         /* Setup your scene here */
         physicsWorld.gravity = CGVectorMake(0, 0)
         physicsWorld.contactDelegate = self
-        createBall()
+        createCoin()
         createBlocks()
         addSwipe()
         setupObservers()
         createBackground()
         print("NAME: \(GameViewController.instance.leftBusiness.businessName)")
         print("NAME: \(GameViewController.instance.rightBusiness.businessName)")
-        //        GameViewController.instance.resetPoints() //reset the total points earned
+        // GameViewController.instance.resetPoints() //reset the total points earned
     }
-    
     
     //MARK: Off Screen MEthod
     override func update(currentTime: CFTimeInterval) {
@@ -60,24 +57,22 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         self.enumerateChildNodesWithName("*") {
             node, stop in
             if (node is SKSpriteNode) {
-                if node.name == "ball"  {
+                if node.name == "coin"  {
                     let sprite = node as! SKSpriteNode
-                    // Check if the node is not in the scene, then add a new ball
+                    // Check if the node is not in the scene, then add a new coin
                     if (sprite.position.x < -sprite.size.width/2.0 || sprite.position.x > self.size.width+sprite.size.width/2.0
                         || sprite.position.y < -sprite.size.height/2.0 || sprite.position.y > self.size.height+sprite.size.height/2.0) {
-                        self.ballCounter += 1
+                        self.coinCounter += 1
                         sprite.removeFromParent()
-                        
-                        //Coin goes off screen, do the following methods
-                        //save points earned from the blocks
+                        // Coin goes off screen, do the following methods
+                        // Save points earned from the blocks
                         self.calculateTotalScores()
-                        //store previous points earned
+                        // Store previous points earned
                         GameViewController.instance.storePreviousPoints()
-                        //                        GameViewController.instance.saveDataFromSession() This is now
-                        
-                        //randomise the objects
+                        // GameViewController.instance.saveDataFromSession() This is now
+                        // Randomise the objects
                         GameViewController.instance.setupBusinessPromotions()
-                        self.createBall() //start again, reset the scores
+                        self.createCoin() //start again, reset the scores
                         self.resetScores()
                         
                         //reset scores to 0
@@ -88,7 +83,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     }
     
     //MARK: Contact Delegates
-    func projectileDidCollideWithBlock(block:SKSpriteNode, ball:SKSpriteNode) {
+    func projectileDidCollideWithBlock(block:SKSpriteNode, coin:SKSpriteNode) {
         if let blockName = block.name {
             print("Name: \(blockName)")
             if blockName == "block0" {
@@ -103,8 +98,8 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     }
     
     func didBeginContact(contact: SKPhysicsContact) {
-        
-        // 1
+
+        // 1: Establish physics body for both of the body
         var firstBody: SKPhysicsBody
         var secondBody: SKPhysicsBody
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
@@ -117,8 +112,8 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         
         // 2: Dectecting the hit and calling the method to do with scores
         if ((firstBody.categoryBitMask & PhysicsCategory.Block != 0) &&
-            (secondBody.categoryBitMask & PhysicsCategory.Ball != 0)) {
-            projectileDidCollideWithBlock(firstBody.node as! SKSpriteNode, ball: secondBody.node as! SKSpriteNode)
+            (secondBody.categoryBitMask & PhysicsCategory.Coin != 0)) {
+            projectileDidCollideWithBlock(firstBody.node as! SKSpriteNode, coin: secondBody.node as! SKSpriteNode)
         }
     }
     
@@ -183,22 +178,21 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         
         switch gestureDirection {
         case UISwipeGestureRecognizerDirection.Right:
-            print("RIGHT")
-            ball.removeActionForKey("downForever")
+            print("RIGHT-Miss?")
+            coin.removeActionForKey("downForever")
             let moveRight = SKAction.moveTo(CGPointMake(3000,450), duration:2.0) //orginally the values where 4000
             let actionMoveDone = SKAction.removeFromParent()
-            ball.runAction(SKAction.sequence([moveRight, actionMoveDone]), withKey: "GoRightBall")
+            coin.runAction(SKAction.sequence([moveRight, actionMoveDone]), withKey: "GoRightCoin")
             blockRightCount -= 1
             
         case UISwipeGestureRecognizerDirection.Left:
-            print("LEFT")
-            ball.removeActionForKey("downForever")
+            print("LEFT-Miss?")
+            coin.removeActionForKey("downForever")
             let moveLeft = SKAction.moveTo(CGPointMake(-3000,450), duration:2.0)
             let actionMoveDone = SKAction.removeFromParent()
-            ball.runAction(SKAction.sequence([moveLeft, actionMoveDone]), withKey: "GoLeftBall")
+            coin.runAction(SKAction.sequence([moveLeft, actionMoveDone]), withKey: "GoLeftCoin")
             blockLeftCount -= 1
             
-        //            block0.runAction(setLeftBlockMoveDown(2)) //experiement with variable random panel
         default:
             print("Gesture Direction Not Needed")
         }
@@ -207,31 +201,31 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     func randomTupleNumbers() -> (Int, Int) {
         let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(4)
         let anotherRandomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(4)
-        print("numbers: \(randomNumber) , \(anotherRandomNumber)")
+//        print("numbers: \(randomNumber) , \(anotherRandomNumber)")
         return (randomNumber, anotherRandomNumber)
     }
     
-    //MARK: Create Sprites/Ball/ Blocks/ background
-    func createBall()  {
-        print("create ball: \(ballCounter)")
-        let newBall = SKSpriteNode(imageNamed: "19")
-        newBall.name = BallCategoryName
-        newBall.size = CGSizeMake(50, 50)
-        newBall.position = CGPoint(x: self.size.width/2, y: self.size.height) //drop ball in centre of screen
-        newBall.physicsBody = SKPhysicsBody.init(circleOfRadius: newBall.size.width/2)
-        newBall.physicsBody?.friction = 0
-        newBall.physicsBody?.restitution = 1
-        newBall.physicsBody?.usesPreciseCollisionDetection = true
-        newBall.physicsBody?.affectedByGravity = false
+    //MARK: Create Sprites/Coin/ Blocks/ background
+    func createCoin()  {
+        print("create coin: \(coinCounter)")
+        let newCoin = SKSpriteNode(imageNamed: "19")
+        newCoin.name = CoinCategoryName
+        newCoin.size = CGSizeMake(50, 50)
+        newCoin.position = CGPoint(x: self.size.width/2, y: self.size.height) //drop coin in centre of screen
+        newCoin.physicsBody = SKPhysicsBody.init(circleOfRadius: newCoin.size.width/2)
+        newCoin.physicsBody?.friction = 0
+        newCoin.physicsBody?.restitution = 1
+        newCoin.physicsBody?.usesPreciseCollisionDetection = true
+        newCoin.physicsBody?.affectedByGravity = false
         
-        newBall.zPosition = 1
-        ball = newBall
+        newCoin.zPosition = 1
+        coin = newCoin
         
-        addChild(newBall)
+        addChild(newCoin)
         
         let actionMoveDownForever = SKAction.repeatActionForever(SKAction.moveToY(-100, duration: 3.0))
         let actionMoveDone = SKAction.removeFromParent()
-        newBall.runAction(SKAction.sequence([actionMoveDownForever, actionMoveDone]), withKey: "downForever")
+        newCoin.runAction(SKAction.sequence([actionMoveDownForever, actionMoveDone]), withKey: "downForever")
     }
     
     
@@ -263,11 +257,12 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
                 block.zPosition = 1
                 block1 = block
             }
+            
             //phsyics body setup
             block.physicsBody = SKPhysicsBody(rectangleOfSize: block.size)
             block.physicsBody?.dynamic = true
             block.physicsBody?.categoryBitMask = PhysicsCategory.Block
-            block.physicsBody?.contactTestBitMask = PhysicsCategory.Ball
+            block.physicsBody?.contactTestBitMask = PhysicsCategory.Coin
             block.physicsBody?.collisionBitMask = PhysicsCategory.None
             
             addChild(block)
@@ -301,7 +296,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     }
     
     func timeHasBeenDecreased() {
-        //        print("Time Went Down: \(GameViewController.instance.timerCount)"
+        // print("Time Went Down: \(GameViewController.instance.timerCount)"
         let number = randomTupleNumbers()
         
         switch GameViewController.instance.timerCount {
@@ -340,7 +335,5 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         blockLeftCount = 0
         blockRightCount = 0
     }
-    
-    
-    
+
 }
