@@ -64,7 +64,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
                         || sprite.position.y < -sprite.size.height/2.0 || sprite.position.y > self.size.height+sprite.size.height/2.0) {
                         self.coinCounter += 1
                         sprite.removeFromParent()
-                        // Coin goes off screen, do the following methods
+                        // Coin goes off screen, remove it, do the following methods
                         // Save points earned from the blocks
                         self.calculateTotalScores()
                         // Store previous points earned
@@ -98,7 +98,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     }
     
     func didBeginContact(contact: SKPhysicsContact) {
-
+        
         // 1: Establish physics body for both of the body
         var firstBody: SKPhysicsBody
         var secondBody: SKPhysicsBody
@@ -157,9 +157,9 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         block1.removeActionForKey("rightBlockMove")
     }
     
-    func moveBlocksRandomely(randomNumber number: (Int, Int)) {
-        block0.runAction(setLeftBlockMoveDown(reducePanelDuration(level: number.0)), withKey: "newLeftPanelSpeed")
-        block1.runAction(setRightBlockMoveUp(reducePanelDuration(level: number.1)), withKey: "newRightPanelSpeed")
+    func moveBlocksRandomely(randomNumber number: (first: Int, second: Int)) {
+        block0.runAction(setLeftBlockMoveDown(reducePanelDuration(level: number.first)), withKey: "newLeftPanelSpeed")
+        block1.runAction(setRightBlockMoveUp(reducePanelDuration(level: number.second)), withKey: "newRightPanelSpeed")
     }
     
     //MARK: Helper Functions
@@ -198,14 +198,22 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         }
     }
     
-    func randomTupleNumbers() -> (Int, Int) {
+    /**
+     Creates random Tuple Numbers that corrolate with the levels of speed for the panels, so for example if the random
+     number brings back 3, this means level 3 of speed for the blocks will be used.
+     */
+    func randomTupleNumbers() -> (first: Int, second: Int) {
         let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(4)
         let anotherRandomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(4)
-//        print("numbers: \(randomNumber) , \(anotherRandomNumber)")
+        //        print("numbers: \(randomNumber) , \(anotherRandomNumber)")
         return (randomNumber, anotherRandomNumber)
     }
     
     //MARK: Create Sprites/Coin/ Blocks/ background
+    /**
+     A Coin assest is created, placed in the centre and a physics body is established so that when the coin colloides with the blocks
+     it registers the intersection for late use in the scoring mechanic
+     */
     func createCoin()  {
         print("create coin: \(coinCounter)")
         let newCoin = SKSpriteNode(imageNamed: "19")
@@ -335,5 +343,5 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         blockLeftCount = 0
         blockRightCount = 0
     }
-
+    
 }
