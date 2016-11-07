@@ -125,11 +125,11 @@ class GameViewController: UIViewController {
         if firstRandomNumber == randomNumber
         {
             //Random number generation, ensures
-//            print("Same, FirstNumber: \(firstRandomNumber) and Second: \(randomNumber)")
-//            print("call again")
+            //            print("Same, FirstNumber: \(firstRandomNumber) and Second: \(randomNumber)")
+            //            print("call again")
             return checkUniqueRandomNumber(randomNumber)
         } else  {
-//            print("DIFFERENT, FirstNumber: \(firstRandomNumber) and Second: \(randomNumber)")
+            //            print("DIFFERENT, FirstNumber: \(firstRandomNumber) and Second: \(randomNumber)")
             return randomNumber
         }
     }
@@ -142,10 +142,10 @@ class GameViewController: UIViewController {
             NSNotificationCenter.defaultCenter().postNotificationName("timeHasBeenDecreased", object: self)
         } else {
             self.clockTimer.invalidate() //stop the clock
-//            print("RandomNumberLeft: \(businessOneRandomNumber) RandomNumberRight: \(businessTwoRandomNumber)")
+            //            print("RandomNumberLeft: \(businessOneRandomNumber) RandomNumberRight: \(businessTwoRandomNumber)")
             NSNotificationCenter.defaultCenter().postNotificationName("gameOver", object: self)
             moveToGameSummary()
-//            saveDataFromSession()
+            //            saveDataFromSession()
         }
     }
     
@@ -171,7 +171,7 @@ class GameViewController: UIViewController {
         self.view.addConstraint(xConstraint)
         self.view.addConstraint(yConstraint)
     }
-
+    
     
     //MARK: Helper Methods
     func moveToGameSummary()  {
@@ -208,23 +208,17 @@ class GameViewController: UIViewController {
         let resultTwo = Int(rightBusiness.pointsEarned) + previousBusinessTwoTotalPoints
         rightBusiness.totalPoints = resultTwo
 
+        
         let total = leftResult + Int(leftBusiness.pointsEarned)
         leftBusiness.totalPointsEarnedPerRound = total
         let totalTwo = rightResult + Int(rightBusiness.pointsEarned)
         rightBusiness.totalPointsEarnedPerRound = totalTwo
         
-        if negativeScoreLimit >= Int(leftBusiness.totalPoints){
-            print("Negative Score Limit reached, Previous Limit: \(negativeScoreLimit)")
-            leftBusiness.totalPoints = negativeScoreLimit //set the limit to the score preventing it from adding anymore negative number
-            leftBusiness.negativeLimitReached = true
-            if total < 0 {
-                print("Negative Number")
-            }
-        } else  {
-            leftBusiness.negativeLimitReached = false
-        }
         print("Points Earned Total (L): \(leftBusiness.businessName) Points Earned \(leftBusiness.totalPointsEarnedPerRound)")
         print("Points Earned Total (R): \(rightBusiness.businessName) Points Earned \(rightBusiness.totalPointsEarnedPerRound)")
+        
+        handleNegativeLimit(isLeftBlock: true, totalBusinessPoints: Int(leftBusiness.totalPoints))
+        handleNegativeLimit(isLeftBlock: false, totalBusinessPoints: Int(rightBusiness.totalPoints))
 
         //Save instance of Data
         Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessOneRandomNumber, withObject: leftBusiness)
@@ -234,7 +228,28 @@ class GameViewController: UIViewController {
         
     }
     
+    /**
+     Set the limit to the score preventing it from adding anymore negative number
+     */
+    func handleNegativeLimit(isLeftBlock isLeftBlock: Bool, totalBusinessPoints: Int) {
+        if isLeftBlock {
+            
+            if negativeScoreLimit >= totalBusinessPoints{
+                leftBusiness.totalPoints = negativeScoreLimit
+                leftBusiness.negativeLimitReached = true
+            } else  {
+                leftBusiness.negativeLimitReached = false
+            }
+        } else  {
+            if negativeScoreLimit >= totalBusinessPoints{
+                rightBusiness.totalPoints = negativeScoreLimit
+                rightBusiness.negativeLimitReached = true
+            } else  {
+                rightBusiness.negativeLimitReached = false
+            }
+        }
+    }
     
-
+    
     
 }
