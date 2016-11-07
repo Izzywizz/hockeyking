@@ -37,7 +37,12 @@
     descriptionLabel.text = _promotion.promotionDescription;
     //reset points to 0 so that the previous scores are not always showing
     
-    pointsEarned.text = [NSString stringWithFormat:@"(%@) %@/500", _promotion.totalPointsEarnedPerRound, _promotion.totalPoints]; //Total points Earned is 500 and hardset
+    if (_promotion.negativeLimitReached == true) {
+        NSLog(@"Confirmed Negatived Limit Reached");
+        pointsEarned.text = [NSString stringWithFormat:@"(Limit Reached) %@/500", _promotion.totalPoints]; //Total points Earned is 500 and hardset
+    } else  {
+        pointsEarned.text = [NSString stringWithFormat:@"(%@) %@/500", _promotion.totalPointsEarnedPerRound, _promotion.totalPoints]; //Total points Earned is 500 and hardset
+    }
     [self setPostiveNegativeColours:pointsEarned];
     promotionTimeLeft.text = [NSString stringWithFormat:@"%@ Left", [self convertToEpochTime:_promotion.expiryEpoch]]; //Calcualtions needed to set whether it is DAys/ Hours
     totalPromotionsAvailable.text = [NSString stringWithFormat:@"%@", _promotion.totalPromotionsAvailable];
@@ -59,7 +64,7 @@
 }
 
 
-/** 
+/**
  This method takes the current time and the date set within the Promotion object itself and returns the difference as string
  The grammar format is handle by another method below which takes into account Days/ day or Hours/ hour.
  The method also account for daylight saving time

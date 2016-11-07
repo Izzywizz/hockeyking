@@ -27,7 +27,7 @@
 @property (nonatomic, strong) NSURL *website;
 @property (nonatomic, strong) UIImage *gameSummaryLogo;
 @property (nonatomic, strong) UIImage *businessLogo;
-@property BOOL havePointsBeenEarned;
+@property BOOL negativeLimitReached;
 @property (nonatomic, strong) NSNumber *totalPointsEarnedPerRound;
 
 -(Promotion*)initWithDict:(NSDictionary*)dict;

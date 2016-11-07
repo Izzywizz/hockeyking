@@ -22,12 +22,15 @@ class GameViewController: UIViewController {
     var leftBusiness: Promotion!
     var previousBusinessTotalPoints = 0
     var businessOneRandomNumber: Int = 0
-    var leftResult = 0
+    var leftResult = 0 //intially these values are setup as 0 in
     
     var businessTwoRandomNumber: Int = 0
     var rightBusiness: Promotion!
     var previousBusinessTwoTotalPoints = 0
     var rightResult = 0
+    
+    
+    let negativeScoreLimit = -3
     
     
     @IBOutlet weak var leftLogoImageView: UIImageView!
@@ -198,6 +201,7 @@ class GameViewController: UIViewController {
     }
     
     func saveDataFromSession() {
+        
         let result = Int(leftBusiness.pointsEarned) + previousBusinessTotalPoints // current points earned from the game session just played + the total from the actual business
         leftBusiness.totalPoints = result
         
@@ -209,6 +213,16 @@ class GameViewController: UIViewController {
         let totalTwo = rightResult + Int(rightBusiness.pointsEarned)
         rightBusiness.totalPointsEarnedPerRound = totalTwo
         
+        if negativeScoreLimit >= Int(leftBusiness.totalPoints){
+            print("Negative Score Limit reached, Previous Limit: \(negativeScoreLimit)")
+            leftBusiness.totalPoints = negativeScoreLimit //set the limit to the score preventing it from adding anymore negative number
+            leftBusiness.negativeLimitReached = true
+            if total < 0 {
+                print("Negative Number")
+            }
+        } else  {
+            leftBusiness.negativeLimitReached = false
+        }
         print("Points Earned Total (L): \(leftBusiness.businessName) Points Earned \(leftBusiness.totalPointsEarnedPerRound)")
         print("Points Earned Total (R): \(rightBusiness.businessName) Points Earned \(rightBusiness.totalPointsEarnedPerRound)")
 
@@ -219,6 +233,7 @@ class GameViewController: UIViewController {
         print("(Points RIGHT) Business: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].businessName) Total Points Earned: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].pointsEarned)")
         
     }
+    
     
 
     

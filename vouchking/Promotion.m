@@ -32,7 +32,7 @@
         self.website = [dict valueForKey:@"website"];
         self.gameSummaryLogo = [UIImage imageNamed: [dict valueForKey:@"gameSummaryLogo"]];
         self.businessLogo = [UIImage imageNamed: [dict valueForKey:@"businessLogo"]];
-        self.havePointsBeenEarned = [[dict valueForKey:@"havePointsBeenEarned"] boolValue];
+        self.negativeLimitReached = [[dict valueForKey:@"negativeLimitReached"] boolValue];
         self.totalPointsEarnedPerRound = [dict valueForKey:@"totalPointsEarnedPerRound"];
     }
     
