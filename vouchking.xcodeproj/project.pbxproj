@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431AB02D1DD0A22D008C7E3D /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 431AB02B1DD0A22D008C7E3D /* background-music-aac.caf */; };
+		431AB02E1DD0A22D008C7E3D /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 431AB02C1DD0A22D008C7E3D /* pew-pew-lei.caf */; };
 		4321CDCB1DBA0ED3005C06AB /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4321CDC91DBA0ED3005C06AB /* LICENSE.txt */; };
 		4321CDCC1DBA0ED3005C06AB /* LuckiestGuy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4321CDCA1DBA0ED3005C06AB /* LuckiestGuy.ttf */; };
 		4321CDDD1DBA2195005C06AB /* PromotionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321CDDC1DBA2195005C06AB /* PromotionsTableViewController.m */; };
@@ -67,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		431AB02B1DD0A22D008C7E3D /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
+		431AB02C1DD0A22D008C7E3D /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
 		4321CDC91DBA0ED3005C06AB /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		4321CDCA1DBA0ED3005C06AB /* LuckiestGuy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LuckiestGuy.ttf; sourceTree = "<group>"; };
 		4321CDDB1DBA2195005C06AB /* PromotionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PromotionsTableViewController.h; path = ../PromotionsTableViewController.h; sourceTree = "<group>"; };
@@ -151,6 +155,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		431AB02A1DD0A22D008C7E3D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				431AB02B1DD0A22D008C7E3D /* background-music-aac.caf */,
+				431AB02C1DD0A22D008C7E3D /* pew-pew-lei.caf */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		4321CDC81DBA0ED3005C06AB /* Luckiest_Guy */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +275,7 @@
 		43C7BA011DB611A700FDD9F1 /* vouchking */ = {
 			isa = PBXGroup;
 			children = (
+				431AB02A1DD0A22D008C7E3D /* Sounds */,
 				43B5CFF41DC0B7D800117316 /* Game */,
 				43BAC3861DBE283600C8A518 /* Helper Classes */,
 				4321CDDE1DBA21E5005C06AB /* Custom Table Cells */,
@@ -413,6 +427,7 @@
 				434E30841DBE589600A29280 /* MontserratAlternates-ExtraBold.otf in Resources */,
 				434E30861DBE589600A29280 /* MontserratAlternates-Light.otf in Resources */,
 				43C7BA0F1DB611A700FDD9F1 /* Assets.xcassets in Resources */,
+				431AB02D1DD0A22D008C7E3D /* background-music-aac.caf in Resources */,
 				434E307E1DBE589600A29280 /* Montserrat-Medium.otf in Resources */,
 				43B5CFF81DC0B7FD00117316 /* GameScene.sks in Resources */,
 				434E308B1DBE589600A29280 /* SIL Open Font License.txt in Resources */,
@@ -422,6 +437,7 @@
 				4321CDCB1DBA0ED3005C06AB /* LICENSE.txt in Resources */,
 				434E30871DBE589600A29280 /* MontserratAlternates-Medium.otf in Resources */,
 				434E307B1DBE589600A29280 /* Montserrat-ExtraBold.otf in Resources */,
+				431AB02E1DD0A22D008C7E3D /* pew-pew-lei.caf in Resources */,
 				434E308A1DBE589600A29280 /* MontserratAlternates-Thin.otf in Resources */,
 				434E30851DBE589600A29280 /* MontserratAlternates-ExtraLight.otf in Resources */,
 				4321CDCC1DBA0ED3005C06AB /* LuckiestGuy.ttf in Resources */,

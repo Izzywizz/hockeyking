@@ -49,6 +49,11 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         print("NAME: \(GameViewController.instance.leftBusiness.businessName)")
         print("NAME: \(GameViewController.instance.rightBusiness.businessName)")
         // GameViewController.instance.resetPoints() //reset the total points earned
+        
+        //BAckground music
+        let backgroundMusic = SKAudioNode(fileNamed: "background-music-aac.caf")
+        backgroundMusic.autoplayLooped = true
+        addChild(backgroundMusic)
     }
     
     //MARK: Off Screen MEthod

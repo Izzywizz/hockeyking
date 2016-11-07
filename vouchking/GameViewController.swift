@@ -30,7 +30,7 @@ class GameViewController: UIViewController {
     var rightResult = 0
     
     
-    let negativeScoreLimit = -3
+    let negativeScoreLimit = -100//limit for scores
     
     
     @IBOutlet weak var leftLogoImageView: UIImageView!
@@ -208,7 +208,6 @@ class GameViewController: UIViewController {
         let resultTwo = Int(rightBusiness.pointsEarned) + previousBusinessTwoTotalPoints
         rightBusiness.totalPoints = resultTwo
 
-        
         let total = leftResult + Int(leftBusiness.pointsEarned)
         leftBusiness.totalPointsEarnedPerRound = total
         let totalTwo = rightResult + Int(rightBusiness.pointsEarned)
