@@ -127,16 +127,17 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     
     /**
      This method takes in a level variable as a parameter, it then sets speed by which the panel should move along the y axis.
-     Its movement is manipulated by these speed levels and creates the illusion of a dynamic and ever changing panel
+     Its movement is manipulated by these speed levels and creates the illusion of a dynamic and ever changing panel speed, the 
+     smaller the number the faster the panels speed
      */
     func reducePanelDuration(level level: Int)-> NSTimeInterval  {
         
         switch level {
-        case 1: panelDuration = 0.7
-        case 2: panelDuration = 0.5
-        case 3: panelDuration = 0.3
+            case 1: panelDuration = 0.7
+            case 2: panelDuration = 0.5
+            case 3: panelDuration = 0.3
         default:
-            panelDuration = 1
+            panelDuration = 1 //default speed
         }
         
         return panelDuration

@@ -235,14 +235,14 @@
 			path = "montserrat-2";
 			sourceTree = "<group>";
 		};
-		43B5CFF41DC0B7D800117316 /* Game */ = {
+		43B5CFF41DC0B7D800117316 /* GameScene */ = {
 			isa = PBXGroup;
 			children = (
 				43B5CFF51DC0B7FD00117316 /* GameScene.sks */,
 				43B5CFF61DC0B7FD00117316 /* GameScene.swift */,
 				43B5CFF71DC0B7FD00117316 /* GameViewController.swift */,
 			);
-			name = Game;
+			name = GameScene;
 			sourceTree = "<group>";
 		};
 		43BAC3861DBE283600C8A518 /* Helper Classes */ = {
@@ -282,7 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				431AB02A1DD0A22D008C7E3D /* Sounds */,
-				43B5CFF41DC0B7D800117316 /* Game */,
+				43B5CFF41DC0B7D800117316 /* GameScene */,
 				43BAC3861DBE283600C8A518 /* Helper Classes */,
 				4321CDDE1DBA21E5005C06AB /* Custom Table Cells */,
 				43C7BA271DB61C8A00FDD9F1 /* Model */,

@@ -20,21 +20,20 @@ class GameViewController: UIViewController {
     
     //One = Left business
     var leftBusiness: Promotion!
-    var previousBusinessTotalPoints = 0
-    var businessOneRandomNumber: Int = 0
-    var leftResult = 0 //intially these values are setup as 0 in
+    var previousLeftBusinessTotalPoints = 0
+    var businessLeftRandomNumber: Int = 0
+    var leftPointsEarnedPerRound = 0 //initially these values are setup as 0 in
     
-    var businessTwoRandomNumber: Int = 0
+    var businessRightRandomNumber: Int = 0
     var rightBusiness: Promotion!
-    var previousBusinessTwoTotalPoints = 0
-    var rightResult = 0
-    
+    var previousRightBusinessTotalPoints = 0
+    var rightResultEarnedPerRound = 0
     
     let negativeScoreLimit = -100//limit for scores
     
-    
     @IBOutlet weak var leftLogoImageView: UIImageView!
     @IBOutlet weak var rightLogoImageView: UIImageView!
+    
     
     override func viewWillAppear(animated: Bool) {
         rightLogoImageView.frame.origin.y = 20.0 // 20 down from the top
@@ -96,10 +95,10 @@ class GameViewController: UIViewController {
     //MARK: Promotion Methods
     func returnTwoObjects() -> (promotionOne: Promotion, promotionTwo: Promotion) {
         let dataArray = Data.sharedInstance().promotionsArray
-        businessOneRandomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(dataArray.count) //create random number based on total array count
-        let promotionOne = dataArray[businessOneRandomNumber] as! Promotion //grab the Promtion object based on the array value given by the random number
-        businessTwoRandomNumber = checkUniqueRandomNumber(businessOneRandomNumber)
-        let promotionTwo = dataArray[businessTwoRandomNumber] as! Promotion //create another random Promotion object but ensure that it is not the same object by ensuring that it is not the same random number
+        businessLeftRandomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(dataArray.count) //create random number based on total array count
+        let promotionOne = dataArray[businessLeftRandomNumber] as! Promotion //grab the Promtion object based on the array value given by the random number
+        businessRightRandomNumber = checkUniqueRandomNumber(businessLeftRandomNumber)
+        let promotionTwo = dataArray[businessRightRandomNumber] as! Promotion //create another random Promotion object but ensure that it is not the same object by ensuring that it is not the same random number
         
         return (promotionOne, promotionTwo)
         //        print("Array Object: \(promotionObject.facebook)")
@@ -142,7 +141,7 @@ class GameViewController: UIViewController {
             NSNotificationCenter.defaultCenter().postNotificationName("timeHasBeenDecreased", object: self)
         } else {
             self.clockTimer.invalidate() //stop the clock
-            //            print("RandomNumberLeft: \(businessOneRandomNumber) RandomNumberRight: \(businessTwoRandomNumber)")
+            //            print("RandomNumberLeft: \(businessLeftRandomNumber) RandomNumberRight: \(businessRightRandomNumber)")
             NSNotificationCenter.defaultCenter().postNotificationName("gameOver", object: self)
             moveToGameSummary()
             //            saveDataFromSession()
@@ -186,31 +185,31 @@ class GameViewController: UIViewController {
     
     //MARK: Save Session Data
     func storePreviousPoints() {
-        let business = Data.sharedInstance().promotionsArray[businessOneRandomNumber] as! Promotion
-        let businessTwo = Data.sharedInstance().promotionsArray[businessTwoRandomNumber] as! Promotion
-        previousBusinessTotalPoints = Int (business.totalPoints)
-        previousBusinessTwoTotalPoints = Int (businessTwo.totalPoints)
+        let business = Data.sharedInstance().promotionsArray[businessLeftRandomNumber] as! Promotion
+        let businessTwo = Data.sharedInstance().promotionsArray[businessRightRandomNumber] as! Promotion
+        previousLeftBusinessTotalPoints = Int (business.totalPoints)
+        previousRightBusinessTotalPoints = Int (businessTwo.totalPoints)
         
-        leftResult = Int(business.totalPointsEarnedPerRound)
-        rightResult = Int(businessTwo.totalPointsEarnedPerRound)
+        leftPointsEarnedPerRound = Int(business.totalPointsEarnedPerRound)
+        rightResultEarnedPerRound = Int(businessTwo.totalPointsEarnedPerRound)
         
-        print("Previous Total Points (L) \(business.businessName) Points: \(previousBusinessTotalPoints)")
-        print("Previous Total Points (R)  \(businessTwo.businessName) Points: \(previousBusinessTwoTotalPoints)")
+        print("Previous Total Points (L) \(business.businessName) Points: \(previousLeftBusinessTotalPoints)")
+        print("Previous Total Points (R)  \(businessTwo.businessName) Points: \(previousRightBusinessTotalPoints)")
         
         saveDataFromSession()
     }
     
     func saveDataFromSession() {
         
-        let result = Int(leftBusiness.pointsEarned) + previousBusinessTotalPoints // current points earned from the game session just played + the total from the actual business
+        let result = Int(leftBusiness.pointsEarned) + previousLeftBusinessTotalPoints // current points earned from the game session just played + the total from the actual business
         leftBusiness.totalPoints = result
         
-        let resultTwo = Int(rightBusiness.pointsEarned) + previousBusinessTwoTotalPoints
+        let resultTwo = Int(rightBusiness.pointsEarned) + previousRightBusinessTotalPoints
         rightBusiness.totalPoints = resultTwo
 
-        let total = leftResult + Int(leftBusiness.pointsEarned)
+        let total = leftPointsEarnedPerRound + Int(leftBusiness.pointsEarned)
         leftBusiness.totalPointsEarnedPerRound = total
-        let totalTwo = rightResult + Int(rightBusiness.pointsEarned)
+        let totalTwo = rightResultEarnedPerRound + Int(rightBusiness.pointsEarned)
         rightBusiness.totalPointsEarnedPerRound = totalTwo
         
         print("Points Earned Total (L): \(leftBusiness.businessName) Points Earned \(leftBusiness.totalPointsEarnedPerRound)")
@@ -220,10 +219,10 @@ class GameViewController: UIViewController {
         handleNegativeLimit(isLeftBlock: false, totalBusinessPoints: Int(rightBusiness.totalPoints))
 
         //Save instance of Data
-        Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessOneRandomNumber, withObject: leftBusiness)
-        Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessTwoRandomNumber, withObject: rightBusiness)
-        print("(Points LEFT) Business: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].businessName) Total Points Earned: \(Data.sharedInstance().promotionsArray[businessOneRandomNumber].pointsEarned)")
-        print("(Points RIGHT) Business: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].businessName) Total Points Earned: \(Data.sharedInstance().promotionsArray[businessTwoRandomNumber].pointsEarned)")
+        Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessLeftRandomNumber, withObject: leftBusiness)
+        Data.sharedInstance().promotionsArray.replaceObjectAtIndex(businessRightRandomNumber, withObject: rightBusiness)
+        print("(Points LEFT) Business: \(Data.sharedInstance().promotionsArray[businessLeftRandomNumber].businessName) Total Points Earned: \(Data.sharedInstance().promotionsArray[businessLeftRandomNumber].pointsEarned)")
+        print("(Points RIGHT) Business: \(Data.sharedInstance().promotionsArray[businessRightRandomNumber].businessName) Total Points Earned: \(Data.sharedInstance().promotionsArray[businessRightRandomNumber].pointsEarned)")
         
     }
     
