@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431522941DD4B1CC00F70597 /* hockeyStickSlap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 431522931DD4B1CC00F70597 /* hockeyStickSlap.mp3 */; };
+		431522961DD4B42D00F70597 /* goalScored.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 431522951DD4B42D00F70597 /* goalScored.m4a */; };
 		431AB02D1DD0A22D008C7E3D /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 431AB02B1DD0A22D008C7E3D /* background-music-aac.caf */; };
 		431AB02E1DD0A22D008C7E3D /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 431AB02C1DD0A22D008C7E3D /* pew-pew-lei.caf */; };
 		4321CDCB1DBA0ED3005C06AB /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4321CDC91DBA0ED3005C06AB /* LICENSE.txt */; };
@@ -69,6 +71,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		431522931DD4B1CC00F70597 /* hockeyStickSlap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hockeyStickSlap.mp3; sourceTree = "<group>"; };
+		431522951DD4B42D00F70597 /* goalScored.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = goalScored.m4a; sourceTree = "<group>"; };
 		431AB02B1DD0A22D008C7E3D /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
 		431AB02C1DD0A22D008C7E3D /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
 		4321CDC91DBA0ED3005C06AB /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
@@ -158,8 +162,10 @@
 		431AB02A1DD0A22D008C7E3D /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				431522931DD4B1CC00F70597 /* hockeyStickSlap.mp3 */,
 				431AB02B1DD0A22D008C7E3D /* background-music-aac.caf */,
 				431AB02C1DD0A22D008C7E3D /* pew-pew-lei.caf */,
+				431522951DD4B42D00F70597 /* goalScored.m4a */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -417,6 +423,7 @@
 				4321CDE91DBA2934005C06AB /* Montserrat-Regular.ttf in Resources */,
 				434E30801DBE589600A29280 /* Montserrat-SemiBold.otf in Resources */,
 				43C7BA321DB62D6600FDD9F1 /* promotions.plist in Resources */,
+				431522941DD4B1CC00F70597 /* hockeyStickSlap.mp3 in Resources */,
 				4321CDE01DBA220F005C06AB /* PromotionTableCell.xib in Resources */,
 				434E30881DBE589600A29280 /* MontserratAlternates-Regular.otf in Resources */,
 				434E30811DBE589600A29280 /* Montserrat-Thin.otf in Resources */,
@@ -434,6 +441,7 @@
 				4321CDE81DBA2934005C06AB /* Montserrat-Bold.ttf in Resources */,
 				434E30821DBE589600A29280 /* MontserratAlternates-Black.otf in Resources */,
 				434E307F1DBE589600A29280 /* Montserrat-Regular.otf in Resources */,
+				431522961DD4B42D00F70597 /* goalScored.m4a in Resources */,
 				4321CDCB1DBA0ED3005C06AB /* LICENSE.txt in Resources */,
 				434E30871DBE589600A29280 /* MontserratAlternates-Medium.otf in Resources */,
 				434E307B1DBE589600A29280 /* Montserrat-ExtraBold.otf in Resources */,

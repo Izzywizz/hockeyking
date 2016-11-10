@@ -89,6 +89,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     
     //MARK: Contact Delegates
     func projectileDidCollideWithBlock(block:SKSpriteNode, coin:SKSpriteNode) {
+        runAction(SKAction.playSoundFileNamed("goalScored.m4a", waitForCompletion: false))
         if let blockName = block.name {
             print("Name: \(blockName)")
             if blockName == "block0" {
@@ -213,6 +214,8 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
             let actionMoveDone = SKAction.removeFromParent()
             coin.runAction(SKAction.sequence([moveRight, actionMoveDone]), withKey: "GoRightCoin")
             blockRightCount -= 1
+            runAction(SKAction.playSoundFileNamed("hockeyStickSlap.mp3", waitForCompletion: false))
+
             
         case UISwipeGestureRecognizerDirection.Left:
             print("LEFT-Miss?")
@@ -221,6 +224,8 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
             let actionMoveDone = SKAction.removeFromParent()
             coin.runAction(SKAction.sequence([moveLeft, actionMoveDone]), withKey: "GoLeftCoin")
             blockLeftCount -= 1
+            runAction(SKAction.playSoundFileNamed("hockeyStickSlap.mp3", waitForCompletion: false))
+
             
         default:
             print("Gesture Direction Not Needed")
