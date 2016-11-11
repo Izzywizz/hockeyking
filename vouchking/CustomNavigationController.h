@@ -11,5 +11,4 @@
 @interface CustomNavigationController : UINavigationItem
 
 -(UIView *) setupNavigationControllerWithImage: (NSString *) imageName AndTitle: (NSString *) title;
-
 @end

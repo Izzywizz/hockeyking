@@ -32,7 +32,7 @@
         NSLog(@"Coming from the PLAY screen");
         UIEdgeInsets inset = UIEdgeInsetsMake(64, 0, 0, 0);
         self.tableView.contentInset = inset;
-        _backButton.image = [UIImage imageNamed:@""];
+        _backButton.image = [UIImage imageNamed:@""]; //Remove (<) button image
         _backButton.title = @"Done";
         [self setupTimesUpView]; //show times up view
         self.tableView.scrollEnabled = NO; //prevent scrolling till the timesup animaton completes

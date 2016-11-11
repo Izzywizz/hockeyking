@@ -31,15 +31,15 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     var coin = SKSpriteNode(imageNamed: "coin")
     var block0 = SKSpriteNode(imageNamed: "17")
     var block1 = SKSpriteNode(imageNamed: "18")
-    var panelDuration: NSTimeInterval = 1.0 //Its' bsically the speed
+    var panelDuration: TimeInterval = 1.0 //Its' bsically the speed
     
     var blockRightCount: Int = 0
     var blockLeftCount: Int = 0
     
     //MARK: GameScence Methods
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         /* Setup your scene here */
-        physicsWorld.gravity = CGVectorMake(0, 0)
+        physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         physicsWorld.contactDelegate = self
         createCoin()
         createBlocks()
@@ -57,9 +57,9 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     }
     
     //MARK: Off Screen MEthod
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         // Loop over all nodes in the scene
-        self.enumerateChildNodesWithName("*") {
+        self.enumerateChildNodes(withName: "*") {
             node, stop in
             if (node is SKSpriteNode) {
                 if node.name == "coin"  {
@@ -88,8 +88,8 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     }
     
     //MARK: Contact Delegates
-    func projectileDidCollideWithBlock(block:SKSpriteNode, coin:SKSpriteNode) {
-        runAction(SKAction.playSoundFileNamed("goalScored.m4a", waitForCompletion: false))
+    func projectileDidCollideWithBlock(_ block:SKSpriteNode, coin:SKSpriteNode) {
+        run(SKAction.playSoundFileNamed("goalScored.m4a", waitForCompletion: false))
         if let blockName = block.name {
             print("Name: \(blockName)")
             if blockName == "block0" {
@@ -103,7 +103,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         }
     }
     
-    func didBeginContact(contact: SKPhysicsContact) {
+    func didBegin(_ contact: SKPhysicsContact) {
         
         // 1: Establish physics body for both of the body
         var firstBody: SKPhysicsBody
@@ -130,7 +130,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
      Its movement is manipulated by these speed levels and creates the illusion of a dynamic and ever changing panel speed, the 
      smaller the number the faster the panels speed
      */
-    func reducePanelDuration(level level: Int)-> NSTimeInterval  {
+    func reducePanelDuration(level: Int)-> TimeInterval  {
         
         switch level {
             case 1: panelDuration = 0.7
@@ -148,12 +148,12 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
      (Left Block) This method handles the physical movement of the Left block and takes in to account the panel duration, the action
      is repeated in order to established the up/down affect
      */
-    func setLeftBlockMoveDown(panelDuration: NSTimeInterval) -> SKAction {
+    func setLeftBlockMoveDown(_ panelDuration: TimeInterval) -> SKAction {
         
-        let actionMoveDown = SKAction.moveToY(self.size.height, duration: panelDuration) //orginally set to 700/ 0
-        let actionMoveUp = SKAction.moveToY(self.size.height - self.size.height, duration: panelDuration)
+        let actionMoveDown = SKAction.moveTo(y: self.size.height, duration: panelDuration) //orginally set to 700/ 0
+        let actionMoveUp = SKAction.moveTo(y: self.size.height - self.size.height, duration: panelDuration)
         let actionMoveDownUp = SKAction.sequence([actionMoveDown, actionMoveUp])
-        let actionMoveDownRepeat = SKAction.repeatActionForever(actionMoveDownUp)
+        let actionMoveDownRepeat = SKAction.repeatForever(actionMoveDownUp)
         
         return actionMoveDownRepeat
     }
@@ -162,24 +162,24 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
      (Right Block) This method handles the physical movement of the Left block and takes in to account the panel duration, the action
      is repeated in order to established the up/down affect
      */
-    func setRightBlockMoveUp(panelDuration: NSTimeInterval) -> SKAction {
+    func setRightBlockMoveUp(_ panelDuration: TimeInterval) -> SKAction {
         
-        let rightActionMoveUp = SKAction.moveToY(size.height - size.height, duration: panelDuration)
-        let rightActionMoveDown = SKAction.moveToY(size.height, duration: panelDuration)
+        let rightActionMoveUp = SKAction.moveTo(y: size.height - size.height, duration: panelDuration)
+        let rightActionMoveDown = SKAction.moveTo(y: size.height, duration: panelDuration)
         let actionUpDown = SKAction.sequence([rightActionMoveUp, rightActionMoveDown])
-        let actionUpDownRepeat = SKAction.repeatActionForever(actionUpDown)
+        let actionUpDownRepeat = SKAction.repeatForever(actionUpDown)
         
         return actionUpDownRepeat
     }
     
     func removeActionsOnBlocks() {
-        block0.removeActionForKey("leftBlockMove")
-        block1.removeActionForKey("rightBlockMove")
+        block0.removeAction(forKey: "leftBlockMove")
+        block1.removeAction(forKey: "rightBlockMove")
     }
     
     func moveBlocksRandomely(randomNumber number: (first: Int, second: Int)) {
-        block0.runAction(setLeftBlockMoveDown(reducePanelDuration(level: number.first)), withKey: "newLeftPanelSpeed")
-        block1.runAction(setRightBlockMoveUp(reducePanelDuration(level: number.second)), withKey: "newRightPanelSpeed")
+        block0.run(setLeftBlockMoveDown(reducePanelDuration(level: number.first)), withKey: "newLeftPanelSpeed")
+        block1.run(setRightBlockMoveUp(reducePanelDuration(level: number.second)), withKey: "newRightPanelSpeed")
     }
     
     //MARK: Helper Functions
@@ -189,7 +189,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
      Everytime a swipe is regeistered, it stored it in array and then a method is called on a specific direction within that method
      */
     func addSwipe() {
-        let directions: [UISwipeGestureRecognizerDirection] = [.Right, .Left, .Up, .Down]
+        let directions: [UISwipeGestureRecognizerDirection] = [.right, .left, .up, .down]
         for direction in directions {
             let gesture = UISwipeGestureRecognizer(target: self, action: #selector(GameScene.handleSwipe(_:)))
             gesture.direction = direction
@@ -203,29 +203,29 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
      score a hit then the points given +2, thus avoiding the hassle of a complex scoring mechanic because the +2 gets rids of -ve number and the use ends up with
      +1 (-1 + 2 = 1)
      */
-    func handleSwipe(sender: UISwipeGestureRecognizer) {
+    func handleSwipe(_ sender: UISwipeGestureRecognizer) {
         print(sender.direction)
         let gestureDirection = sender.direction
         
         switch gestureDirection {
-        case UISwipeGestureRecognizerDirection.Right:
+        case UISwipeGestureRecognizerDirection.right:
             print("RIGHT-Miss?")
-            coin.removeActionForKey("downForever")
-            let moveRight = SKAction.moveTo(CGPointMake(3000,450), duration:2.0) //orginally the values where 4000
+            coin.removeAction(forKey: "downForever")
+            let moveRight = SKAction.move(to: CGPoint(x: 3000,y: 450), duration:2.0) //orginally the values where 4000
             let actionMoveDone = SKAction.removeFromParent()
-            coin.runAction(SKAction.sequence([moveRight, actionMoveDone]), withKey: "GoRightCoin")
+            coin.run(SKAction.sequence([moveRight, actionMoveDone]), withKey: "GoRightCoin")
             blockRightCount -= 1
-            runAction(SKAction.playSoundFileNamed("hockeyStickSlap.mp3", waitForCompletion: false))
+            run(SKAction.playSoundFileNamed("hockeyStickSlap.mp3", waitForCompletion: false))
 
             
-        case UISwipeGestureRecognizerDirection.Left:
+        case UISwipeGestureRecognizerDirection.left:
             print("LEFT-Miss?")
-            coin.removeActionForKey("downForever")
-            let moveLeft = SKAction.moveTo(CGPointMake(-3000,450), duration:2.0)
+            coin.removeAction(forKey: "downForever")
+            let moveLeft = SKAction.move(to: CGPoint(x: -3000,y: 450), duration:2.0)
             let actionMoveDone = SKAction.removeFromParent()
-            coin.runAction(SKAction.sequence([moveLeft, actionMoveDone]), withKey: "GoLeftCoin")
+            coin.run(SKAction.sequence([moveLeft, actionMoveDone]), withKey: "GoLeftCoin")
             blockLeftCount -= 1
-            runAction(SKAction.playSoundFileNamed("hockeyStickSlap.mp3", waitForCompletion: false))
+            run(SKAction.playSoundFileNamed("hockeyStickSlap.mp3", waitForCompletion: false))
 
             
         default:
@@ -238,8 +238,8 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
      number brings back 3, this means level 3 of speed for the blocks will be used.
      */
     func randomTupleNumbers() -> (first: Int, second: Int) {
-        let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(4)
-        let anotherRandomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(4)
+        let randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: 4)
+        let anotherRandomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: 4)
         //        print("numbers: \(randomNumber) , \(anotherRandomNumber)")
         return (randomNumber, anotherRandomNumber)
     }
@@ -253,7 +253,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         print("create coin: \(coinCounter)")
         let newCoin = SKSpriteNode(imageNamed: "19")
         newCoin.name = CoinCategoryName
-        newCoin.size = CGSizeMake(50, 50)
+        newCoin.size = CGSize(width: 50, height: 50)
         newCoin.position = CGPoint(x: self.size.width/2, y: self.size.height) //drop coin in centre of screen
         newCoin.physicsBody = SKPhysicsBody.init(circleOfRadius: newCoin.size.width/2)
         newCoin.physicsBody?.friction = 0
@@ -266,9 +266,9 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         
         addChild(newCoin)
         
-        let actionMoveDownForever = SKAction.repeatActionForever(SKAction.moveToY(-100, duration: 3.0))
+        let actionMoveDownForever = SKAction.repeatForever(SKAction.moveTo(y: -100, duration: 3.0))
         let actionMoveDone = SKAction.removeFromParent()
-        newCoin.runAction(SKAction.sequence([actionMoveDownForever, actionMoveDone]), withKey: "downForever")
+        newCoin.run(SKAction.sequence([actionMoveDownForever, actionMoveDone]), withKey: "downForever")
     }
     
     /**
@@ -282,7 +282,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         
         for i in 0..<numberOfBlocks {
             var block = SKSpriteNode(imageNamed: "18")//default image
-            block.size = CGSizeMake(14, 80.0)
+            block.size = CGSize(width: 14, height: 80.0)
             
             if i == 0 {
                 let texture = SKTexture(imageNamed: "17")
@@ -291,7 +291,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
                 //                block.name = GameViewController.instance.businessOneLeft.businessName
                 print("block: Bottom Left: \(block.name)")
                 block.position = CGPoint(x: (size.width - size.width) + 10, y: size.height - size.height) //bottom left, 10 + added to allow for paddle to be viewable
-                block.runAction(setLeftBlockMoveDown(panelDuration), withKey: "leftBlockMove")
+                block.run(setLeftBlockMoveDown(panelDuration), withKey: "leftBlockMove")
                 block.zPosition = 1
                 block0 = block // a way to reference the panel back to change its speed
                 
@@ -301,14 +301,14 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
                 block.name = "block\(i)"
                 print("block: Top Right: \(block.name)")
                 block.position = CGPoint(x: (size.width) - 10, y: size.height) //top right, - 10 (minus) to allow for the paddle to be viewable
-                block.runAction(setRightBlockMoveUp(panelDuration), withKey: "rightBlockMove")
+                block.run(setRightBlockMoveUp(panelDuration), withKey: "rightBlockMove")
                 block.zPosition = 1
                 block1 = block
             }
             
             //phsyics body setup
-            block.physicsBody = SKPhysicsBody(rectangleOfSize: block.size)
-            block.physicsBody?.dynamic = true
+            block.physicsBody = SKPhysicsBody(rectangleOf: block.size)
+            block.physicsBody?.isDynamic = true
             block.physicsBody?.categoryBitMask = PhysicsCategory.Block
             block.physicsBody?.contactTestBitMask = PhysicsCategory.Coin
             block.physicsBody?.collisionBitMask = PhysicsCategory.None
@@ -326,17 +326,17 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     func createBackground() {
         let background = SKSpriteNode(imageNamed: "no-clock")
         let clock = SKSpriteNode(imageNamed: "14")
-        clock.anchorPoint = CGPointMake(0.5, 0.5)
+        clock.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         clock.size.height = 104
         clock.size.width = 90
-        clock.position = CGPointMake(self.frame.width/2, self.frame.height/4)
+        clock.position = CGPoint(x: self.frame.width/2, y: self.frame.height/4)
         clock.zPosition = 0.5
         addChild(clock)
         
-        background.anchorPoint = CGPointMake(0.5, 0.5)
+        background.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         background.size.height = self.size.height
         background.size.width = self.size.width
-        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
+        background.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         background.name = "background"
         //        background.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
         background.zPosition = 0
@@ -345,8 +345,8 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     
     //MARK: Observer Methods
     func setupObservers() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(GameScene.methodOfReceivedNotification(_:)), name:"gameOver", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(GameScene.timeHasBeenDecreased), name:"timeHasBeenDecreased", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(GameScene.methodOfReceivedNotification(_:)), name:NSNotification.Name(rawValue: "gameOver"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(GameScene.timeHasBeenDecreased), name:NSNotification.Name(rawValue: "timeHasBeenDecreased"), object: nil)
     }
     
     /**
@@ -375,18 +375,18 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         }
     }
     
-    func methodOfReceivedNotification(notification: NSNotification){
+    func methodOfReceivedNotification(_ notification: Notification){
         print("Game Over baby")
         //Tally up the scores here!
         pointsEarnedTotal()
-        scene!.view?.paused = true
+        scene!.view?.isPaused = true
     }
     
     //MARK: Promotion Scores
     func pointsEarnedTotal()  {
         
-        GameViewController.instance.leftBusiness.pointsEarned = blockLeftCount
-        GameViewController.instance.rightBusiness.pointsEarned = blockRightCount
+        GameViewController.instance.leftBusiness.pointsEarned = blockLeftCount as NSNumber!
+        GameViewController.instance.rightBusiness.pointsEarned = blockRightCount as NSNumber!
     }
     
     func resetScores()  {

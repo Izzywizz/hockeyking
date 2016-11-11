@@ -13,6 +13,7 @@
 #pragma mark - View Methods
 
 -(void)awakeFromNib {
+    [super awakeFromNib];
     [self performSelector:@selector(performAnimation) withObject:nil afterDelay:2.0];
 }
 
