@@ -255,6 +255,8 @@
 				43BAC3841DBE25D900C8A518 /* CustomNavigationController.m */,
 				4337BCCE1DC8D5810024CA74 /* UILabel+FormattedText.h */,
 				4337BCCF1DC8D5810024CA74 /* UILabel+FormattedText.m */,
+				43C7BA361DB644BF00FDD9F1 /* NSObject+logProperties.h */,
+				43C7BA371DB644BF00FDD9F1 /* NSObject+logProperties.m */,
 			);
 			name = "Helper Classes";
 			sourceTree = "<group>";
@@ -301,8 +303,6 @@
 				43C7BA101DB611A700FDD9F1 /* LaunchScreen.storyboard */,
 				43C7BA131DB611A700FDD9F1 /* Info.plist */,
 				43C7BA021DB611A700FDD9F1 /* Supporting Files */,
-				43C7BA361DB644BF00FDD9F1 /* NSObject+logProperties.h */,
-				43C7BA371DB644BF00FDD9F1 /* NSObject+logProperties.m */,
 				43BAC3801DBE205700C8A518 /* vouchking-Bridging-Header.h */,
 			);
 			path = vouchking;

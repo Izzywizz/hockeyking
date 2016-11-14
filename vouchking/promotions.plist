@@ -16,7 +16,7 @@
 		<key>totalUsers</key>
 		<integer>10</integer>
 		<key>expiryEpoch</key>
-		<integer>1477664191</integer>
+		<integer>1480626758</integer>
 		<key>promotionDescription</key>
 		<string>Two for One offer on coffees and get a free cookie</string>
 		<key>pointsEarned</key>
@@ -52,7 +52,7 @@
 		<key>totalUsers</key>
 		<integer>42</integer>
 		<key>expiryEpoch</key>
-		<integer>1477750591</integer>
+		<integer>1482268358</integer>
 		<key>promotionDescription</key>
 		<string>Buy one Dominoes lotion and get one free</string>
 		<key>pointsEarned</key>
@@ -88,7 +88,7 @@
 		<key>totalUsers</key>
 		<integer>93</integer>
 		<key>expiryEpoch</key>
-		<integer>1478355391</integer>
+		<integer>1479676358</integer>
 		<key>promotionDescription</key>
 		<string>Everything Free in Amazon</string>
 		<key>pointsEarned</key>
@@ -124,7 +124,7 @@
 		<key>totalUsers</key>
 		<string>73</string>
 		<key>expiryEpoch</key>
-		<integer>1478528191</integer>
+		<integer>1479244358</integer>
 		<key>promotionDescription</key>
 		<string>Free Facemask!</string>
 		<key>pointsEarned</key>
@@ -160,7 +160,7 @@
 		<key>totalUsers</key>
 		<integer>3</integer>
 		<key>expiryEpoch</key>
-		<integer>1478268991</integer>
+		<integer>1479287558</integer>
 		<key>promotionDescription</key>
 		<string>Buy one T shirt and get another T shirt free</string>
 		<key>pointsEarned</key>
