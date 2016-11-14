@@ -35,7 +35,7 @@
         _backButton.image = [UIImage imageNamed:@""]; //Remove (<) button image
         _backButton.title = @"Done";
         [self setupTimesUpView]; //show times up view
-        self.tableView.scrollEnabled = NO; //prevent scrolling till the timesup animaton completes
+        self.tableView.scrollEnabled = NO; //prevent scrolling till the timesup animaton completes, this is set at the same time within the PromotionTableCell
         [self performSelector: @selector(setScroll) withObject:nil afterDelay:2.0];
     }
 }
@@ -77,7 +77,6 @@
 #pragma mark - TableView DataSource Delegates
 // Need to pull in data count from DataShared Instance
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section    {
-    
 //    return [Data sharedInstance].promotionsDict.count;
     return [Data sharedInstance].promotionsArray.count;
 }
@@ -114,26 +113,19 @@
 }
 
 #pragma mark - OverlayVIew
-/*ensures that the view added streches properly to the screen*/
-- (void) stretchToSuperView:(UIView*) view {
-    view.translatesAutoresizingMaskIntoConstraints = NO;
-    NSDictionary *bindings = NSDictionaryOfVariableBindings(view);
-    NSString *formatTemplate = @"%@:|[view]|";
-    for (NSString * axis in @[@"H",@"V"]) {
-        NSString * format = [NSString stringWithFormat:formatTemplate,axis];
-        NSArray * constraints = [NSLayoutConstraint constraintsWithVisualFormat:format options:0 metrics:nil views:bindings];
-        [view.superview addConstraints:constraints];
-    }
-}
-
 -(void) setupTimesUpView   {
     OverlayView *overlayVC = [OverlayView overlayView];
     self.view.bounds = overlayVC.bounds;
     [self.view addSubview:overlayVC];
-    [self stretchToSuperView:self.view];
-    self.overlayView = overlayVC;
+    [overlayVC stretchToSuperView:self.view];
+    self.overlayView = overlayVC; //add the local instance with all the properties
 }
 
+/**
+ A method that resets the pointsEarned scores so that it doesn't affect the realtime nature of the points,
+ because of the way NSNumber works I wasn't able to use += so I used a separate variable to show the number of pointsEarned per round
+ but is not related to the total points so they can be set indepedent of another.
+ */
 -(void) resetScores {
     for (int i = 0; i < [Data sharedInstance].promotionsArray.count; i++) {
         Promotion *promotion = [Data sharedInstance].promotionsArray[i];

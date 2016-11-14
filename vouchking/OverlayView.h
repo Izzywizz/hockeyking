@@ -11,5 +11,6 @@
 @interface OverlayView : UIView
 
 + (id)overlayView;
+- (void) stretchToSuperView:(UIView*) view;
 
 @end
