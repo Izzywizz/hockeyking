@@ -53,7 +53,7 @@
 -(void) setupTable  {
     self.tableView.allowsSelectionDuringEditing=YES;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 258;
+    self.tableView.estimatedRowHeight = 140;
 }
 
 /** This method setups up the navigation controller to include text and image side by side */
@@ -69,12 +69,10 @@
     self.navigationController.navigationBar.translucent = NO;
 }
 
-#pragma mark - TableView <Delgate>
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Row: %ld", (long)indexPath.row);
-}
+#pragma mark - TableView <Delegate>
+//No methods needed
 
-#pragma mark - TableView DataSource Delegates
+#pragma mark - TableView DataSource <Delegate>
 // Need to pull in data count from DataShared Instance
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section    {
 //    return [Data sharedInstance].promotionsDict.count;

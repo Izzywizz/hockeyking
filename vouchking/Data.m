@@ -51,7 +51,7 @@
 /**
  This method recreates the same functionality as PromsDict however each promotionObject created is added to an array rather than a dictionary.
  The array is populated with the information from the plist, thus we are able to reference the data anywhere from within the app so that it always peristent 
- It also is easier to update the object because an array is an ordered list , you just reference the specific number/ index and replaceObject 
+ It also is easier to update the object because an array is an ordered list , you just reference the specific number/ index and replaceObject
  */
 -(void) createPromotionArray  {
     

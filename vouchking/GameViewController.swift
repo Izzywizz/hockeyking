@@ -227,7 +227,6 @@ class GameViewController: UIViewController {
         Data.sharedInstance().promotionsArray.replaceObject(at: businessRightRandomNumber, with: rightBusiness)
         print("(Points LEFT) Business: \((Data.sharedInstance().promotionsArray[businessLeftRandomNumber] as AnyObject).businessName) Total Points Earned: \((Data.sharedInstance().promotionsArray[businessLeftRandomNumber] as AnyObject).pointsEarned)")
         print("(Points RIGHT) Business: \((Data.sharedInstance().promotionsArray[businessRightRandomNumber] as AnyObject).businessName) Total Points Earned: \((Data.sharedInstance().promotionsArray[businessRightRandomNumber] as AnyObject).pointsEarned)")
-        
     }
     
     /**
