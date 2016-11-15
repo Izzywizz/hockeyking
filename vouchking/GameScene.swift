@@ -134,8 +134,8 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         
         switch level {
             case 1: panelDuration = 0.7
-            case 2: panelDuration = 0.5
-            case 3: panelDuration = 0.3
+            case 2: panelDuration = 0.6
+            case 3: panelDuration = 0.5
         default:
             panelDuration = 1 //default speed
         }
