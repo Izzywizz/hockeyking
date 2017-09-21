@@ -203,7 +203,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
      score a hit then the points given +2, thus avoiding the hassle of a complex scoring mechanic because the +2 gets rids of -ve number and the use ends up with
      +1 (-1 + 2 = 1)
      */
-    func handleSwipe(_ sender: UISwipeGestureRecognizer) {
+    @objc func handleSwipe(_ sender: UISwipeGestureRecognizer) {
         print(sender.direction)
         let gestureDirection = sender.direction
         
@@ -289,7 +289,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
                 block = SKSpriteNode(texture: texture)
                 block.name = "block\(i)"
                 //                block.name = GameViewController.instance.businessOneLeft.businessName
-                print("block: Bottom Left: \(block.name)")
+                print("block: Bottom Left: \(String(describing: block.name))")
                 block.position = CGPoint(x: (size.width - size.width) + 10, y: size.height - size.height) //bottom left, 10 + added to allow for paddle to be viewable
                 block.run(setLeftBlockMoveDown(panelDuration), withKey: "leftBlockMove")
                 block.zPosition = 1
@@ -299,7 +299,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
                 let texture = SKTexture(imageNamed: "18")
                 block = SKSpriteNode(texture: texture)
                 block.name = "block\(i)"
-                print("block: Top Right: \(block.name)")
+                print("block: Top Right: \(String(describing: block.name))")
                 block.position = CGPoint(x: (size.width) - 10, y: size.height) //top right, - 10 (minus) to allow for the paddle to be viewable
                 block.run(setRightBlockMoveUp(panelDuration), withKey: "rightBlockMove")
                 block.zPosition = 1
@@ -354,7 +354,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
      which calls a method that brings back a random blocks speed based on the number that is genreated from randomNumber generator.
      */
     
-    func timeHasBeenDecreased() {
+    @objc func timeHasBeenDecreased() {
         // print("Time Went Down: \(GameViewController.instance.timerCount)"
         let number = randomTupleNumbers()
         
@@ -375,7 +375,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
         }
     }
     
-    func methodOfReceivedNotification(_ notification: Notification){
+    @objc func methodOfReceivedNotification(_ notification: Notification){
         print("Game Over baby")
         //Tally up the scores here!
         pointsEarnedTotal()

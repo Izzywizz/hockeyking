@@ -134,7 +134,7 @@ class GameViewController: UIViewController {
     }
     
     //MARK: Timer Methods/ Timer Label
-    func countdown() {
+    @objc func countdown() {
         if timerCount > 0 {
             timerCount -= 1
             label.text = "\(timerCount)"
@@ -153,7 +153,7 @@ class GameViewController: UIViewController {
         label = UILabel(frame: CGRect.zero)
         label.text = "\(timerCount)"
         label.font = UIFont(name: "LuckiestGuy-Regular", size: 32.0)
-        label.textColor = UIColor(colorLiteralRed: 46/255.0, green: 117/255.0, blue: 161/255.0, alpha: 1)
+        label.textColor = UIColor(red: 46/255.0, green: 117/255.0, blue: 161/255.0, alpha: 1)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(label)
@@ -191,11 +191,11 @@ class GameViewController: UIViewController {
     func storePreviousPoints() {
         let business = Data.sharedInstance().promotionsArray[businessLeftRandomNumber] as! Promotion
         let businessTwo = Data.sharedInstance().promotionsArray[businessRightRandomNumber] as! Promotion
-        previousLeftBusinessTotalPoints = Int (business.totalPoints)
-        previousRightBusinessTotalPoints = Int (businessTwo.totalPoints)
+        previousLeftBusinessTotalPoints = Int (truncating: business.totalPoints)
+        previousRightBusinessTotalPoints = Int (truncating: businessTwo.totalPoints)
         
-        leftPointsEarnedPerRound = Int(business.totalPointsEarnedPerRound)
-        rightResultEarnedPerRound = Int(businessTwo.totalPointsEarnedPerRound)
+        leftPointsEarnedPerRound = Int(truncating: business.totalPointsEarnedPerRound)
+        rightResultEarnedPerRound = Int(truncating: businessTwo.totalPointsEarnedPerRound)
         
         print("Previous Total Points (L) \(business.businessName) Points: \(previousLeftBusinessTotalPoints)")
         print("Previous Total Points (R)  \(businessTwo.businessName) Points: \(previousRightBusinessTotalPoints)")
@@ -205,22 +205,22 @@ class GameViewController: UIViewController {
     
     func saveDataFromSession() {
         
-        let result = Int(leftBusiness.pointsEarned) + previousLeftBusinessTotalPoints // current points earned from the game session just played + the total from the actual business
+        let result = Int(truncating: leftBusiness.pointsEarned) + previousLeftBusinessTotalPoints // current points earned from the game session just played + the total from the actual business
         leftBusiness.totalPoints = result as NSNumber!
         
-        let resultTwo = Int(rightBusiness.pointsEarned) + previousRightBusinessTotalPoints
+        let resultTwo = Int(truncating: rightBusiness.pointsEarned) + previousRightBusinessTotalPoints
         rightBusiness.totalPoints = resultTwo as NSNumber!
         
-        let total = leftPointsEarnedPerRound + Int(leftBusiness.pointsEarned)
+        let total = leftPointsEarnedPerRound + Int(truncating: leftBusiness.pointsEarned)
         leftBusiness.totalPointsEarnedPerRound = total as NSNumber!
-        let totalTwo = rightResultEarnedPerRound + Int(rightBusiness.pointsEarned)
+        let totalTwo = rightResultEarnedPerRound + Int(truncating: rightBusiness.pointsEarned)
         rightBusiness.totalPointsEarnedPerRound = totalTwo as NSNumber!
         
         print("Points Earned Total (L): \(leftBusiness.businessName) Points Earned \(leftBusiness.totalPointsEarnedPerRound)")
         print("Points Earned Total (R): \(rightBusiness.businessName) Points Earned \(rightBusiness.totalPointsEarnedPerRound)")
         
-        handleNegativeLimit(isLeftBlock: true, totalBusinessPoints: Int(leftBusiness.totalPoints))
-        handleNegativeLimit(isLeftBlock: false, totalBusinessPoints: Int(rightBusiness.totalPoints))
+        handleNegativeLimit(isLeftBlock: true, totalBusinessPoints: Int(truncating: leftBusiness.totalPoints))
+        handleNegativeLimit(isLeftBlock: false, totalBusinessPoints: Int(truncating: rightBusiness.totalPoints))
         
         //Save instance of Data
         Data.sharedInstance().promotionsArray.replaceObject(at: businessLeftRandomNumber, with: leftBusiness)
