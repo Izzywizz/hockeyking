@@ -1,13 +1,13 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'vouchking' do
+target 'hockeyking' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for vouchking
+  # Pods for hockeyking
 
-  target 'vouchkingTests' do
+  target 'hockeykingTests' do
     inherit! :search_paths
     # Pods for testing
   end

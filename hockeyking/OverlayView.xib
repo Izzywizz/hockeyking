@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="OverlayView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="32" translatesAutoresizingMaskIntoConstraints="NO" id="Aw4-QS-K2b" userLabel="TimesUp">
+                    <rect key="frame" x="175" y="233" width="250" height="134"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="eAU-iP-7ZU"/>
+                        <constraint firstAttribute="height" constant="134" id="tOo-DU-btW"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.75479525862068964" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Aw4-QS-K2b" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="LVt-d2-1xr"/>
+                <constraint firstItem="Aw4-QS-K2b" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="m1M-3m-46o"/>
+            </constraints>
+            <point key="canvasLocation" x="751" y="114"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="32" width="250" height="133"/>
+    </resources>
+</document>

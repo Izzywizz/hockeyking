@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="Bey-Ft-xd6" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="azy-Oh-sy4" userLabel="Logo">
+                                <rect key="frame" x="55" y="206.5" width="265" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="Ynh-TP-mH8"/>
+                                    <constraint firstAttribute="height" constant="92" id="ZCZ-32-Yj5"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="hsb-X1-J9j" userLabel="Our Company Logo">
+                                <rect key="frame" x="137.5" y="613" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="GYE-4e-oyk"/>
+                                    <constraint firstAttribute="height" constant="34" id="HdS-WD-UZs"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1803921568627451" green="0.45882352941176469" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hsb-X1-J9j" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1be-0R-Rgv"/>
+                            <constraint firstItem="azy-Oh-sy4" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="168" id="6f2-Ax-aVa"/>
+                            <constraint firstAttribute="trailing" secondItem="azy-Oh-sy4" secondAttribute="trailing" constant="167" id="L4s-hy-9H4"/>
+                            <constraint firstAttribute="trailing" secondItem="Bey-Ft-xd6" secondAttribute="trailing" id="LYF-Dk-mkt"/>
+                            <constraint firstItem="azy-Oh-sy4" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="156" id="QTs-xS-IIg"/>
+                            <constraint firstItem="azy-Oh-sy4" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Rxd-iF-pOw"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="hsb-X1-J9j" secondAttribute="bottom" constant="20" id="WHH-OO-OcA"/>
+                            <constraint firstItem="azy-Oh-sy4" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="148" id="drW-Pd-FHn"/>
+                            <constraint firstItem="Bey-Ft-xd6" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="okf-0g-xQy"/>
+                            <constraint firstItem="azy-Oh-sy4" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-81" id="pLk-sx-ASY"/>
+                            <constraint firstItem="Bey-Ft-xd6" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="stw-yx-FG0"/>
+                            <constraint firstItem="azy-Oh-sy4" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="148" id="tI5-hI-6v9"/>
+                            <constraint firstItem="azy-Oh-sy4" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="uT9-SZ-2rA"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Bey-Ft-xd6" secondAttribute="bottom" id="yXi-k8-iU4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6f2-Ax-aVa"/>
+                                <exclude reference="L4s-hy-9H4"/>
+                                <exclude reference="QTs-xS-IIg"/>
+                                <exclude reference="Rxd-iF-pOw"/>
+                                <exclude reference="drW-Pd-FHn"/>
+                                <exclude reference="tI5-hI-6v9"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="294" height="123"/>
+        <image name="2" width="103" height="38"/>
+        <image name="3" width="375" height="667"/>
+    </resources>
+</document>

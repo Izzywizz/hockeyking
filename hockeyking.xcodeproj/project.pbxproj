@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A6ACBB5AB044085EB3383FB /* Pods_hockeyking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5764B80F999594677C828F /* Pods_hockeyking.framework */; };
 		431522941DD4B1CC00F70597 /* hockeyStickSlap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 431522931DD4B1CC00F70597 /* hockeyStickSlap.mp3 */; };
 		431522961DD4B42D00F70597 /* goalScored.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 431522951DD4B42D00F70597 /* goalScored.m4a */; };
 		431AB02D1DD0A22D008C7E3D /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 431AB02B1DD0A22D008C7E3D /* background-music-aac.caf */; };
@@ -58,7 +59,7 @@
 		43C7BA321DB62D6600FDD9F1 /* promotions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43C7BA311DB62D6600FDD9F1 /* promotions.plist */; };
 		43C7BA351DB634A600FDD9F1 /* PListParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA341DB634A600FDD9F1 /* PListParser.m */; };
 		43C7BA381DB644BF00FDD9F1 /* NSObject+logProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA371DB644BF00FDD9F1 /* NSObject+logProperties.m */; };
-		57EF1F97206413EC008901B5 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EF1F96206413EC008901B5 /* GoogleMobileAds.framework */; };
+		8C1DFC203A24A0ACB5637EEF /* Pods_hockeykingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83EE6E912E6D734B32D0F7DD /* Pods_hockeykingTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,7 +114,7 @@
 		43B5CFF51DC0B7FD00117316 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		43B5CFF61DC0B7FD00117316 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		43B5CFF71DC0B7FD00117316 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		43BAC3801DBE205700C8A518 /* vouchking-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vouchking-Bridging-Header.h"; sourceTree = "<group>"; };
+		43BAC3801DBE205700C8A518 /* hockeyking-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hockeyking-Bridging-Header.h"; sourceTree = "<group>"; };
 		43BAC3831DBE25D900C8A518 /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
 		43BAC3841DBE25D900C8A518 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
 		43BAC3871DBE3D3900C8A518 /* TermsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TermsViewController.h; sourceTree = "<group>"; };
@@ -140,11 +141,12 @@
 		43C7BA341DB634A600FDD9F1 /* PListParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PListParser.m; sourceTree = "<group>"; };
 		43C7BA361DB644BF00FDD9F1 /* NSObject+logProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+logProperties.h"; sourceTree = "<group>"; };
 		43C7BA371DB644BF00FDD9F1 /* NSObject+logProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+logProperties.m"; sourceTree = "<group>"; };
-		57EF1F96206413EC008901B5 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		7544E23384B3AA3C63FDFC1E /* Pods-vouchkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vouchkingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-vouchkingTests/Pods-vouchkingTests.release.xcconfig"; sourceTree = "<group>"; };
-		96161AE4C2A092EC73263A24 /* Pods-vouchkingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vouchkingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vouchkingTests/Pods-vouchkingTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CAE32F484DC05C7FB472EA71 /* Pods-vouchking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vouchking.release.xcconfig"; path = "Pods/Target Support Files/Pods-vouchking/Pods-vouchking.release.xcconfig"; sourceTree = "<group>"; };
-		E8F4449CBB138D928DD57CEC /* Pods-vouchking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vouchking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vouchking/Pods-vouchking.debug.xcconfig"; sourceTree = "<group>"; };
+		4F5764B80F999594677C828F /* Pods_hockeyking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hockeyking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83EE6E912E6D734B32D0F7DD /* Pods_hockeykingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hockeykingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96F7ED790438C3741015C623 /* Pods-hockeyking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hockeyking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hockeyking/Pods-hockeyking.debug.xcconfig"; sourceTree = "<group>"; };
+		B1933B6B373A5C5ED14C48C9 /* Pods-hockeyking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hockeyking.release.xcconfig"; path = "Pods/Target Support Files/Pods-hockeyking/Pods-hockeyking.release.xcconfig"; sourceTree = "<group>"; };
+		D5238A7860DE0A8135FBBC52 /* Pods-hockeykingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hockeykingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hockeykingTests/Pods-hockeykingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DD63C67E229BF77733C0598A /* Pods-hockeykingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hockeykingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hockeykingTests/Pods-hockeykingTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57EF1F97206413EC008901B5 /* GoogleMobileAds.framework in Frameworks */,
+				3A6ACBB5AB044085EB3383FB /* Pods_hockeyking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C1DFC203A24A0ACB5637EEF /* Pods_hockeykingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,10 +172,10 @@
 		1FD3EA03B0C518DBB903CED6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E8F4449CBB138D928DD57CEC /* Pods-vouchking.debug.xcconfig */,
-				CAE32F484DC05C7FB472EA71 /* Pods-vouchking.release.xcconfig */,
-				96161AE4C2A092EC73263A24 /* Pods-vouchkingTests.debug.xcconfig */,
-				7544E23384B3AA3C63FDFC1E /* Pods-vouchkingTests.release.xcconfig */,
+				96F7ED790438C3741015C623 /* Pods-hockeyking.debug.xcconfig */,
+				B1933B6B373A5C5ED14C48C9 /* Pods-hockeyking.release.xcconfig */,
+				D5238A7860DE0A8135FBBC52 /* Pods-hockeykingTests.debug.xcconfig */,
+				DD63C67E229BF77733C0598A /* Pods-hockeykingTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -283,7 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				4321CDCD1DBA0ED7005C06AB /* Fonts */,
-				43C7BA011DB611A700FDD9F1 /* vouchking */,
+				43C7BA011DB611A700FDD9F1 /* hockeyking */,
 				43C7BA1B1DB611A700FDD9F1 /* vouchkingTests */,
 				43C7BA001DB611A700FDD9F1 /* Products */,
 				1FD3EA03B0C518DBB903CED6 /* Pods */,
@@ -300,7 +303,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		43C7BA011DB611A700FDD9F1 /* vouchking */ = {
+		43C7BA011DB611A700FDD9F1 /* hockeyking */ = {
 			isa = PBXGroup;
 			children = (
 				431AB02A1DD0A22D008C7E3D /* Sounds */,
@@ -323,9 +326,9 @@
 				43C7BA101DB611A700FDD9F1 /* LaunchScreen.storyboard */,
 				43C7BA131DB611A700FDD9F1 /* Info.plist */,
 				43C7BA021DB611A700FDD9F1 /* Supporting Files */,
-				43BAC3801DBE205700C8A518 /* vouchking-Bridging-Header.h */,
+				43BAC3801DBE205700C8A518 /* hockeyking-Bridging-Header.h */,
 			);
-			path = vouchking;
+			path = hockeyking;
 			sourceTree = "<group>";
 		};
 		43C7BA021DB611A700FDD9F1 /* Supporting Files */ = {
@@ -360,7 +363,8 @@
 		BA6F4625E08B655EF0734C07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				57EF1F96206413EC008901B5 /* GoogleMobileAds.framework */,
+				4F5764B80F999594677C828F /* Pods_hockeyking.framework */,
+				83EE6E912E6D734B32D0F7DD /* Pods_hockeykingTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -376,8 +380,8 @@
 				43C7B9FB1DB611A700FDD9F1 /* Sources */,
 				43C7B9FC1DB611A700FDD9F1 /* Frameworks */,
 				43C7B9FD1DB611A700FDD9F1 /* Resources */,
-				9F29E3207459EDE77E03A3F6 /* [CP] Embed Pods Frameworks */,
-				71A9FABFD8309E2F33F60D1D /* [CP] Copy Pods Resources */,
+				845657584BD98620AA5E8FC0 /* [CP] Embed Pods Frameworks */,
+				5000F29508F7C39B36436685 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -512,14 +516,14 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-vouchkingTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-hockeykingTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		71A9FABFD8309E2F33F60D1D /* [CP] Copy Pods Resources */ = {
+		5000F29508F7C39B36436685 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -531,7 +535,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vouchking/Pods-vouchking-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hockeyking/Pods-hockeyking-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		798578B68EC44958663D16A8 /* [CP] Check Pods Manifest.lock */ = {
@@ -545,14 +549,14 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-vouchking-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-hockeyking-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9F29E3207459EDE77E03A3F6 /* [CP] Embed Pods Frameworks */ = {
+		845657584BD98620AA5E8FC0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -564,7 +568,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vouchking/Pods-vouchking-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hockeyking/Pods-hockeyking-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D5442104887CFAD8D9C77EAC /* [CP] Embed Pods Frameworks */ = {
@@ -579,7 +583,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vouchkingTests/Pods-vouchkingTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hockeykingTests/Pods-hockeykingTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F9082216312D66CC839EFEDD /* [CP] Copy Pods Resources */ = {
@@ -594,7 +598,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vouchkingTests/Pods-vouchkingTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hockeykingTests/Pods-hockeykingTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -763,7 +767,7 @@
 		};
 		43C7BA221DB611A700FDD9F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8F4449CBB138D928DD57CEC /* Pods-vouchking.debug.xcconfig */;
+			baseConfigurationReference = 96F7ED790438C3741015C623 /* Pods-hockeyking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -773,12 +777,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = vouchking/Info.plist;
+				INFOPLIST_FILE = hockeyking/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.izzyali.hockeyking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "vouchking/vouchking-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "hockeyking/hockeyking-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
@@ -787,7 +791,7 @@
 		};
 		43C7BA231DB611A700FDD9F1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAE32F484DC05C7FB472EA71 /* Pods-vouchking.release.xcconfig */;
+			baseConfigurationReference = B1933B6B373A5C5ED14C48C9 /* Pods-hockeyking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -797,12 +801,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = vouchking/Info.plist;
+				INFOPLIST_FILE = hockeyking/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.izzyali.hockeyking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "vouchking/vouchking-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "hockeyking/hockeyking-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
@@ -810,7 +814,7 @@
 		};
 		43C7BA251DB611A700FDD9F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96161AE4C2A092EC73263A24 /* Pods-vouchkingTests.debug.xcconfig */;
+			baseConfigurationReference = D5238A7860DE0A8135FBBC52 /* Pods-hockeykingTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = vouchkingTests/Info.plist;
@@ -823,7 +827,7 @@
 		};
 		43C7BA261DB611A700FDD9F1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7544E23384B3AA3C63FDFC1E /* Pods-vouchkingTests.release.xcconfig */;
+			baseConfigurationReference = DD63C67E229BF77733C0598A /* Pods-hockeykingTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = vouchkingTests/Info.plist;
