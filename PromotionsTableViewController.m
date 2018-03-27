@@ -17,7 +17,6 @@
 @property NSArray *promoKeysArray; //Previously used when the Promotion where Dict
 @property (nonatomic) UIView *overlayView; //timesUpScreen
 
-
 @end
 
 @implementation PromotionsTableViewController
@@ -40,6 +39,11 @@
         [self performSelector: @selector(setScroll) withObject:nil afterDelay:2.0];
     }
 }
+
+-(void) viewDidLoad {
+    [self setupNavigationController];
+}
+
 
 #pragma mark - Helper Methods
 
