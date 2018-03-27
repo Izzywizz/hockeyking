@@ -8,8 +8,6 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate
@@ -24,6 +22,9 @@
                                           barMetrics:UIBarMetricsDefault];
     
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+    
+    // Initialize Google Mobile Ads SDK
+    // Sample AdMob app ID: ca-app-pub-3940256099942544~1458002511
     return YES;
 }
 

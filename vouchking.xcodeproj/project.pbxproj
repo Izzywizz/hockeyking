@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07407C41E6AE8623DEA50ECC /* Pods_vouchking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CADCCAA399874397BCDD27D /* Pods_vouchking.framework */; };
+		1C2133270D76BA1EF9510484 /* Pods_vouchkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D303F3F3F32D9EDCC381D5 /* Pods_vouchkingTests.framework */; };
 		431522941DD4B1CC00F70597 /* hockeyStickSlap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 431522931DD4B1CC00F70597 /* hockeyStickSlap.mp3 */; };
 		431522961DD4B42D00F70597 /* goalScored.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 431522951DD4B42D00F70597 /* goalScored.m4a */; };
 		431AB02D1DD0A22D008C7E3D /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 431AB02B1DD0A22D008C7E3D /* background-music-aac.caf */; };
@@ -58,6 +60,7 @@
 		43C7BA321DB62D6600FDD9F1 /* promotions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43C7BA311DB62D6600FDD9F1 /* promotions.plist */; };
 		43C7BA351DB634A600FDD9F1 /* PListParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA341DB634A600FDD9F1 /* PListParser.m */; };
 		43C7BA381DB644BF00FDD9F1 /* NSObject+logProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA371DB644BF00FDD9F1 /* NSObject+logProperties.m */; };
+		57EF1F97206413EC008901B5 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EF1F96206413EC008901B5 /* GoogleMobileAds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CADCCAA399874397BCDD27D /* Pods_vouchking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vouchking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		431522931DD4B1CC00F70597 /* hockeyStickSlap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hockeyStickSlap.mp3; sourceTree = "<group>"; };
 		431522951DD4B42D00F70597 /* goalScored.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = goalScored.m4a; sourceTree = "<group>"; };
 		431AB02B1DD0A22D008C7E3D /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
@@ -139,6 +143,12 @@
 		43C7BA341DB634A600FDD9F1 /* PListParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PListParser.m; sourceTree = "<group>"; };
 		43C7BA361DB644BF00FDD9F1 /* NSObject+logProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+logProperties.h"; sourceTree = "<group>"; };
 		43C7BA371DB644BF00FDD9F1 /* NSObject+logProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+logProperties.m"; sourceTree = "<group>"; };
+		57EF1F96206413EC008901B5 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		7544E23384B3AA3C63FDFC1E /* Pods-vouchkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vouchkingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-vouchkingTests/Pods-vouchkingTests.release.xcconfig"; sourceTree = "<group>"; };
+		92D303F3F3F32D9EDCC381D5 /* Pods_vouchkingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vouchkingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96161AE4C2A092EC73263A24 /* Pods-vouchkingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vouchkingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vouchkingTests/Pods-vouchkingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CAE32F484DC05C7FB472EA71 /* Pods-vouchking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vouchking.release.xcconfig"; path = "Pods/Target Support Files/Pods-vouchking/Pods-vouchking.release.xcconfig"; sourceTree = "<group>"; };
+		E8F4449CBB138D928DD57CEC /* Pods-vouchking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vouchking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vouchking/Pods-vouchking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +156,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57EF1F97206413EC008901B5 /* GoogleMobileAds.framework in Frameworks */,
+				07407C41E6AE8623DEA50ECC /* Pods_vouchking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,12 +165,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C2133270D76BA1EF9510484 /* Pods_vouchkingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FD3EA03B0C518DBB903CED6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8F4449CBB138D928DD57CEC /* Pods-vouchking.debug.xcconfig */,
+				CAE32F484DC05C7FB472EA71 /* Pods-vouchking.release.xcconfig */,
+				96161AE4C2A092EC73263A24 /* Pods-vouchkingTests.debug.xcconfig */,
+				7544E23384B3AA3C63FDFC1E /* Pods-vouchkingTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		431AB02A1DD0A22D008C7E3D /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +292,8 @@
 				43C7BA011DB611A700FDD9F1 /* vouchking */,
 				43C7BA1B1DB611A700FDD9F1 /* vouchkingTests */,
 				43C7BA001DB611A700FDD9F1 /* Products */,
+				1FD3EA03B0C518DBB903CED6 /* Pods */,
+				BA6F4625E08B655EF0734C07 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -337,6 +363,16 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		BA6F4625E08B655EF0734C07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CADCCAA399874397BCDD27D /* Pods_vouchking.framework */,
+				92D303F3F3F32D9EDCC381D5 /* Pods_vouchkingTests.framework */,
+				57EF1F96206413EC008901B5 /* GoogleMobileAds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -344,9 +380,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43C7BA211DB611A700FDD9F1 /* Build configuration list for PBXNativeTarget "vouchking" */;
 			buildPhases = (
+				798578B68EC44958663D16A8 /* [CP] Check Pods Manifest.lock */,
 				43C7B9FB1DB611A700FDD9F1 /* Sources */,
 				43C7B9FC1DB611A700FDD9F1 /* Frameworks */,
 				43C7B9FD1DB611A700FDD9F1 /* Resources */,
+				9F29E3207459EDE77E03A3F6 /* [CP] Embed Pods Frameworks */,
+				71A9FABFD8309E2F33F60D1D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -361,9 +400,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43C7BA241DB611A700FDD9F1 /* Build configuration list for PBXNativeTarget "vouchkingTests" */;
 			buildPhases = (
+				21E8D8276EFE93E41F081153 /* [CP] Check Pods Manifest.lock */,
 				43C7BA141DB611A700FDD9F1 /* Sources */,
 				43C7BA151DB611A700FDD9F1 /* Frameworks */,
 				43C7BA161DB611A700FDD9F1 /* Resources */,
+				D5442104887CFAD8D9C77EAC /* [CP] Embed Pods Frameworks */,
+				F9082216312D66CC839EFEDD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -465,6 +507,105 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21E8D8276EFE93E41F081153 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-vouchkingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71A9FABFD8309E2F33F60D1D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vouchking/Pods-vouchking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		798578B68EC44958663D16A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-vouchking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F29E3207459EDE77E03A3F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vouchking/Pods-vouchking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5442104887CFAD8D9C77EAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vouchkingTests/Pods-vouchkingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9082216312D66CC839EFEDD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vouchkingTests/Pods-vouchkingTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43C7B9FB1DB611A700FDD9F1 /* Sources */ = {
@@ -630,13 +771,18 @@
 		};
 		43C7BA221DB611A700FDD9F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8F4449CBB138D928DD57CEC /* Pods-vouchking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = VZ2738TJ98;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = vouchking/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reraise.vouchking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -649,13 +795,18 @@
 		};
 		43C7BA231DB611A700FDD9F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAE32F484DC05C7FB472EA71 /* Pods-vouchking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = VZ2738TJ98;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = vouchking/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reraise.vouchking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -667,6 +818,7 @@
 		};
 		43C7BA251DB611A700FDD9F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96161AE4C2A092EC73263A24 /* Pods-vouchkingTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = vouchkingTests/Info.plist;
@@ -679,6 +831,7 @@
 		};
 		43C7BA261DB611A700FDD9F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7544E23384B3AA3C63FDFC1E /* Pods-vouchkingTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = vouchkingTests/Info.plist;

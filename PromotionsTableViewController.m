@@ -17,6 +17,7 @@
 @property NSArray *promoKeysArray; //Previously used when the Promotion where Dict
 @property (nonatomic) UIView *overlayView; //timesUpScreen
 
+
 @end
 
 @implementation PromotionsTableViewController
@@ -38,10 +39,6 @@
         self.tableView.scrollEnabled = NO; //prevent scrolling till the timesup animaton completes, this is set at the same time within the PromotionTableCell
         [self performSelector: @selector(setScroll) withObject:nil afterDelay:2.0];
     }
-}
-
--(void) viewDidLoad {
-    [self setupNavigationController];
 }
 
 #pragma mark - Helper Methods
@@ -131,5 +128,6 @@
         [[Data sharedInstance].promotionsArray replaceObjectAtIndex:i withObject:promotion];
     }
 }
+
 
 @end
