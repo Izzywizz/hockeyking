@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07407C41E6AE8623DEA50ECC /* Pods_vouchking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CADCCAA399874397BCDD27D /* Pods_vouchking.framework */; };
-		1C2133270D76BA1EF9510484 /* Pods_vouchkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D303F3F3F32D9EDCC381D5 /* Pods_vouchkingTests.framework */; };
 		431522941DD4B1CC00F70597 /* hockeyStickSlap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 431522931DD4B1CC00F70597 /* hockeyStickSlap.mp3 */; };
 		431522961DD4B42D00F70597 /* goalScored.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 431522951DD4B42D00F70597 /* goalScored.m4a */; };
 		431AB02D1DD0A22D008C7E3D /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 431AB02B1DD0A22D008C7E3D /* background-music-aac.caf */; };
@@ -74,7 +72,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1CADCCAA399874397BCDD27D /* Pods_vouchking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vouchking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		431522931DD4B1CC00F70597 /* hockeyStickSlap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hockeyStickSlap.mp3; sourceTree = "<group>"; };
 		431522951DD4B42D00F70597 /* goalScored.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = goalScored.m4a; sourceTree = "<group>"; };
 		431AB02B1DD0A22D008C7E3D /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
@@ -121,7 +118,7 @@
 		43BAC3841DBE25D900C8A518 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
 		43BAC3871DBE3D3900C8A518 /* TermsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TermsViewController.h; sourceTree = "<group>"; };
 		43BAC3881DBE3D3900C8A518 /* TermsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TermsViewController.m; sourceTree = "<group>"; };
-		43C7B9FF1DB611A700FDD9F1 /* vouchking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vouchking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43C7B9FF1DB611A700FDD9F1 /* hockeyking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hockeyking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C7BA031DB611A700FDD9F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43C7BA051DB611A700FDD9F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		43C7BA061DB611A700FDD9F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -131,7 +128,7 @@
 		43C7BA0E1DB611A700FDD9F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43C7BA111DB611A700FDD9F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43C7BA131DB611A700FDD9F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43C7BA181DB611A700FDD9F1 /* vouchkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vouchkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43C7BA181DB611A700FDD9F1 /* hockeykingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hockeykingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C7BA1C1DB611A700FDD9F1 /* vouchkingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vouchkingTests.m; sourceTree = "<group>"; };
 		43C7BA1E1DB611A700FDD9F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43C7BA281DB61CF800FDD9F1 /* Promotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Promotion.h; sourceTree = "<group>"; };
@@ -145,7 +142,6 @@
 		43C7BA371DB644BF00FDD9F1 /* NSObject+logProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+logProperties.m"; sourceTree = "<group>"; };
 		57EF1F96206413EC008901B5 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		7544E23384B3AA3C63FDFC1E /* Pods-vouchkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vouchkingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-vouchkingTests/Pods-vouchkingTests.release.xcconfig"; sourceTree = "<group>"; };
-		92D303F3F3F32D9EDCC381D5 /* Pods_vouchkingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vouchkingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96161AE4C2A092EC73263A24 /* Pods-vouchkingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vouchkingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vouchkingTests/Pods-vouchkingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CAE32F484DC05C7FB472EA71 /* Pods-vouchking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vouchking.release.xcconfig"; path = "Pods/Target Support Files/Pods-vouchking/Pods-vouchking.release.xcconfig"; sourceTree = "<group>"; };
 		E8F4449CBB138D928DD57CEC /* Pods-vouchking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vouchking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vouchking/Pods-vouchking.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,7 +153,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				57EF1F97206413EC008901B5 /* GoogleMobileAds.framework in Frameworks */,
-				07407C41E6AE8623DEA50ECC /* Pods_vouchking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +160,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C2133270D76BA1EF9510484 /* Pods_vouchkingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,8 +294,8 @@
 		43C7BA001DB611A700FDD9F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				43C7B9FF1DB611A700FDD9F1 /* vouchking.app */,
-				43C7BA181DB611A700FDD9F1 /* vouchkingTests.xctest */,
+				43C7B9FF1DB611A700FDD9F1 /* hockeyking.app */,
+				43C7BA181DB611A700FDD9F1 /* hockeykingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -366,8 +360,6 @@
 		BA6F4625E08B655EF0734C07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1CADCCAA399874397BCDD27D /* Pods_vouchking.framework */,
-				92D303F3F3F32D9EDCC381D5 /* Pods_vouchkingTests.framework */,
 				57EF1F96206413EC008901B5 /* GoogleMobileAds.framework */,
 			);
 			name = Frameworks;
@@ -376,9 +368,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		43C7B9FE1DB611A700FDD9F1 /* vouchking */ = {
+		43C7B9FE1DB611A700FDD9F1 /* hockeyking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43C7BA211DB611A700FDD9F1 /* Build configuration list for PBXNativeTarget "vouchking" */;
+			buildConfigurationList = 43C7BA211DB611A700FDD9F1 /* Build configuration list for PBXNativeTarget "hockeyking" */;
 			buildPhases = (
 				798578B68EC44958663D16A8 /* [CP] Check Pods Manifest.lock */,
 				43C7B9FB1DB611A700FDD9F1 /* Sources */,
@@ -391,14 +383,14 @@
 			);
 			dependencies = (
 			);
-			name = vouchking;
+			name = hockeyking;
 			productName = vouchking;
-			productReference = 43C7B9FF1DB611A700FDD9F1 /* vouchking.app */;
+			productReference = 43C7B9FF1DB611A700FDD9F1 /* hockeyking.app */;
 			productType = "com.apple.product-type.application";
 		};
-		43C7BA171DB611A700FDD9F1 /* vouchkingTests */ = {
+		43C7BA171DB611A700FDD9F1 /* hockeykingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43C7BA241DB611A700FDD9F1 /* Build configuration list for PBXNativeTarget "vouchkingTests" */;
+			buildConfigurationList = 43C7BA241DB611A700FDD9F1 /* Build configuration list for PBXNativeTarget "hockeykingTests" */;
 			buildPhases = (
 				21E8D8276EFE93E41F081153 /* [CP] Check Pods Manifest.lock */,
 				43C7BA141DB611A700FDD9F1 /* Sources */,
@@ -412,9 +404,9 @@
 			dependencies = (
 				43C7BA1A1DB611A700FDD9F1 /* PBXTargetDependency */,
 			);
-			name = vouchkingTests;
+			name = hockeykingTests;
 			productName = vouchkingTests;
-			productReference = 43C7BA181DB611A700FDD9F1 /* vouchkingTests.xctest */;
+			productReference = 43C7BA181DB611A700FDD9F1 /* hockeykingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -437,7 +429,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 43C7B9FA1DB611A700FDD9F1 /* Build configuration list for PBXProject "vouchking" */;
+			buildConfigurationList = 43C7B9FA1DB611A700FDD9F1 /* Build configuration list for PBXProject "hockeyking" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -450,8 +442,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				43C7B9FE1DB611A700FDD9F1 /* vouchking */,
-				43C7BA171DB611A700FDD9F1 /* vouchkingTests */,
+				43C7B9FE1DB611A700FDD9F1 /* hockeyking */,
+				43C7BA171DB611A700FDD9F1 /* hockeykingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -643,7 +635,7 @@
 /* Begin PBXTargetDependency section */
 		43C7BA1A1DB611A700FDD9F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 43C7B9FE1DB611A700FDD9F1 /* vouchking */;
+			target = 43C7B9FE1DB611A700FDD9F1 /* hockeyking */;
 			targetProxy = 43C7BA191DB611A700FDD9F1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -784,7 +776,7 @@
 				INFOPLIST_FILE = vouchking/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.reraise.vouchking;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.izzyali.hockeyking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "vouchking/vouchking-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -808,7 +800,7 @@
 				INFOPLIST_FILE = vouchking/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.reraise.vouchking;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.izzyali.hockeyking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "vouchking/vouchking-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -825,7 +817,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reraise.vouchkingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vouchking.app/vouchking";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hockeyking.app/hockeyking";
 			};
 			name = Debug;
 		};
@@ -838,14 +830,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reraise.vouchkingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vouchking.app/vouchking";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hockeyking.app/hockeyking";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		43C7B9FA1DB611A700FDD9F1 /* Build configuration list for PBXProject "vouchking" */ = {
+		43C7B9FA1DB611A700FDD9F1 /* Build configuration list for PBXProject "hockeyking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43C7BA1F1DB611A700FDD9F1 /* Debug */,
@@ -854,7 +846,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		43C7BA211DB611A700FDD9F1 /* Build configuration list for PBXNativeTarget "vouchking" */ = {
+		43C7BA211DB611A700FDD9F1 /* Build configuration list for PBXNativeTarget "hockeyking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43C7BA221DB611A700FDD9F1 /* Debug */,
@@ -863,7 +855,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		43C7BA241DB611A700FDD9F1 /* Build configuration list for PBXNativeTarget "vouchkingTests" */ = {
+		43C7BA241DB611A700FDD9F1 /* Build configuration list for PBXNativeTarget "hockeykingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43C7BA251DB611A700FDD9F1 /* Debug */,
