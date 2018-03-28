@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wfd-yn-1De">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wfd-yn-1De">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,7 +12,7 @@
         <array key="LuckiestGuy.ttf">
             <string>LuckiestGuy-Regular</string>
         </array>
-        <array key="Montserrat-Bold.ttf">
+        <array key="Montserrat-Bold.otf">
             <string>Montserrat-Bold</string>
         </array>
     </customFonts>
@@ -34,18 +34,11 @@
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.45882352939999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.12156862745098039" green="0.32941176470588235" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="pHB-tq-ahw" userLabel="Logo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="pHB-tq-ahw" userLabel="Logo">
                                 <rect key="frame" x="74.666666666666686" y="241" width="265" height="92"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="92" id="0aV-KE-6fh"/>
                                     <constraint firstAttribute="width" constant="265" id="zkU-ic-qrI"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="EJl-ET-qkg" userLabel="Our Company Logo">
-                                <rect key="frame" x="157" y="682" width="100" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="m7M-tQ-t0b"/>
-                                    <constraint firstAttribute="width" constant="100" id="xJh-Rx-sgJ"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="9" translatesAutoresizingMaskIntoConstraints="NO" id="5iH-sX-8US" userLabel="Promotion Image">
@@ -62,7 +55,7 @@
                                     <constraint firstAttribute="width" constant="202" id="lf4-eS-ZK6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="24"/>
-                                <state key="normal" title="PROMOTIONS"/>
+                                <state key="normal" title="LEADERBOARD"/>
                                 <connections>
                                     <action selector="promotionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOi-4Z-aUW"/>
                                 </connections>
@@ -113,7 +106,6 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EJl-ET-qkg" secondAttribute="bottom" constant="20" id="09f-ob-k3O"/>
                             <constraint firstItem="Qef-gF-ZRv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-2.5" id="1IK-C4-vkV"/>
                             <constraint firstAttribute="trailing" secondItem="3dx-RG-ZsN" secondAttribute="trailing" id="AO5-k3-zCx"/>
                             <constraint firstAttribute="leadingMargin" secondItem="2vl-wP-Bun" secondAttribute="leading" constant="-20" id="Cue-8a-fH9"/>
@@ -129,9 +121,6 @@
                             <constraint firstItem="Qef-gF-ZRv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="116.5" id="mC1-hP-FXW"/>
                             <constraint firstItem="VZe-xj-9a0" firstAttribute="centerX" secondItem="pHB-tq-ahw" secondAttribute="centerX" constant="-0.5" id="mbC-MP-CER"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2vl-wP-Bun" secondAttribute="bottom" constant="15" id="mgZ-qf-hbo"/>
-                            <constraint firstItem="EJl-ET-qkg" firstAttribute="leading" secondItem="2vl-wP-Bun" secondAttribute="trailing" constant="114" id="nS4-Gy-tv7"/>
-                            <constraint firstItem="2vl-wP-Bun" firstAttribute="centerY" secondItem="EJl-ET-qkg" secondAttribute="centerY" id="ohk-Me-7s9"/>
-                            <constraint firstItem="EJl-ET-qkg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p3p-vG-UDF"/>
                             <constraint firstItem="VZe-xj-9a0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="41" id="qAf-fS-jKP"/>
                             <constraint firstItem="2vl-wP-Bun" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="72" id="usG-5z-XSO"/>
                             <constraint firstItem="3dx-RG-ZsN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xOk-HY-wkq"/>
@@ -142,9 +131,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="XTs-Uk-Hog"/>
-                                <exclude reference="ohk-Me-7s9"/>
                                 <exclude reference="usG-5z-XSO"/>
-                                <exclude reference="nS4-Gy-tv7"/>
                                 <exclude reference="eDq-Ft-jfQ"/>
                             </mask>
                         </variation>
@@ -186,7 +173,7 @@
                                             <action selector="termsButtonPressed:" destination="Ux7-cv-Dl9" eventType="touchUpInside" id="Zxw-Zj-DU3"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TERMS AND CONDITIONS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="9h7-6o-6Ek">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="9h7-6o-6Ek">
                                         <rect key="frame" x="96" y="44" width="182" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="182" id="MQd-cU-aUM"/>
@@ -196,20 +183,8 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" minimumZoomScale="0.0" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9b-7x-YKO">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" minimumZoomScale="0.0" editable="NO" text="Test" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9b-7x-YKO">
                                         <rect key="frame" x="22" y="73" width="338" height="605"/>
-                                        <string key="text">We are committed to protecting your privacy
-We collect the minimum amount of information about you that is commensurate with providing you with a satisfactory service. This policy indicates the type of processes that may result in data being collected about you. Your use of this website gives us the right to collect that information.
-
-Information Collected
-We may collect any or all of the information that you give us depending on the type of transaction you enter into, including your name, address, telephone number, and email address, together with data about your use of the website. Other information that may be needed from time to time to process a request may also be collected as indicated on the website.
-
-Information Use
-We use the information collected primarily to process the task for which you visited the website. Data collected in the UK is held in accordance with the Data Protection Act. All reasonable precautions are taken to prevent unauthorised access to this information. This safeguard may require you to provide additional forms of identity should you wish to obtain information about your account details. Cookies Your Internet browser has the in-built facility for storing small files - "cookies" - that hold information which allows a website to recognise your account. Our website takes advantage of this facility to enhance your experience. You have the ability to prevent your computer from accepting cookies but, if you do, certain functionality on the website may be impaired. Disclosing Information We do not disclose any personal information obtained about you from this website to third parties unless you permit us to do so by ticking the relevant boxes in registration or competition forms. We may also use the information to keep in contact with you and inform you of developments associated with us. You will be given the opportunity to remove yourself from any mailing list or similar device. If at any time in the future we should wish to disclose information collected on this website to any third party, it would only be with your knowledge and consent. We may from time to time provide information of a general nature to third parties - for example, the number of individuals visiting our website or completing a registration form, but we will not use any information that could identify those individuals. In addition Dummy may work with third parties for the purpose of delivering targeted behavioural advertising to the Dummy website. Through the use of cookies, anonymous information about your use of our websites and other websites will be used to provide more relevant adverts about goods and services of interest to you. For more information on online behavioural advertising and about how to turn this feature off, please visit youronlinechoices.com/opt-out. Changes to this Policy Any changes to our Privacy Policy will be placed here and will supersede this version of our policy. We will take reasonable steps to draw your attention to any changes in our policy. However, to be on the safe side, we suggest that you read this document each time you use the website to ensure that it still meets with your approval. 
-
-Contacting Us 
-
-If you have any questions about our Privacy Policy, or if you want to know what information we have collected about you, please email us at paul@dummymag.com. </string>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -304,7 +279,7 @@ If you have any questions about our Privacy Policy, or if you want to know what 
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wfd-yn-1De" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="sgi-wc-htb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -319,7 +294,7 @@ If you have any questions about our Privacy Policy, or if you want to know what 
         <!--Game View Controller-->
         <scene sceneID="mJu-eH-WCc">
             <objects>
-                <viewController id="gva-Hk-TvM" customClass="GameViewController" customModule="vouchking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gva-Hk-TvM" customClass="GameViewController" customModule="hockeyking" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KZ5-Tb-ylN"/>
                         <viewControllerLayoutGuide type="bottom" id="y3E-mA-o1O"/>
@@ -369,16 +344,15 @@ If you have any questions about our Privacy Policy, or if you want to know what 
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="294" height="123"/>
         <image name="10" width="220" height="90"/>
         <image name="11" width="44" height="44"/>
         <image name="12" width="45" height="45"/>
-        <image name="2" width="103" height="38"/>
         <image name="29" width="11" height="17"/>
         <image name="3" width="375" height="667"/>
         <image name="34" width="341" height="617"/>
         <image name="9" width="250" height="90"/>
         <image name="amazon-lg" width="100" height="100"/>
         <image name="dominos-lg" width="100" height="100"/>
+        <image name="logo" width="323" height="123"/>
     </resources>
 </document>

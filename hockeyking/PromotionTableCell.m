@@ -29,7 +29,6 @@
     UIImageView *iv = (UIImageView*) [self viewWithTag:31];
     UILabel *descriptionLabel = (UILabel*)[self viewWithTag:100];
     UILabel *pointsEarned = (UILabel*)[self viewWithTag:90];
-    UILabel *promotionTimeLeft = (UILabel *)[self viewWithTag:80];
     UILabel *totalPromotionsAvailable = (UILabel *)[self viewWithTag:70];
     
     //Setting up the values/images by referencing the Promotion object
@@ -41,10 +40,10 @@
         NSLog(@"Confirmed Negatived Limit Reached");
         pointsEarned.text = [NSString stringWithFormat:@"(%@) / -ve Score Limit Reached", _promotion.totalPointsEarnedPerRound]; //Total points Earned is 500 and hardset
     } else  {
-        pointsEarned.text = [NSString stringWithFormat:@"(%@) %@/500", _promotion.totalPointsEarnedPerRound, _promotion.totalPoints]; //Total points Earned is 500 and hardset
+        pointsEarned.text = [NSString stringWithFormat:@"Round: (%@), Total: %@", _promotion.totalPointsEarnedPerRound, _promotion.totalPoints]; //Total points Earned is 500 and hardset
     }
     [self setPostiveNegativeColours:pointsEarned];
-    promotionTimeLeft.text = [NSString stringWithFormat:@"%@ Left", [self convertToEpochTime:_promotion.expiryEpoch]]; //Calcualtions needed to set whether it is DAys/ Hours
+//    promotionTimeLeft.text = [NSString stringWithFormat:@"%@ Left", [self convertToEpochTime:_promotion.expiryEpoch]]; //Calcualtions needed to set whether it is DAys/ Hours
     totalPromotionsAvailable.text = [NSString stringWithFormat:@"%@", _promotion.totalPromotionsAvailable];
 }
 

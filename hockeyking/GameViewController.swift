@@ -206,15 +206,15 @@ class GameViewController: UIViewController {
     func saveDataFromSession() {
         
         let result = Int(truncating: leftBusiness.pointsEarned) + previousLeftBusinessTotalPoints // current points earned from the game session just played + the total from the actual business
-        leftBusiness.totalPoints = result as NSNumber!
+        leftBusiness.totalPoints = result as NSNumber?
         
         let resultTwo = Int(truncating: rightBusiness.pointsEarned) + previousRightBusinessTotalPoints
-        rightBusiness.totalPoints = resultTwo as NSNumber!
+        rightBusiness.totalPoints = resultTwo as NSNumber?
         
         let total = leftPointsEarnedPerRound + Int(truncating: leftBusiness.pointsEarned)
-        leftBusiness.totalPointsEarnedPerRound = total as NSNumber!
+        leftBusiness.totalPointsEarnedPerRound = total as NSNumber?
         let totalTwo = rightResultEarnedPerRound + Int(truncating: rightBusiness.pointsEarned)
-        rightBusiness.totalPointsEarnedPerRound = totalTwo as NSNumber!
+        rightBusiness.totalPointsEarnedPerRound = totalTwo as NSNumber?
         
         print("Points Earned Total (L): \(leftBusiness.businessName) Points Earned \(leftBusiness.totalPointsEarnedPerRound)")
         print("Points Earned Total (R): \(rightBusiness.businessName) Points Earned \(rightBusiness.totalPointsEarnedPerRound)")
@@ -236,14 +236,14 @@ class GameViewController: UIViewController {
         if isLeftBlock {
             
             if negativeScoreLimit >= totalBusinessPoints{
-                leftBusiness.totalPoints = negativeScoreLimit as NSNumber!
+                leftBusiness.totalPoints = negativeScoreLimit as NSNumber?
                 leftBusiness.negativeLimitReached = true
             } else  {
                 leftBusiness.negativeLimitReached = false
             }
         } else  {
             if negativeScoreLimit >= totalBusinessPoints{
-                rightBusiness.totalPoints = negativeScoreLimit as NSNumber!
+                rightBusiness.totalPoints = negativeScoreLimit as NSNumber?
                 rightBusiness.negativeLimitReached = true
             } else  {
                 rightBusiness.negativeLimitReached = false

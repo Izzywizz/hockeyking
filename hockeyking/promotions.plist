@@ -4,9 +4,9 @@
 <array>
 	<dict>
 		<key>businessLogo</key>
-		<string>22</string>
+		<string>N-logo 100</string>
 		<key>gameSummaryLogo</key>
-		<string>31</string>
+		<string>napoli full</string>
 		<key>promotionId</key>
 		<real>123456</real>
 		<key>totalPoints</key>
@@ -18,15 +18,15 @@
 		<key>expiryEpoch</key>
 		<integer>1480626758</integer>
 		<key>promotionDescription</key>
-		<string>Two for One offer on coffees and get a free cookie</string>
+		<string>Napoli</string>
 		<key>pointsEarned</key>
 		<integer>0</integer>
 		<key>promotionNotes</key>
-		<string>This is one time offer, you use it once thats it</string>
+		<string>Napoli1</string>
 		<key>totalPromotionsAvailable</key>
 		<integer>200</integer>
 		<key>businessName</key>
-		<string>StarBucks</string>
+		<string>Napoli</string>
 		<key>twitter</key>
 		<string>https://twitter.com/Starbucks?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor</string>
 		<key>facebook</key>
@@ -40,9 +40,9 @@
 	</dict>
 	<dict>
 		<key>businessLogo</key>
-		<string>dominos-lg</string>
+		<string>R-logo 100</string>
 		<key>gameSummaryLogo</key>
-		<string>36</string>
+		<string>roma full</string>
 		<key>promotionId</key>
 		<real>654321</real>
 		<key>totalPoints</key>
@@ -54,15 +54,15 @@
 		<key>expiryEpoch</key>
 		<integer>1482268358</integer>
 		<key>promotionDescription</key>
-		<string>Buy one Dominoes lotion and get one free</string>
+		<string>Roma</string>
 		<key>pointsEarned</key>
 		<integer>0</integer>
 		<key>promotionNotes</key>
-		<string>This offer can be used multiplen times baby</string>
+		<string>Roma2</string>
 		<key>totalPromotionsAvailable</key>
 		<integer>500</integer>
 		<key>businessName</key>
-		<string>Dominoes</string>
+		<string>Roma2</string>
 		<key>twitter</key>
 		<string>https://twitter.com/kfc_uki?lang=en</string>
 		<key>facebook</key>
@@ -76,11 +76,11 @@
 	</dict>
 	<dict>
 		<key>businessLogo</key>
-		<string>amazon-lg</string>
+		<string>J-logo</string>
 		<key>gameSummaryLogo</key>
-		<string>37</string>
+		<string>jv-bg</string>
 		<key>promotionId</key>
-		<integer>985789</integer>
+		<real>985789</real>
 		<key>totalPoints</key>
 		<integer>0</integer>
 		<key>currentRank</key>
@@ -90,21 +90,21 @@
 		<key>expiryEpoch</key>
 		<integer>1479676358</integer>
 		<key>promotionDescription</key>
-		<string>Everything Free in Amazon</string>
+		<string>Juventus</string>
 		<key>pointsEarned</key>
 		<integer>0</integer>
 		<key>promotionNotes</key>
-		<string>This is not real sorry</string>
+		<string>Juventus</string>
 		<key>totalPromotionsAvailable</key>
 		<integer>70</integer>
 		<key>businessName</key>
-		<string>Amazon</string>
+		<string>Juventus</string>
 		<key>twitter</key>
-		<string>twitter amazon</string>
+		<string>twitter Juventus</string>
 		<key>facebook</key>
-		<string>facebook Amazon</string>
+		<string>facebook Juventus</string>
 		<key>website</key>
-		<string>amazon world</string>
+		<string>Juventus world</string>
 		<key>negativeLimitReached</key>
 		<false/>
 		<key>totalPointsEarnedPerRound</key>
@@ -112,9 +112,9 @@
 	</dict>
 	<dict>
 		<key>businessLogo</key>
-		<string>bs-lg</string>
+		<string>T-Logo</string>
 		<key>gameSummaryLogo</key>
-		<string>bs-bg</string>
+		<string>torino-bg</string>
 		<key>promotionId</key>
 		<integer>398534</integer>
 		<key>totalPoints</key>
@@ -126,7 +126,7 @@
 		<key>expiryEpoch</key>
 		<integer>1479244358</integer>
 		<key>promotionDescription</key>
-		<string>Free Facemask!</string>
+		<string>Torino</string>
 		<key>pointsEarned</key>
 		<integer>0</integer>
 		<key>promotionNotes</key>
@@ -148,9 +148,9 @@
 	</dict>
 	<dict>
 		<key>businessLogo</key>
-		<string>hm-lg</string>
+		<string>C-logo</string>
 		<key>gameSummaryLogo</key>
-		<string>hm-bg</string>
+		<string>cheivo-bg</string>
 		<key>promotionId</key>
 		<integer>49582</integer>
 		<key>totalPoints</key>
@@ -162,21 +162,21 @@
 		<key>expiryEpoch</key>
 		<integer>1479287558</integer>
 		<key>promotionDescription</key>
-		<string>Buy one T shirt and get another T shirt free</string>
+		<string>Cheivo</string>
 		<key>pointsEarned</key>
 		<integer>0</integer>
 		<key>promotionNotes</key>
-		<string>Only red T shirts apply</string>
+		<string>Cheivo</string>
 		<key>totalPromotionsAvailable</key>
 		<integer>99</integer>
 		<key>businessName</key>
-		<string>H&amp;M</string>
+		<string>Cheivo</string>
 		<key>twitter</key>
-		<string>H&amp;M twitter</string>
+		<string>Cheivo twitter</string>
 		<key>facebook</key>
-		<string>H &amp; M Facebook</string>
+		<string>Cheivo Facebook</string>
 		<key>website</key>
-		<string>H &amp; M website</string>
+		<string>Cheivo website</string>
 		<key>negativeLimitReached</key>
 		<false/>
 		<key>totalPointsEarnedPerRound</key>
