@@ -112,7 +112,7 @@
 	</dict>
 	<dict>
 		<key>businessLogo</key>
-		<string>T-Logo</string>
+		<string>T-logo</string>
 		<key>gameSummaryLogo</key>
 		<string>torino-bg</string>
 		<key>promotionId</key>

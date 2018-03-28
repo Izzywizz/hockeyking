@@ -52,7 +52,7 @@
                             </mask>
                         </variation>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" tag="90" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="083/500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="2KO-KK-Tsn" userLabel="Points Needed">
+                    <label opaque="NO" userInteractionEnabled="NO" tag="90" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="083/50097896786" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="2KO-KK-Tsn" userLabel="Points Needed">
                         <rect key="frame" x="69.5" y="114" width="200" height="17"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="200" id="1ma-oQ-0Uj"/>

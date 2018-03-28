@@ -5,7 +5,6 @@
 //  Created by Izzy on 19/10/2016.
 //  Copyright (c) 2016 Izzy. All rights reserved.
 // Testing whether branch conversion
-
 import UIKit
 import SpriteKit
 import GameKit
@@ -186,7 +185,7 @@ class GameViewController: UIViewController {
     //MARK: Save Session Data
     
     /**
-     Obtain the scores from the Left and Right Business 
+     Obtain the scores from the Left and Right Business
      */
     func storePreviousPoints() {
         let business = Data.sharedInstance().promotionsArray[businessLeftRandomNumber] as! Promotion
@@ -206,15 +205,15 @@ class GameViewController: UIViewController {
     func saveDataFromSession() {
         
         let result = Int(truncating: leftBusiness.pointsEarned) + previousLeftBusinessTotalPoints // current points earned from the game session just played + the total from the actual business
-        leftBusiness.totalPoints = result as NSNumber?
+        leftBusiness.totalPoints = result as NSNumber!
         
         let resultTwo = Int(truncating: rightBusiness.pointsEarned) + previousRightBusinessTotalPoints
-        rightBusiness.totalPoints = resultTwo as NSNumber?
+        rightBusiness.totalPoints = resultTwo as NSNumber!
         
         let total = leftPointsEarnedPerRound + Int(truncating: leftBusiness.pointsEarned)
-        leftBusiness.totalPointsEarnedPerRound = total as NSNumber?
+        leftBusiness.totalPointsEarnedPerRound = total as NSNumber!
         let totalTwo = rightResultEarnedPerRound + Int(truncating: rightBusiness.pointsEarned)
-        rightBusiness.totalPointsEarnedPerRound = totalTwo as NSNumber?
+        rightBusiness.totalPointsEarnedPerRound = totalTwo as NSNumber!
         
         print("Points Earned Total (L): \(leftBusiness.businessName) Points Earned \(leftBusiness.totalPointsEarnedPerRound)")
         print("Points Earned Total (R): \(rightBusiness.businessName) Points Earned \(rightBusiness.totalPointsEarnedPerRound)")
@@ -236,21 +235,22 @@ class GameViewController: UIViewController {
         if isLeftBlock {
             
             if negativeScoreLimit >= totalBusinessPoints{
-                leftBusiness.totalPoints = negativeScoreLimit as NSNumber?
+                leftBusiness.totalPoints = negativeScoreLimit as NSNumber!
                 leftBusiness.negativeLimitReached = true
             } else  {
                 leftBusiness.negativeLimitReached = false
             }
         } else  {
             if negativeScoreLimit >= totalBusinessPoints{
-                rightBusiness.totalPoints = negativeScoreLimit as NSNumber?
+                rightBusiness.totalPoints = negativeScoreLimit as NSNumber!
                 rightBusiness.negativeLimitReached = true
             } else  {
                 rightBusiness.negativeLimitReached = false
             }
         }
-    }
-    
-    
-    
 }
+
+}
+
+
+

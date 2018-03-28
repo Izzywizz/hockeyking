@@ -183,10 +183,15 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" minimumZoomScale="0.0" editable="NO" text="Test" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9b-7x-YKO">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" minimumZoomScale="0.0" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9b-7x-YKO">
                                         <rect key="frame" x="22" y="73" width="338" height="605"/>
+                                        <mutableString key="text">I thought it would be fun to create a football hockey hybrid game, so the leaderboard shows my favourite teams from Serie A football league, aka the Italian top flight 
+
+So you swipe left and right trying to get the hockey puck in the goal as many times as possible, be careful though! You’ll gain negative points if you miss and the team you score for may not always be the one you want.
+
+Have fun 😊</mutableString>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <connections>
                                             <outlet property="delegate" destination="Ux7-cv-Dl9" id="m05-km-cST"/>
