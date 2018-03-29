@@ -385,8 +385,8 @@ class GameScene: SKScene,SKPhysicsContactDelegate{
     //MARK: Promotion Scores
     func pointsEarnedTotal()  {
         
-        GameViewController.instance.leftBusiness.pointsEarned = blockLeftCount as NSNumber!
-        GameViewController.instance.rightBusiness.pointsEarned = blockRightCount as NSNumber!
+        GameViewController.instance.leftBusiness.pointsEarned = blockLeftCount as NSNumber
+        GameViewController.instance.rightBusiness.pointsEarned = blockRightCount as NSNumber
     }
     
     func resetScores()  {

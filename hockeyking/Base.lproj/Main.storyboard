@@ -92,12 +92,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DC4-b5-mHh" userLabel="Info Button">
-                                <rect key="frame" x="330" y="677" width="44" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="7BI-aX-hPU"/>
-                                    <constraint firstAttribute="width" constant="44" id="QfM-5H-1ZY"/>
-                                </constraints>
-                                <state key="normal" image="12"/>
+                                <rect key="frame" x="109.33333333333331" y="530" width="196" height="53"/>
+                                <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
+                                <state key="normal" title="How To Play"/>
                                 <connections>
                                     <action selector="termsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uRM-yd-eiM"/>
                                     <segue destination="Ux7-cv-Dl9" kind="show" id="BVS-Rx-Xdx"/>
@@ -111,13 +108,15 @@
                             <constraint firstAttribute="leadingMargin" secondItem="2vl-wP-Bun" secondAttribute="leading" constant="-20" id="Cue-8a-fH9"/>
                             <constraint firstItem="pHB-tq-ahw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dk8-fp-6fg"/>
                             <constraint firstItem="EPF-N8-uwB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mir-hf-ik6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="DC4-b5-mHh" secondAttribute="trailing" constant="20" id="NC1-S6-DTN"/>
+                            <constraint firstItem="DC4-b5-mHh" firstAttribute="width" secondItem="EPF-N8-uwB" secondAttribute="width" id="Osk-pj-hJR"/>
                             <constraint firstItem="5iH-sX-8US" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="38.5" id="PNb-78-z0d"/>
+                            <constraint firstItem="DC4-b5-mHh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SlA-gG-Y9w"/>
                             <constraint firstItem="2vl-wP-Bun" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="72" id="XTs-Uk-Hog"/>
                             <constraint firstItem="pHB-tq-ahw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-81" id="XVh-Gd-29M"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3dx-RG-ZsN" secondAttribute="bottom" id="XzT-uU-cxy"/>
+                            <constraint firstItem="DC4-b5-mHh" firstAttribute="top" secondItem="EPF-N8-uwB" secondAttribute="bottom" constant="16" id="e1G-VA-Vhh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2vl-wP-Bun" secondAttribute="bottom" constant="15" id="eDq-Ft-jfQ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DC4-b5-mHh" secondAttribute="bottom" constant="15" id="kuL-yY-EU4"/>
+                            <constraint firstItem="DC4-b5-mHh" firstAttribute="height" secondItem="EPF-N8-uwB" secondAttribute="height" id="hgd-xN-3gO"/>
                             <constraint firstItem="Qef-gF-ZRv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="116.5" id="mC1-hP-FXW"/>
                             <constraint firstItem="VZe-xj-9a0" firstAttribute="centerX" secondItem="pHB-tq-ahw" secondAttribute="centerX" constant="-0.5" id="mbC-MP-CER"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2vl-wP-Bun" secondAttribute="bottom" constant="15" id="mgZ-qf-hbo"/>
@@ -143,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="559" y="447"/>
+            <point key="canvasLocation" x="556.52173913043487" y="446.73913043478262"/>
         </scene>
         <!--Terms View Controller-->
         <scene sceneID="zPF-sf-yPH">
@@ -185,9 +184,11 @@
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" minimumZoomScale="0.0" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9b-7x-YKO">
                                         <rect key="frame" x="22" y="73" width="338" height="605"/>
-                                        <mutableString key="text">I thought it would be fun to create a football hockey hybrid game, so the leaderboard shows my favourite teams from Serie A football league, aka the Italian top flight 
+                                        <mutableString key="text">Swipe left and right to hit the puck in the desired direction. Trying your best to get the hockey puck in the goal as many times as possible.
 
-So you swipe left and right trying to get the hockey puck in the goal as many times as possible, be careful though! You’ll gain negative points if you miss and the team you score for may not always be the one you want.
+Be Careful! You’ll gain negative points if you miss but don't worry, there is a limit to how many negative points you'll gain. You'll have to battle your way out of the relegation zone! 
+
+The team you score for may not always be the one you want.
 
 Have fun 😊</mutableString>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -351,7 +352,6 @@ Have fun 😊</mutableString>
     <resources>
         <image name="10" width="220" height="90"/>
         <image name="11" width="44" height="44"/>
-        <image name="12" width="45" height="45"/>
         <image name="29" width="11" height="17"/>
         <image name="3" width="375" height="667"/>
         <image name="34" width="341" height="617"/>

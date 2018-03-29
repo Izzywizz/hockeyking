@@ -38,7 +38,7 @@
     
     if (_promotion.negativeLimitReached == true) {
         NSLog(@"Confirmed Negatived Limit Reached");
-        pointsEarned.text = [NSString stringWithFormat:@"(%@) / -ve Score Limit Reached", _promotion.totalPointsEarnedPerRound]; //Total points Earned is 500 and hardset
+        pointsEarned.text = [NSString stringWithFormat:@"(%@) / Relegation Zone!", _promotion.totalPointsEarnedPerRound]; //Total points Earned is 500 and hardset
     } else  {
         pointsEarned.text = [NSString stringWithFormat:@"Round: (%@), Total: %@", _promotion.totalPointsEarnedPerRound, _promotion.totalPoints]; //Total points Earned is 500 and hardset
     }
@@ -63,9 +63,9 @@
     
     //Handle the negative score limit colour (make it red for now)
     if (_promotion.negativeLimitReached == true)  {
-        [pointsEarned setTextColor:[UIColor redColor] String:@"-ve Score Limit Reached"];
+        [pointsEarned setTextColor:[UIColor redColor] String:@"Relegation Zone!"];
     } else  {
-        [pointsEarned setTextColor:[UIColor colorWithRed:31.0/255.0 green:84.0/255.0 blue:118.0/255.0 alpha:1.0] String:@"-ve Score Limit Reached"];
+        [pointsEarned setTextColor:[UIColor colorWithRed:31.0/255.0 green:84.0/255.0 blue:118.0/255.0 alpha:1.0] String:@"Relegation Zone!"];
     }
 }
 

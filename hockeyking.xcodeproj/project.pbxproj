@@ -53,24 +53,12 @@
 		43C7BA0D1DB611A700FDD9F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C7BA0B1DB611A700FDD9F1 /* Main.storyboard */; };
 		43C7BA0F1DB611A700FDD9F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43C7BA0E1DB611A700FDD9F1 /* Assets.xcassets */; };
 		43C7BA121DB611A700FDD9F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C7BA101DB611A700FDD9F1 /* LaunchScreen.storyboard */; };
-		43C7BA1D1DB611A700FDD9F1 /* vouchkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA1C1DB611A700FDD9F1 /* vouchkingTests.m */; };
 		43C7BA2A1DB61CF800FDD9F1 /* Promotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA291DB61CF800FDD9F1 /* Promotion.m */; };
 		43C7BA2D1DB626D500FDD9F1 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA2C1DB626D500FDD9F1 /* Data.m */; };
 		43C7BA321DB62D6600FDD9F1 /* promotions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43C7BA311DB62D6600FDD9F1 /* promotions.plist */; };
 		43C7BA351DB634A600FDD9F1 /* PListParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA341DB634A600FDD9F1 /* PListParser.m */; };
 		43C7BA381DB644BF00FDD9F1 /* NSObject+logProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7BA371DB644BF00FDD9F1 /* NSObject+logProperties.m */; };
-		8C1DFC203A24A0ACB5637EEF /* Pods_hockeykingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83EE6E912E6D734B32D0F7DD /* Pods_hockeykingTests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		43C7BA191DB611A700FDD9F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 43C7B9F71DB611A700FDD9F1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 43C7B9FE1DB611A700FDD9F1;
-			remoteInfo = vouchking;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		431522931DD4B1CC00F70597 /* hockeyStickSlap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hockeyStickSlap.mp3; sourceTree = "<group>"; };
@@ -129,9 +117,6 @@
 		43C7BA0E1DB611A700FDD9F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43C7BA111DB611A700FDD9F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43C7BA131DB611A700FDD9F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43C7BA181DB611A700FDD9F1 /* hockeykingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hockeykingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		43C7BA1C1DB611A700FDD9F1 /* vouchkingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vouchkingTests.m; sourceTree = "<group>"; };
-		43C7BA1E1DB611A700FDD9F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43C7BA281DB61CF800FDD9F1 /* Promotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Promotion.h; sourceTree = "<group>"; };
 		43C7BA291DB61CF800FDD9F1 /* Promotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Promotion.m; sourceTree = "<group>"; };
 		43C7BA2B1DB626D500FDD9F1 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
@@ -155,14 +140,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A6ACBB5AB044085EB3383FB /* Pods_hockeyking.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		43C7BA151DB611A700FDD9F1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8C1DFC203A24A0ACB5637EEF /* Pods_hockeykingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +264,6 @@
 			children = (
 				4321CDCD1DBA0ED7005C06AB /* Fonts */,
 				43C7BA011DB611A700FDD9F1 /* hockeyking */,
-				43C7BA1B1DB611A700FDD9F1 /* vouchkingTests */,
 				43C7BA001DB611A700FDD9F1 /* Products */,
 				1FD3EA03B0C518DBB903CED6 /* Pods */,
 				BA6F4625E08B655EF0734C07 /* Frameworks */,
@@ -298,7 +274,6 @@
 			isa = PBXGroup;
 			children = (
 				43C7B9FF1DB611A700FDD9F1 /* hockeyking.app */,
-				43C7BA181DB611A700FDD9F1 /* hockeykingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -337,15 +312,6 @@
 				43C7BA031DB611A700FDD9F1 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		43C7BA1B1DB611A700FDD9F1 /* vouchkingTests */ = {
-			isa = PBXGroup;
-			children = (
-				43C7BA1C1DB611A700FDD9F1 /* vouchkingTests.m */,
-				43C7BA1E1DB611A700FDD9F1 /* Info.plist */,
-			);
-			path = vouchkingTests;
 			sourceTree = "<group>";
 		};
 		43C7BA271DB61C8A00FDD9F1 /* Model */ = {
@@ -392,27 +358,6 @@
 			productReference = 43C7B9FF1DB611A700FDD9F1 /* hockeyking.app */;
 			productType = "com.apple.product-type.application";
 		};
-		43C7BA171DB611A700FDD9F1 /* hockeykingTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 43C7BA241DB611A700FDD9F1 /* Build configuration list for PBXNativeTarget "hockeykingTests" */;
-			buildPhases = (
-				21E8D8276EFE93E41F081153 /* [CP] Check Pods Manifest.lock */,
-				43C7BA141DB611A700FDD9F1 /* Sources */,
-				43C7BA151DB611A700FDD9F1 /* Frameworks */,
-				43C7BA161DB611A700FDD9F1 /* Resources */,
-				D5442104887CFAD8D9C77EAC /* [CP] Embed Pods Frameworks */,
-				F9082216312D66CC839EFEDD /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				43C7BA1A1DB611A700FDD9F1 /* PBXTargetDependency */,
-			);
-			name = hockeykingTests;
-			productName = vouchkingTests;
-			productReference = 43C7BA181DB611A700FDD9F1 /* hockeykingTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -426,10 +371,6 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = VZ2738TJ98;
 						LastSwiftMigration = 0900;
-					};
-					43C7BA171DB611A700FDD9F1 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 43C7B9FE1DB611A700FDD9F1;
 					};
 				};
 			};
@@ -447,7 +388,6 @@
 			projectRoot = "";
 			targets = (
 				43C7B9FE1DB611A700FDD9F1 /* hockeyking */,
-				43C7BA171DB611A700FDD9F1 /* hockeykingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -495,34 +435,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		43C7BA161DB611A700FDD9F1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		21E8D8276EFE93E41F081153 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-hockeykingTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5000F29508F7C39B36436685 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -571,36 +486,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hockeyking/Pods-hockeyking-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D5442104887CFAD8D9C77EAC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hockeykingTests/Pods-hockeykingTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F9082216312D66CC839EFEDD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hockeykingTests/Pods-hockeykingTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -626,23 +511,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		43C7BA141DB611A700FDD9F1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43C7BA1D1DB611A700FDD9F1 /* vouchkingTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		43C7BA1A1DB611A700FDD9F1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 43C7B9FE1DB611A700FDD9F1 /* hockeyking */;
-			targetProxy = 43C7BA191DB611A700FDD9F1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		43C7BA0B1DB611A700FDD9F1 /* Main.storyboard */ = {
@@ -814,32 +683,6 @@
 			};
 			name = Release;
 		};
-		43C7BA251DB611A700FDD9F1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5238A7860DE0A8135FBBC52 /* Pods-hockeykingTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = vouchkingTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.reraise.vouchkingTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hockeyking.app/hockeyking";
-			};
-			name = Debug;
-		};
-		43C7BA261DB611A700FDD9F1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD63C67E229BF77733C0598A /* Pods-hockeykingTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = vouchkingTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.reraise.vouchkingTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hockeyking.app/hockeyking";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -857,15 +700,6 @@
 			buildConfigurations = (
 				43C7BA221DB611A700FDD9F1 /* Debug */,
 				43C7BA231DB611A700FDD9F1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		43C7BA241DB611A700FDD9F1 /* Build configuration list for PBXNativeTarget "hockeykingTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				43C7BA251DB611A700FDD9F1 /* Debug */,
-				43C7BA261DB611A700FDD9F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
