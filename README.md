@@ -1,2 +1,2 @@
-# vouchking
+# HockeyKing
 HockeyKing iOS 
